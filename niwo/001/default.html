@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-1.8.2.js"></script>
+    <script src="fancybox/jquery.fancybox.pack.js"></script>
+    <link href="fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <title>弹出框</title>
+</head>
+<body>
+
+    <a id='payimg' class="fancybox fancybox.iframe" href='iframe.html'>付款</a>
+    <script type="text/javascript">
+
+        $(function () {
+            $("#payimg").fancybox({
+                closeBtn: false,
+                autoSize: false,
+                autoResize: false,
+                height: 520,
+                width:520,
+                minHeight: 400,
+                minWidth: 400,
+                padding: 2
+            });
+        });
+
+    </script>
+</body>
+</html>
