@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>选择课程</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #fff;
+            margin: 0 auto;
+        }
+        #topbar{
+            text-align:center;
+            height:90px;
+            /*border:1px solid red;*/
+        }
+        #topbar_a{
+            float:left;
+            width:25%
+        }
+        #topbar_a img{
+            margin-top:15px;
+        }
+        #topbar_b{
+            float:left;
+            width:45%;
+            /*background:green;*/
+        }
+        #bar_middle {
+            margin:0 auto;
+            margin-top:10px;
+            width: 80%;
+            border: 2px dashed #5dc0d5;
+            border-radius: 10px;
+            height:65px;
+        } 
+        #bar_middle img{
+            margin-top:3px;
+        }
+        #topbar_c {
+            float: left;
+            width: 30%;
+        }
+        #topbar_c img{
+            margin-top:12px;
+        }
+
+        #title{
+            clear:both;
+        } 
+        .center {
+            width: 40px;
+            background: url("images/vs.png") no-repeat;
+        }
+
+        #page_title {
+           /*clear:both;*/
+        } 
+        .center, .left, .right {
+            float: left;
+        }
+
+        .left, .right {
+            width: 50%;
+            margin-left: -20px;
+        }
+
+        .inner {
+            height:50px;
+            clear:both;
+            line-height:50px;
+            text-align:center;
+            margin:0 auto;
+            font-size:24px;
+            font-weight:bold;
+            color:#fff;
+        }
+
+        .left .inner {
+            margin-left: 20px;
+            background: #5dc0d5;
+        }
+        .right .inner {
+            margin-left: 20px;
+            background: #999999;
+        }
+
+        #item_list {
+            clear: both;
+        }
+        .item{
+            display:inline-block;
+            min-height:320px;
+        }
+        .item_title {
+            margin: 0 auto;
+            margin-top:20px;
+            text-align: center;
+            height:30px;
+            width:100%;
+        }
+            .item_title div {
+                width: 100px;
+                border-top: 2px dashed #cea753;
+                border-bottom: 2px dashed #cea753;
+                color: #cea753;
+                padding:10px;
+                font-size:20px;
+                font-weight:bold;
+                margin:0 auto;
+            }
+        .item_content {
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        .content_a, .content_b {
+            float: left;
+            width: 49%;
+        }
+
+            .content_a > div, .content_b > div {
+                padding: 15px;
+                height: 120px;
+            }
+
+            .content_a img, .content_b img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;                
+            }
+            .content_a img {
+                border: 5px solid #5dc0d5;
+            }
+            .content_b img {
+                border: 5px solid #999;
+            }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="topbar">
+            <div id="topbar_a"><img src="images/mhrs.png" /></div>
+            <div id="topbar_b">
+                <div id="bar_middle">
+                    <img src="images/bartitle.png" />
+                </div>
+            </div>
+            <div id="topbar_c"><img src="images/sk.png" /></div>
+        </div>
+
+        <div id="page_title">
+            <div class="left">
+                <div class="inner">廉洁</div>
+            </div>
+            <div class="center">
+                <div class="inner"></div>
+            </div>
+            <div class="right">
+                <div class="inner">腐败</div>
+            </div>
+        </div>
+
+        <div id="item_list">
+            <div class="item">
+                <div class="item_title">
+                    <div>政治账</div>
+                </div>
+                <div class="item_content">
+                    <div>
+                        <div class="content_a">
+                            <div>
+                                <img src="images/d1.jpg" />
+                                <div>勤奋努力工作，进步晋升机会很多！</div>
+                            </div>
+
+                        </div>
+                        <div class="content_b">
+                            <div>
+                                <img src="images/d2.jpg" />
+                                <div>丢掉了工作，美好的生活戛然而止！</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item_title">
+                    <div>经济账</div>
+                </div>
+                <div class="item_content">
+                    <div>
+                        <div class="content_a">
+                            <div>
+                                <img src="images/d1.jpg" />
+                                <div>你有着很好的待遇,请珍惜你现在的工作！</div>
+                            </div>
+
+                        </div>
+                        <div class="content_b">
+                            <div>
+                                <img src="images/d2.jpg" />
+                                <div>你到退休之前的正常收入5210000元将会化为乌有。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+               <div class="item_title">
+                     <div>亲情账</div>
+                </div>
+                 <div class="item_content">
+                     <div>
+                         <div class="content_a">
+                             <div>
+                                 <img src="images/d1.jpg" />
+                                 <div>你很年轻，父母对你寄予很大的希望，希望你能努力工作，不断进步。</div>
+                             </div>
+
+                         </div>
+                         <div class="content_b">
+                             <div>
+                                 <img src="images/d2.jpg" />
+                                 <div>残缺的家庭，父母妻儿在邻居，朋友中抬不起头，幸福的生活离你远去</div>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item_title">
+                    <div>自由账</div>
+                </div>
+                <div class="item_content">
+                    <div>
+                        <div class="content_a">
+                            <div>
+                                <img src="images/d1.jpg" />
+                                <div>工作之余，和家人朋友一同休闲、旅游，享受自由美好的生活。</div>
+                            </div>
+
+                        </div>
+                        <div class="content_b">
+                            <div>
+                                <img src="images/d2.jpg" />
+                                <div>从此你将独守铁窗，彻底失去自由美好的生活。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
