@@ -59,7 +59,9 @@
     <Content Include="095.html" />
     <Content Include="css\pure-min.css" />
     <Content Include="css\pure.css" />
+    <Content Include="images\010\acccount.png" />
     <Content Include="images\010\default.png" />
+    <Content Include="images\010\lock.png" />
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
   </ItemGroup>

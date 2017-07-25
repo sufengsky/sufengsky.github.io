@@ -13,26 +13,76 @@
         }
         .xj-user-img {
             text-align: center;
-            height: 160px;
-            line-height: 160px;
         }
          .xj-user-img img {
-             width: 50px;
-             height: 50px;
+             width: 100px;
+             height: 100px;
+             margin: 0 auto;
+             margin-top: 10%;
+             margin-bottom: 10%;
          }
+        .xj-icon {
+            text-align: right;
+            border-bottom: 1px solid red;
+            height: 60px;
+            line-height: 60px;
+            margin-left: 20px;
+        }
+         .xj-input {
+             height: 60px;
+             line-height: 60px;
+             border-bottom: 1px solid red;
+             margin-right: 20px;
+         }
+         .xj-button-container {
+             text-align: center;
+         }
+        .xj-button {
+            margin: 0 auto;
+            margin-top: 10%;
+            width: 80%;
+            color: #fff;
+            -ms-border-radius: 30px;
+            border-radius: 30px;
+            background-color: #29a0d8;
+            height: 60px;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
     <div class="pure-g">
         <div class="pure-u-1">
             <div class="xj-user-img">
-                <img src="images/010/default.png" />
+                <img src="images/010/default.png" alt="" class="pure-img"/>
             </div>
         </div>
-        <div class="pure-u-1">账号</div>
-        <div class="pure-u-1">密码</div>
+        <div class="pure-u-1-5">
+            <div class="xj-icon">
+                <label><img src="images/010/acccount.png" alt=""/></label>
+            </div>
+        </div>
+        <div class="pure-u-4-5">
+            <div class="xj-input">
+              <input  pattern="[0-9]*"  placeholder="请你输入账号" >
+            </div>
+        </div>
+        <div class="pure-u-1-5">
+            <div class="xj-icon">
+                <label class="ac_control_label">
+                    <img src="images/010/lock.png" alt=""/>
+                </label>
+            </div>
+        </div>
+        <div class="pure-u-4-5">
+            <div class="xj-input">
+                <input type="password" pattern="[0-9]*" placeholder="请你输入密码">
+            </div>
+        </div>
         <div class="pure-u-1">
-            <button class="pure-button">登录</button>
+            <div class="xj-button-container">
+                <button class="pure-button xj-button">登 录</button>
+            </div>
         </div>
     </div>
 
