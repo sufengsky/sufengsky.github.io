@@ -21,32 +21,39 @@
              margin-top: 10%;
              margin-bottom: 10%;
          }
-        .xj-icon {
-            text-align: right;
-            border-bottom: 1px solid red;
+        .xj-input {
+            border-bottom: 1px solid #ccc;
             height: 60px;
             line-height: 60px;
-            margin-left: 20px;
+            margin-left: 5%;
+            margin-right: 5%;
+            padding-left: 20px;
         }
-         .xj-input {
-             height: 60px;
-             line-height: 60px;
-             border-bottom: 1px solid red;
-             margin-right: 20px;
-         }
+        .xj-input img {
+            vertical-align: middle;
+        }
+        .xj-input input {
+            vertical-align: middle;
+            margin-left:20px;
+            height: 40px;
+            width: 80%;
+            font-size: 20px;
+            border: none;
+            outline:medium;
+        }
          .xj-button-container {
              text-align: center;
          }
         .xj-button {
             margin: 0 auto;
             margin-top: 10%;
-            width: 80%;
+            width: 90%;
             color: #fff;
-            -ms-border-radius: 30px;
-            border-radius: 30px;
+            -ms-border-radius: 60px;
+            border-radius: 60px;
             background-color: #29a0d8;
-            height: 60px;
-            font-size: 18px;
+            height: 120px;
+            font-size: 25px;
         }
     </style>
 </head>
@@ -54,28 +61,20 @@
     <div class="pure-g">
         <div class="pure-u-1">
             <div class="xj-user-img">
-                <img src="images/010/default.png" alt="" class="pure-img"/>
+                <img src="images/010/default.png" alt="" class="pure-img" />
             </div>
         </div>
-        <div class="pure-u-1-5">
-            <div class="xj-icon">
-                <label><img src="images/010/acccount.png" alt=""/></label>
-            </div>
-        </div>
-        <div class="pure-u-4-5">
+        <div class="pure-u-1">
             <div class="xj-input">
-              <input  pattern="[0-9]*"  placeholder="请你输入账号" >
+                <label><img src="images/010/acccount.png" alt="" /></label>
+                <input pattern="[0-9]*" placeholder="请你输入账号">
             </div>
         </div>
-        <div class="pure-u-1-5">
-            <div class="xj-icon">
+        <div class="pure-u-1">
+            <div class="xj-input">
                 <label class="ac_control_label">
-                    <img src="images/010/lock.png" alt=""/>
+                    <img src="images/010/lock.png" alt="" />
                 </label>
-            </div>
-        </div>
-        <div class="pure-u-4-5">
-            <div class="xj-input">
                 <input type="password" pattern="[0-9]*" placeholder="请你输入密码">
             </div>
         </div>
