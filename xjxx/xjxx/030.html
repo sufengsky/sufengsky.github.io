@@ -5,8 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <link href="css/pure-min.css" rel="stylesheet" />
     <title>搜索</title>
+    <style type="text/css">
+        /*body {
+            margin: 0;
+            padding: 0;
+        }*/
+         .xj-top {
+             width: 100%;
+             height: 40px;
+             position: fixed !important;
+             top: 0;
+             z-index: 10;
+             background-color: #000;
+             color: #fff;
+            line-height: 40px;
+            margin: 0;
+            padding: 0;
+         }
+
+        .xj-grid-a i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-bottom: solid 2px #fff;
+            border-right: solid 2px #fff;
+            margin-left: 2px;
+            margin-right: -2px;
+            -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+        .xj-grid-a {
+            float: left;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding-top: 2px;
+        }
+
+        .xj-grid-b {
+            float: right;
+            width: 45px;
+            height: 40px;
+        }
+
+        .xj-grid-m {
+            height: 30px;
+            line-height: 30px;
+            margin: 0 50px 0 40px;
+            margin-top: 5px;
+            -ms-border-radius: 30px;
+            border-radius: 30px;
+            background-color: #ffffff;
+            padding-left: 5px;
+        }
+
+        .xj-search-box img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            padding-left: 5px;
+        }
+
+        .xj-grid-m input {
+            margin-left: 3px;
+            width: 70%;
+            vertical-align: middle;
+            border: none;
+            outline: medium;
+            color: #000;
+        }
+    </style>
 </head>
 <body>
+    <div class="pure-g">
 
+        <div class="pure-u-1">
+
+            <div class="xj-top">
+                <div class="xj-grid-a">
+                        <a href="020.html">
+                            <i></i>
+                        </a>
+                    </div>
+                    <div class="xj-grid-b">搜索</div>
+                    <div class="xj-grid-m">
+                        <div class="xj-search-box">
+                            <img src="images/030/search.png" alt="" />
+                            <input type="text" placeholder="请输入要搜索的内容" />
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>

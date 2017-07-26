@@ -74,6 +74,7 @@
     <Content Include="images\020\wsxk.png" />
     <Content Include="images\020\xysq.png" />
     <Content Include="images\020\ytjl.png" />
+    <Content Include="images\030\search.png" />
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\unslider\css\sliders.css" />
