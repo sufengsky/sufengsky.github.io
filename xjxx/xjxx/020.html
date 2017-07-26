@@ -4,15 +4,57 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
     <link href="css/pure-min.css" rel="stylesheet"/>
+    <link href="js/unslider/css/sliders.css" rel="stylesheet" />
     <script src="js/jquery.min.js"></script>
+    <script src="js/unslider/js/unslider.js"></script>
     <title>首页</title>
+    <style type="text/css">
+        .banner {
+            position: relative;
+            overflow: auto;
+        }
+
+            .banner li {
+                list-style: none;
+                height: 100px;
+                width: 100%;
+            }
+            li img {
+                width: 100%;
+                height: 100%;
+            }
+            /*.banner ul li {
+                float: left;
+            }*/
+    </style>
 </head>
 <body>
-
+    <div class="banner">
+        <ul>
+            <li>
+                <a href="http://www.baidu.com"><img src="images/020/l_0.png" /></a>
+            </li>
+            <li>
+                <a href="http://www.qq.com"><img src="images/020/l_1.jpg" /></a>
+            </li>
+            <li>
+                <a href="http://www.sina.com"><img src="images/020/l_2.jpg" /></a>
+            </li>
+            <li>
+                <a href="http://www.sohu.com"><img src="images/020/l_3.jpg" /></a>
+            </li>
+        </ul>
+    </div>
     <script type="text/javascript">
         $(function () {
-            $("#btnlogin").click(function () {
-                location.href = "020.html";
+            var unslider = $('.banner').unslider({
+                speed: 500,       // 切换的速度
+                delay: 3000,      // 切换的速度
+                keys: true,       // 是否启用左右按钮控制slider切换
+                fluid: false,     // 是否每次在容器大小改变的时候，修正slider的大小
+                pause: true,      // 鼠标以上去是否暂停播放
+                arrows: false,    // 是否显示左右箭头，用于slider切换
+                dots: true        // 是否显示白色圆点，用于slider切换
             });
         });
     </script>
