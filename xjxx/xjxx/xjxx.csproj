@@ -58,11 +58,13 @@
     <Content Include="093.html" />
     <Content Include="094.html" />
     <Content Include="095.html" />
+    <Content Include="css\common.css" />
     <Content Include="css\pure-min.css" />
     <Content Include="css\pure.css" />
     <Content Include="images\010\acccount.png" />
     <Content Include="images\010\default.png" />
     <Content Include="images\010\lock.png" />
+    <Content Include="images\010\weixin.png" />
     <Content Include="images\020\bjyd.png" />
     <Content Include="images\020\byzq.png" />
     <Content Include="images\020\jszq.png" />
@@ -75,6 +77,7 @@
     <Content Include="images\020\xysq.png" />
     <Content Include="images\020\ytjl.png" />
     <Content Include="images\030\search.png" />
+    <Content Include="js\common.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\unslider\css\sliders.css" />
