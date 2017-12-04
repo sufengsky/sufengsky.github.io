@@ -77,7 +77,12 @@
     <Content Include="images\020\xysq.png" />
     <Content Include="images\020\ytjl.png" />
     <Content Include="images\030\search.png" />
+<<<<<<< HEAD
+    <Content Include="info\default.png" />
+    <Content Include="info\info.html" />
+=======
     <Content Include="js\common.js" />
+>>>>>>> origin/master
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\unslider\css\sliders.css" />
