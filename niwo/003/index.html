@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en-US" xmlns:wb="http://open.weibo.com/wb">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>选择课程3-手机版</title>
+    <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link href="common/common.css" rel="stylesheet" />
+    <link href="default.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.8.2.js"></script>
+</head>
+<body>
+    <!--top写个公共的-->
+    <div class="top_1">
+        <img src="common/top.jpg">
+        <a href="http://www.niwolife.cn/" class="index"><img src="common/index.png" alt=""></a>
+        <span class="back" onclick="history.back();"><i class="fa fa-angle-left"></i></span>
+    </div>
+
+    <div class='body-content'>
+        <div class="top-alter">
+            <div class="alter-title">请选择课程</div>
+            <div class="alter-content">温馨提示:为保证效果建议您选择全部课程系统听课，如有特殊需求也可以挑选单节课程报名。</div>
+        </div>
+
+        <div class="static-title">
+            <div class="static-title-left">
+                <img src="star.png" class="img-star" /><span>报名全部课程</span>
+            </div>
+            <div class="static-title-right">
+                <span>¥1980.00</span><img id="selectAll" src="check_false.png" class="img-select-all" />
+            </div>
+        </div>
+
+        <div class="course-stage">
+            <div class="course-stage-title">
+                <div class="course-stage-title-left">阶段一</div>
+                <div class="course-stage-title-right">课程主题：学习用手帐养小孩</div>
+            </div>
+            <div class="course-list">
+                <div class="course-item">
+                    <div class="course-title">course1：学习用手帐养小孩</div>
+                    <div class="course-time">2017.2.18	21:30-23:00</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-title">course2：如何做一个会观察的父母</div>
+                    <div class="course-time">2017.2.18	21:30-23:00</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-title">course3：N个要点:培养孩子的天赋和创意</div>
+                    <div class="course-time">2017.2.18	21:30-23:00</div>
+                </div>
+            </div>
+            <div class="course-stage-static">
+                <span>价格：¥980.00</span>
+                <img  src="check_false.png" class="img-course-stage-check" />
+                <input type="checkbox" class="course-stage-checkbox" />
+            </div>
+        </div>
+        <div class="course-stage">
+            <div class="course-stage-title">
+                <div class="course-stage-title-left">阶段一</div>
+                <div class="course-stage-title-right">课程主题：学习用手帐养小孩</div>
+            </div>
+            <div class="course-list">
+                <div class="course-item">
+                    <div class="course-title">course1：学习用手帐养小孩</div>
+                    <div class="course-time">2017.2.18 21:30-23:00</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-title">course2：如何做一个会观察的父母</div>
+                    <div class="course-time">2017.2.18 21:30-23:00</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-title">course3：N个要点:培养孩子的天赋和创意</div>
+                    <div class="course-time">2017.2.18 21:30-23:00</div>
+                </div>
+            </div>
+            <div class="course-stage-static">
+                <span>价格：¥980.00</span>
+                <img src="check_false.png" class="img-course-stage-check"/>
+                <input type="checkbox" class="course-stage-checkbox"/>
+            </div>
+        </div>
+        <div>
+            <input type='hidden' id='coupon_code_a' name='coupon_code' value=''/>
+            <input type='hidden' id='coupon_code_price' name='coupon_code_price' value=0 />
+            <div class="buy-for-friend-title">
+                <div class="buy-for-friend-title-left">选择优惠券(单节购买不能使用)</div>
+                <div class="buy-fro-friend-title-right">&nbsp;<img id="arrow" src="lefarrow.png"/>
+                </div>
+            </div>
+            <div class="buy-for-friend-content">
+                <div class="lbl"><span>100元优惠券</span></div>
+                <div class="div-input">
+                    <input type="radio" id="radio-1-1" name="radio-1-set" value='0' price="100" class="regular-radio"/>
+                    <label for="radio-1-1"></label>
+                </div>
+            </div>
+            <div class="buy-for-friend-content">
+                <div class="lbl"><span>200元优惠券</span></div>
+                <div class="div-input">
+                    <input type="radio" id="radio-1-2" name="radio-1-set" value='0' price="200" class="regular-radio"/>
+                    <label for="radio-1-2"></label>
+                </div>
+            </div>
+            <div class="buy-for-friend-content">
+                <div class="lbl"><span>300元优惠券</span></div>
+                <div class="div-input">
+                    <input type="radio" id="radio-1-3" name="radio-1-set" value='0' price="300" class="regular-radio" />
+                    <label for="radio-1-3"></label>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-alert">
+            <div style="width: 30px; height: 1px; margin: 0 auto; padding: 0; background-color: #d6d6d6; overflow: hidden;"></div>
+            全课程系统听课，体验更好
+            <div style="width: 30px; height: 1px; margin: 0 auto; padding: 0; background-color: #d6d6d6; overflow: hidden;"></div>
+        </div>
+		<div class='import-alert'>
+		 重要提示：套餐报名成功后，请务必添加niwo小管家（微信ID：niwolama）返还优惠金额。
+		</div>
+        <div class="bottom">
+            <span>合计：¥124</span>
+            <img id="btnSave" src="btnbuy.png" />
+        </div>
+    </div>
+    <!--联系方式及版权-->
+    <div class="connect">
+        <a href="tel:4000303975">
+            <img src="common/phone.png" alt="">
+        </a>
+        <span id="we"><img src="common/wechat.png" alt=""></span>
+        <a href="http://weibo.com/niwolamabang"><img src="common/weibo.png" alt=""></a>
+    </div>
+    <div class="shadow"></div>
+    <div id="wechat">
+        <span class="close"><i class="fa fa-times-circle-o"></i></span>
+        <p>关注我们的微信</p>
+        <img src="common/pic3.jpg" alt="">
+        <p style="line-height:20px;text-align:center;border-bottom:none;">搜索微信号：niwolamabang，关注niwo公众号</p>
+    </div>
+    <div class="copy">
+        Copyright © 2006-2015 你我（北京）文化传媒有限公司<br>
+        京IP备14055718号-2
+    </div>
+    <script>
+        $(function () {
+            var topHeight = $(".top_1").first().outerHeight();
+            var connectHeight = $(".connect").first().outerHeight();
+            var copyHeight = $(".copy").first().outerHeight();
+            var totalHeight = topHeight + connectHeight + copyHeight;
+            $(".body-content").css("min-height", $(window).height() - totalHeight + 2);
+
+            //全选阶段性课程按钮点击事件
+            $(".static-title").click(function () {
+                if ($("#selectAll").attr("src") == "check_true.png") {
+                    $("#selectAll").attr("src", "check_false.png");
+                    $(".img-course-stage-check").attr("src", "check_false.png");
+                    $(".course-stage-checkbox").removeAttr("checked");
+                } else {
+                    $("#selectAll").attr("src", "check_true.png");
+                    $(".img-course-stage-check").attr("src", "check_true.png");
+                    $(".course-stage-checkbox").attr("checked", "checked");
+                }
+            });
+
+            //阶段性课程选择事件
+            $(".course-stage-static").click(function() {
+                if ($("img", this).attr("src") == "check_true.png") {
+                    $("img", this).attr("src", "check_false.png");
+                    $("input", this).removeAttr("checked");
+                } else {
+                    $("img", this).attr("src", "check_true.png");
+                    $("input", this).attr("checked", "checked");
+                }
+                var length = $(".course-stage-static").length;
+                var trueLength = $(".course-stage-static img[src='check_true.png']").length;
+                if (length == trueLength) {
+                    $("#selectAll").attr("src", "check_true.png");
+                } else {
+                    $("#selectAll").attr("src", "check_false.png");
+                }
+            });
+
+            //优惠券标题列点击事件
+            $(".buy-for-friend-title").click(function () {
+                if ($("#arrow").attr("src") == "downarrrow.png") {
+                    $("#arrow").attr("src", "lefarrow.png");
+                    $(".buy-for-friend-content").show();
+                } else {
+                    $("#arrow").attr("src", "downarrrow.png");
+                    $(".buy-for-friend-content").hide();
+                }
+            });
+
+            $(".buy-for-friend-content").click(function () {
+                var radioButton = $("input", this);
+                var value = radioButton.attr("v");
+                var code = radioButton.val();
+                $(".buy-for-friend-content input").attr("v", "0").removeAttr("checked").next().css("background-color", "");
+                if (value == "0") {
+                    radioButton.attr("v", "1");
+                    radioButton.attr("checked", "checked");
+                    radioButton.next().css("background-color", "#948856");
+                    $("#coupon_code_a").val(code);
+                    $('#coupon_code_price').val(radioButton.attr("price"));
+                } else {
+                    radioButton.attr("v", "0");
+                    radioButton.removeAttr("checked");
+                    radioButton.next().css("background-color", "");
+                    $("#coupon_code_a").val("");
+                    $('#coupon_code_price').val(0);
+                }
+            });
+            $(".buy-for-friend-content input").click(function () {
+                $(this).parent().parent().click();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>保密协议</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mypage {
+            height: auto;
+            min-height: 800px;
+            background-color: #ffffff;
+            color: #333333;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            font: 12px/1 "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        }
+
+        .title_img {
+            margin: 0 auto;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+            .title_img img {
+                width: 96%;
+            }
+
+        .user_name {
+            padding: 10px;
+        }
+
+        .user_name_input {
+            padding: 0 10px 10px 10px;
+        }
+
+            .user_name_input input {
+                width: 94%;
+                height: 30px;
+                line-height: 30px;
+            }
+
+        .p_item {
+            padding: 10px;
+            line-height: 25px;
+            font-size: 14px;
+        }
+
+        .p_title {
+            color: #948856;
+        }
+
+        .p_item_important {
+            color: #948856;
+        }
+
+        .p_item li {
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .select_area {
+            height: 40px;
+            text-align: center;
+            border-top: 1px solid #999;
+            margin: 0 10px 0 10px;
+            padding-top: 13px;
+        }
+
+            .select_area * {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .select_area img {
+                height: 15px;
+                width: 15px;
+            }
+             .select_area span {
+                 margin-left: 5px;
+             }
+
+        .f_submit {
+            text-align: center;
+            padding: 0 10px;
+            margin-bottom: 100px;
+        }
+
+        .f_submitBtn {
+            display: inline-block;
+            line-height: 28px;
+            font-size: 13px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            padding: 2px 24px;
+            background: rgb(62, 118, 167);
+            border-radius: 2px;
+            width: 50%;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.8.2.js"></script>
+    <script>
+        $(function () {
+            $("#chkAgree").hide();
+            $("#select-div").click(function () {
+                if ($("#imgAgree").attr("src") == "checkbox.png") {
+                    $("#imgAgree").attr("src", "checkbox_true.png");
+                    $("#chkAgree").attr("checked", "checked");
+                } else {
+                    $("#imgAgree").attr("src", "checkbox.png");
+                    $("#chkAgree").removeAttr("checked");
+                }
+            });
+            $("#btnsubmit").click(function() {
+                if ($("#chkAgree").attr("checked") == "checked") {
+                    alert("你已经同意以上声明");
+                } else {
+                    alert("请勾选同意以上声明");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="mypage">
+        <div class="title_img">
+            <img src="titleimg.jpg" alt="" />
+        </div>
+        <div>
+            <div class="user_name">姓名*</div>
+            <div class="user_name_input"><input /></div>
+        </div>
+        <div class="p_item p_title">
+            niwo课程讨论小组为大家提供深度交流和相互讨论、交换信息的渠道。为了帮助更好的实现目标，课堂和讨论群组包括以下元素:
+        </div>
+        <div class="p_item">
+            <ul>
+                <li>一个安全的环境，你能够感觉到尊重和被重视</li>
+                <li>对听课内容的保密</li>
+                <li>对讨论内容的保密</li>
+            </ul>
+        </div>
+        <div class="p_item">
+            一个安全的环境是由整个小组及其成员一起创建和维护的，需要相互尊重和建立信任，安全环境的最主要成分是保密性
+        </div>
+        <div class="p_item p_title">
+            》保密原则
+        </div>
+        <div class="p_item">
+            niwo主办方以及课堂老师、嘉宾有责任保护您的隐私权，在内容和范围上受到国家法律和专业伦理规范的保护和约束。课堂内、微信群内讨论区的案例和问答会严格保密，不作为课堂内容之外的用途使用。如果需要在专业范围内讨论到你的案例，会隐去你的身份信息。
+        </div>
+        <div class="p_item p_title">
+            》下列情况为保密原则的例外
+        </div>
+        <div class="p_item">
+            <ul>
+                <li>（1）心理治疗师发现你有伤害自身或伤害他人的严重危险时。</li>
+                <li>（2）你有致命的传染性疾病等且可能危及他人时。</li>
+                <li>（3）法律规定需要披露时。</li>
+            </ul>
+        </div>
+        <div class="p_item">
+            ＊如niwo违反保密原则，会员有保留追究的权利。
+        </div>
+        <div class="p_item p_title">
+            》听课会员需履行的义务：
+        </div>
+        <div class="p_item p_title">
+            <ul>
+                <li>1、课程直播、回放、ppt课件资料只能用于报名者本人使用，不得用于其它任何商业目的，不得全课转化成文字向外分享。</li>
+                <li>2、任何课程，涉及到听课会员的隐私案例，隐私问答，均不能截屏、不能传播、不能在课堂外有其它用途。</li>
+            </ul>
+        </div>
+        <div class="p_item">
+            ＊如会员违反保密原则，niwo保留追求的权利。
+        </div>
+        <div class="p_item p_title">
+            》出席
+        </div>
+        <div class="p_item">
+            你在课程小组中的存在并出席是非常重要的。你的按时参与，有助于创建一个良性的学习交流环境，有助于帮助老师更好的完善课程。因此，niwo要求你尽最大可能准时出席课程。
+        </div>
+        <div class="p_item">
+            如果你遇到紧急或突发疾病、突发事件，<span class="p_item_important">请联系niwo工作人员(微信ID：niwolama/电话：400-030-3975)</span>，在课程开始之前，让他们知道你不出席
+        </div>
+        <div class="p_item p_title">
+            》相互配合
+        </div>
+        <div class="p_item">
+            niwo课程由教学和讨论、处理时间组成。niwo的工作人员可能会围绕不同的问题寻求你的真实看法和反馈，你尽可能的保持给予支持
+        </div>
+        <div class="select_area" id="select-div">
+            <input type="checkbox" id="chkAgree" checked="checked" />
+            <img src="checkbox_true.png" id="imgAgree"/><span>我已经阅读以上声明并同意</span>
+        </div>
+        <div class="f_submit">
+            <a class="f_submitBtn validate_submit" id="btnsubmit">提交</a>
+        </div>
+    </div>
+</body>
+</html>

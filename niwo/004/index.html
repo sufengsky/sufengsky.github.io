@@ -1,0 +1,320 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>优惠券</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f7f7f7;
+        }
+
+        .top-title {
+            height: 102px;
+            background-image: url("topbg.png");
+            border-style: none;
+            border-width: 0;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .nav {
+            overflow: hidden;
+            background: #fff;
+            border-bottom: 1px solid #d6d6d6;
+        }
+
+        .left {
+            width: 32%;
+            height: 60px;
+            float: left;
+            border-right: 1px solid #f9f9f9;
+            text-align: center;
+            line-height: 60px;
+            overflow: hidden;
+        }
+
+        .middle {
+            width: 32%;
+            height: 60px;
+            float: left;
+            border-left: 1px solid #fcfcfc;
+            border-right: 1px solid #fcfcfc;
+            text-align: center;
+            line-height: 60px;
+            overflow: hidden;
+        }
+
+        .right {
+            width: 33%;
+            height: 60px;
+            float: left;
+            border-left: 1px solid #f9f9f9;
+            text-align: center;
+            line-height: 60px;
+            overflow: hidden;
+        }
+
+        .nav span {
+            height: 58px;
+            display: inline-block;
+            padding: 0 10px 0 10px;
+            font-size: 18px;
+        }
+
+        .nav .active {
+            border-bottom: 2px solid #948856;
+        }
+
+        .yhq-list {
+            clear: both;
+            min-height: 100px;
+            height: auto;
+        }
+
+        .item {
+            margin: 10px 10px 0 10px;
+        }
+
+        .item-left {
+            background: url("bg.png");
+            background-repeat: repeat-y;
+            height: 70px;
+            width: 80px;
+            float: left;
+            line-height: 70px;
+            color: #ccc;
+            text-align: center;
+            margin: 0 auto;
+        }
+        /*已使用div左侧的背景*/
+        .bgysy {
+            background: url("bg_ysy.png");
+            color: #fff;
+        }
+        /*未使用div左侧的背景*/
+        .bgwsy {
+            background: url("bg_wsy.png");
+            color: #fff;
+        }
+
+        .item-middle {
+            background-color: #ccc;
+            height: 70px;
+            line-height: 20px;
+            margin-left: 80px;
+            margin-right: 59px;
+        }
+
+        .item-middle-wsy {
+            background-color: #fff;
+            margin-right: 0;
+        }
+        /*立即使用*/
+        .ljsy {
+            text-align: right;
+            /*padding-top: 10px;*/
+            margin: 0 auto;
+            height: 20px;
+            line-height: 20px;
+        }
+            .ljsy img {
+                vertical-align: middle;
+                margin-left: 10px;
+                margin-right: 10px;
+                display: inline-block;
+            }
+            .ljsy a {
+                text-decoration: none;
+                color: #948856;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 14px;
+            }
+
+        .info {
+            padding-top: 15px;
+            color: #fff;
+            padding-left: 5px;
+            font-size: 14px;
+        }
+
+        .info-wsy {
+            margin-left: 5px;
+            margin-right: 5px;
+            padding-top: 5px;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .item-right {
+            background-color: #ccc;
+            height: 70px;
+            width: 60px;
+            line-height: 70px;
+            float: right;
+        }
+
+        .ysy {
+            background-color: #fff;
+        }
+
+        .ysylbl {
+            color: #948856;
+        }
+
+        .ysycount {
+            color: #d2d2d2;
+        }
+
+        .item-right img {
+            margin-top: 10px;
+        }
+
+        .moneylbl {
+            font-size: 16px;
+        }
+
+        .moneycount {
+            font-size: 30px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.8.2.js"></script>
+    <script>
+        $(function () {
+            $(".yhq-list").hide().eq(0).show();
+            $(".nav div").click(function () {
+                $(".nav span").removeClass("active");
+                $('span', this).addClass("active");
+                $(".yhq-list").hide().eq($(this).index()).show();
+            });
+            $("#wsy .item").click(function () {
+                $("a", this)[0].click();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="top-title"></div>
+    <div class="nav">
+        <div class="left"><span class="active">未使用</span></div>
+        <div class="middle"><span>已使用</span></div>
+        <div class="right"><span>已过期</span></div>
+    </div>
+    <div class="yhq-list" id="wsy">
+        <div class="item">
+            <div class="item-left bgwsy">
+                <span class="moneylbl ">¥</span>
+                <span class="moneycount">100</span>
+            </div>
+            <div class="item-middle item-middle-wsy">
+                <div class="info info-wsy">
+                    <div class="ysylbl">购买**课程可以免100优惠券</div>
+                    <div class="ysycount">2016.12.26-2016.12.31</div>
+                </div>
+                <div class="ljsy">
+                    <a href="#">立即使用</a><img src="leftarrow_a.png" />
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-left bgwsy">
+                <span class="moneylbl ">¥</span>
+                <span class="moneycount">100</span>
+            </div>
+            <div class="item-middle item-middle-wsy">
+                <div class="info info-wsy">
+                    <div class="ysylbl">购买**课程可以免100优惠券</div>
+                    <div class="ysycount">2016.12.26-2016.12.31</div>
+                </div>
+                <div class="ljsy">
+                    <a href="#">立即使用</a><img src="leftarrow_a.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="yhq-list" id="ysy">
+        <div class="item">
+            <div class="item-right ysy">
+                <img src="ysy.png" />
+            </div>
+            <div class="item-left bgysy">
+                <span class="moneylbl ">¥</span>
+                <span class="moneycount">100</span>
+            </div>
+            <div class="item-middle ysy">
+                <div class="info">
+                    <div class="ysylbl">购买**课程可以免100优惠券</div>
+                    <div class="ysycount">2016.12.26-2016.12.31</div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-right ysy">
+                <img src="ysy.png" />
+            </div>
+            <div class="item-left bgysy">
+                <span class="moneylbl ">¥</span>
+                <span class="moneycount">100</span>
+            </div>
+            <div class="item-middle ysy">
+                <div class="info">
+                    <div class="ysylbl">购买**课程可以免100优惠券</div>
+                    <div class="ysycount">2016.12.26-2016.12.31</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="yhq-list" id="ygq">
+        <div class="item">
+            <div class="item-right">
+                <img src="gq.png" />
+            </div>
+            <div class="item-left">
+                <span class="moneylbl">¥</span>
+                <span class="moneycount">100</span>
+            </div>
+            <div class="item-middle">
+                <div class="info">
+                    <div>购买**课程可以免100优惠券</div>
+                    <div>2016.12.26-2016.12.31</div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-right">
+                <img src="gq.png" />
+            </div>
+            <div class="item-left">
+                <span style="font-size: 16px;">¥</span>
+                <span style="font-size: 30px;">100</span>
+            </div>
+            <div class="item-middle">
+                <div class="info">
+                    <div>购买**课程可以免100优惠券</div>
+                    <div>2016.12.26-2016.12.31</div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-right">
+                <img src="gq.png" />
+            </div>
+            <div class="item-left">
+                <span class="moneylbl">¥</span>
+                <span class="moneycount">100</span>
+            </div>
+            <div class="item-middle">
+                <div class="info">
+                    <div>购买**课程可以免100优惠券</div>
+                    <div>2016.12.26-2016.12.31</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
