@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="en-US" xmlns:wb="http://open.weibo.com/wb">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>首页</title>
+    <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link href="common/common.css" rel="stylesheet" />
+    <link href="default.css" rel="stylesheet" />
+    <link href="unslider/css/sliders.css" rel="stylesheet" />
+    <style type="text/css">
+        .mypage {
+            height: auto;
+            min-height: 300px;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 10px;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            font: 12px/1 "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            text-align: center;
+        }
+
+        .searcharea {
+            width: 100%;
+            height: 50px;
+            background-color: #eaeaea;
+            padding-top: 20px;
+        }
+
+        .searcharea_in {
+            margin: 0 auto;
+            width: 90%;
+            height: 30px;
+            line-height: 30px;
+            background-color: #fff;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            line-height: 25px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+            .searcharea_in img {
+                width: 16px;
+                height: 16px;
+                vertical-align: middle;
+                display: inline-block;
+                margin-left: 5px;
+            }
+
+        #search {
+            height: 25px;
+            margin: 0;
+            margin-left: 5px;
+            border: none;
+            outline: none;
+            padding: 0;
+            vertical-align: middle;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #c6c6c6;
+        }
+
+        :-moz-placeholder {
+            color: #c6c6c6;
+        }
+
+        ::-moz-placeholder {
+            color: #c6c6c6;
+        }
+
+        :-ms-input-placeholder {
+            color: #c6c6c6;
+        }
+
+        .circle {
+            width: 4px;
+            height: 4px;
+            background: #938856;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .titlediv {
+            padding-bottom: 10px;
+            border-bottom: 2px dotted #d9d9d9;
+            color: #938856;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .newcourse_listdiv {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+            .newcourse_listdiv a {
+                text-decoration: none;
+                color: #000;
+                font-size: 16px;
+            }
+
+        .newcourse_item {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .newcourse_item_title {
+            width: 80%;
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: middle;
+        }
+        .coure_remain {
+            display: inline-block;
+            width: 20%;
+            text-align: right;
+            color: #938856;
+        }
+        .coure_none {
+            display: inline-block;
+            width: 20%;
+            text-align: right;
+            color: #999;
+        }
+        /*奇数行*/
+        .oddrow {
+            background-color: #f7f7f7;
+        }
+        /*偶数行*/
+        .evenrow {
+            background-color: #fff;
+        }
+        .pageTab {
+            width: 88%;
+            height: 35px;
+            margin: 0 auto;
+            padding: 4% 0 2%;
+        }
+
+            .pageTab .pagination {
+                margin: 0 auto;
+                height: 35px;
+                position: relative;
+            }
+
+                .pageTab .pagination li {
+                    width: 40px;
+                    display: block;
+                    height: 35px;
+                    float: left;
+                }
+
+                    .pageTab .pagination li img {
+                        width: 12px;
+                        padding-top: 9px;
+                        display: block;
+                        border: none;
+                    }
+
+                    .pageTab .pagination li a {
+                        display: block;
+                        width: 25px;
+                        font-size: 12px;
+                        line-height: 25px;
+                        text-align: center;
+                        color: #b2b2b2;
+                        margin: 5px auto 0;
+                    }
+
+        .active a {
+            background-color: #e6e6e6;
+            border-radius: 17.5px;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+        }
+
+        .pageTab .pagination li.next img {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            transform: rotate(180deg);
+            padding-top: 0;
+            padding-bottom: 4px;
+        }
+        .niwo_m_top {
+            margin-top: 10px;
+        }
+        .listdiv {
+            text-align: left;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+            .listdiv a {
+                text-decoration: none;
+                color: #000;
+                font-size: 16px;
+            }
+
+        .item {
+            height: auto;
+            width: 43%;
+            display: inline-block;
+            border: 1px solid #b3b3b3;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        .item_margin {
+            margin-left: 10px;
+        }
+
+        .item_title {
+            font-size: 14px;
+            font-weight: bold;
+            border-bottom: 1px dotted #8e8e8e;
+            text-align: left;
+            padding-bottom: 10px;
+        }
+
+        .item_img {
+            margin-top: 10px;
+            position: relative;
+        }
+
+            .item_img img {
+                height: 80px;
+                width: 100%;
+            }
+
+        .item_state {
+            position: absolute;
+            top: 5px;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 0 30px 30px 0;
+            background-color: #5c575a;
+            color: #fff;
+            font-size: 16px;
+            opacity: 0.8;
+            padding-right: 10px;
+        }
+
+        .item_desc {
+            font-size: 14px;
+            color: #888;
+            text-align: left;
+            line-height: 20px;
+        }
+        .nw_btn_container {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .nw_btn {
+            margin: 0 auto;
+            width: 40%;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            border: 1px solid #938856;
+            color: #938856;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+        }
+        .nw_copyright {
+            text-align: left;
+            height: 60px;
+            background-color: #f5f5f5;
+            line-height: 18px;
+            padding-left: 10px;
+        }
+        .nw_copyright_desc {
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .divblank {
+            width: 100%;
+            height: 100px;
+            clear: both;
+        }
+
+        .bottomdiv {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            z-index: 10;
+        }
+
+        .menu {
+            width: 100%;
+            line-height: 60px;
+            height: 60px;
+            background-color: #938856;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+            .menu div {
+                line-height: 60px;
+                height: 60px;
+                margin: 0;
+                padding: 0;
+                float: left;
+                width: 33.33%;
+            }
+
+                .menu div img {
+                    vertical-align: middle;
+                    width: 22px;
+                    height: 36px;
+                    display: inline-block;
+                }
+        .banner {
+            margin-top: 40px;
+            height: 130px;
+        }
+
+            .banner ul {
+                height: 120px;
+            }
+
+            .banner li {
+                list-style: none;
+                width: 100%;
+            }
+
+                .banner li img {
+                    width: 100%;
+                    height: 160px;
+                }
+    </style>
+    <script type="text/javascript" src="jquery-1.8.2.js"></script>
+    <script src="unslider/js/unslider.js"></script>
+</head>
+<body>
+    <!--top写个公共的-->
+    <div class="top_1">
+        <img src="common/top.jpg" alt="">
+        <a href="http://www.niwolife.cn/" class="index"><img src="common/index.png" alt=""></a>
+        <span class="back" onclick="history.back();"><i class="fa fa-angle-left"></i></span>
+    </div>
+    <div class="searcharea">
+        <div class="searcharea_in">
+            <img src="images/search.png" alt="" /><input id="search" placeholder="输入关键词搜索" />
+        </div>
+    </div>
+    <div class="banner">
+        <ul>
+            <li>
+                <a href="http://www.baidu.com"><img src="images/020/l_0.png" class="pure-img" /></a>
+            </li>
+            <li>
+                <a href="http://www.qq.com"><img src="images/020/l_1.jpg" class="pure-img" /></a>
+            </li>
+            <li>
+                <a href="http://www.sina.com"><img src="images/020/l_2.jpg" class="pure-img" /></a>
+            </li>
+            <li>
+                <a href="http://www.sohu.com"><img src="images/020/l_3.jpg" class="pure-img" /></a>
+            </li>
+        </ul>
+    </div>
+    <div class="mypage">
+        <div class="titlediv">
+            <span class="circle"></span> niwo最新课程
+        </div>
+        
+        <div class="newcourse_listdiv">
+            <a href="">
+                <div class="newcourse_item oddrow">
+                    <span class="newcourse_item_title">犹太财商教育课:培养孩子...</span><span class="coure_remain">少量名额</span>
+                </div>
+            </a>
+            <a href="">
+                <div class="newcourse_item">
+                    <span class="newcourse_item_title">哈佛商学院的人脉搭建法...</span><span class="coure_remain">报名中</span>
+                </div>
+            </a>
+            <a href="">
+                <div class="newcourse_item oddrow">
+                    <span class="newcourse_item_title">niwo x胡因梦.爱与亲密两日...</span><span class="coure_remain">报名中</span>
+                </div>
+            </a>
+            <a href="">
+                <div class="newcourse_item">
+                    <span class="newcourse_item_title">如何拥有更好的亲密关系</span><span class="coure_none">已满</span>
+                </div>
+            </a>
+        </div>
+        <div class="pageTab">
+            <ul class="pagination" style="width: 280px;">
+                <li class="prev disabled"><span><img src="images/next.png" alt=""></span></li>
+                <li class="active"><a href="" data-page="0">1</a></li>
+                <li><a href="" data-page="1">2</a></li>
+                <li><a href="" data-page="2">3</a></li>
+                <li><a href="" data-page="3">4</a></li>
+                <li><a href="" data-page="4">5</a></li>
+                <li class="next"><a href="javascript:void(0);" data-page="1"><img src="images/next.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="titlediv niwo_m_top">
+            <span class="circle"></span> niwo课程
+        </div>
+        <div class="listdiv">
+            <div class="item">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">少量名额</div><img src="images/s1.png" alt="" /></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+            <div class="item item_margin">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">报名中</div><img src="images/s2.png" alt="" /></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+            <div class="item">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">少量名额</div><img src="images/s1.png" alt="" /></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+            <div class="item item_margin">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">报名中</div><img src="images/s2.png" alt="" /></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+            <div class="item">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">少量名额</div><img src="images/s1.png" alt="" /></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+            <div class="item item_margin">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">报名中</div><img src="images/s2.png" alt="" /></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+        </div>
+        <div class="nw_btn_container">
+            <div class="nw_btn">the more</div>
+        </div>
+    </div>
+
+    <div class="nw_copyright">
+        <p class="nw_copyright_desc">COPYRIGHT©2006-2015你我（北京）文化传媒有限公司</p>
+        <p>京IP备14055718号－2</p>
+    </div>
+    <div class="divblank"></div>
+    <div class="bottomdiv">
+        <div class="menu">
+            <div><img src="images/kcon.png" alt="" /></div>
+            <div><img src="images/zfoff.png" alt="" /></div>
+            <div><img src="images/myoff.png" alt="" /></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            var unslider = $('.banner').unslider({
+                speed: 500, // 切换的速度
+                delay: 3000, // 切换的速度
+                keys: true, // 是否启用左右按钮控制slider切换
+                fluid: false, // 是否每次在容器大小改变的时候，修正slider的大小
+                pause: true, // 鼠标以上去是否暂停播放
+                arrows: false, // 是否显示左右箭头，用于slider切换
+                dots: true // 是否显示白色圆点，用于slider切换
+            });
+        });
+    </script>
+</body>
+</html>

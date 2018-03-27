@@ -1,0 +1,304 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>专访</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+        .niwo_title {
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            vertical-align: middle;
+            color: #938856;
+        }
+
+        .niwo_line {
+            height: 1px;
+            width: 30px;
+            display: inline-block;
+            border-bottom: 1px solid #000;
+            vertical-align: middle;
+        }
+
+        .niwo_top_title {
+            margin: 0 5px 0 5px;
+        }
+
+        .niwo_desc_container {
+            height: auto;
+            color: #333;
+            padding: 10px;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            font: 12px/1 "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        }
+
+        .niwo_desc {
+            line-height: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .zf_title {
+            background-color: #f4f4f4;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 10px;
+            color: #938856;
+            font-weight: bold;
+        }
+
+        .circle {
+            width: 4px;
+            height: 4px;
+            background: #938856;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            display: inline-block;
+            margin-top: -4px;
+            vertical-align: middle;
+        }
+
+        .listzhuanfang {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+            .listzhuanfang a {
+                text-decoration: none;
+                color: #000;
+                font-size: 16px;
+            }
+
+        .zfitem {
+            width: 100%;
+            height: 100px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .zfimg {
+            display: inline-block;
+            width: 25%;
+            height: 100px;
+            line-height: 100px;
+            text-align: left;
+        }
+
+            .zfimg img {
+                width: 100%;
+                height: 80px;
+                vertical-align: middle;
+            }
+
+        .zfcontent {
+            display: inline-block;
+            width: 70%;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .zftitle {
+            font-size: 15px;
+            font-weight: bold;
+            height: 25px;
+            padding-top: 20px;
+        }
+
+        .zfdesc {
+            height: 60px;
+            padding-top: 5px;
+            line-height: 18px;
+            color: #a6a6a6;
+            font-size: 12px;
+        }
+
+        .pageTab {
+            width: 88%;
+            height: 35px;
+            margin: 0 auto;
+            padding: 4% 0 2%;
+        }
+
+            .pageTab .pagination {
+                margin: 0 auto;
+                height: 35px;
+                position: relative;
+            }
+
+                .pageTab .pagination li {
+                    width: 40px;
+                    display: block;
+                    height: 35px;
+                    float: left;
+                }
+
+                    .pageTab .pagination li img {
+                        width: 12px;
+                        padding-top: 9px;
+                        display: block;
+                        border: none;
+                    }
+
+                    .pageTab .pagination li a {
+                        display: block;
+                        width: 25px;
+                        font-size: 12px;
+                        line-height: 25px;
+                        text-align: center;
+                        color: #b2b2b2;
+                        margin: 5px auto 0;
+                    }
+
+        .active a {
+            background-color: #e6e6e6;
+            border-radius: 17.5px;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+        }
+
+        .pageTab .pagination li.next img {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            transform: rotate(180deg);
+            padding-top: 0;
+            padding-bottom: 4px;
+        }
+
+        .divblank {
+            width: 100%;
+            height: 100px;
+            clear: both;
+        }
+
+        .bottomdiv {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            z-index: 10;
+        }
+
+        .menu {
+            width: 100%;
+            line-height: 60px;
+            height: 60px;
+            background-color: #938856;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+            .menu div {
+                line-height: 60px;
+                height: 60px;
+                margin: 0;
+                padding: 0;
+                float: left;
+                width: 33.33%;
+            }
+
+                .menu div img {
+                    vertical-align: middle;
+                    width: 22px;
+                    height: 36px;
+                }
+    </style>
+</head>
+<body>
+    <div class="niwo_title">
+        <span class="niwo_line"> </span>
+        <span class="niwo_top_title">niwo专访</span>
+        <span class="niwo_line"> </span>
+    </div>
+    <div class="niwo_desc_container">
+        <div class="niwo_desc">
+            我们和有意思、有故事的、有能量的人一起聊天，有哭、有笑、有赞叹、有唏嘘。采访了数百位有意思的人，说了数百个有意思的故事。把这些活色生香的人生写出来给你读别人的好故事，要共同分享......
+        </div>
+    </div>
+    <div class="zf_title">
+        <span class="circle"></span> 分类标题
+    </div>
+    <div class="listzhuanfang">
+        <a href="">
+            <div class="zfitem">
+                <div class="zfimg">
+                    <img src="images/zf2.png" alt="" />
+                </div>
+                <div class="zfcontent">
+                    <div class="zftitle">好的事业，才不在乎我从多少岁开</div>
+                    <div class="zfdesc">2014年之前，陈冠丹一直在努力成为一名优秀的媒体人，兢兢业业，从没有放松过...</div>
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="zfitem">
+                <div class="zfimg">
+                    <img src="images/zf1.png" alt="" />
+                </div>
+                <div class="zfcontent">
+                    <div class="zftitle">对的婚姻，不是雪中送炭而是锦上</div>
+                    <div class="zfdesc">唐微，生于台湾，后随父母定居美国</div>
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="zfitem">
+                <div class="zfimg">
+                    <img src="images/zf2.png" alt="" />
+                </div>
+                <div class="zfcontent">
+                    <div class="zftitle">好的事业，才不在乎我从多少岁开</div>
+                    <div class="zfdesc">2014年之前，陈冠丹一直在努力成为一名优秀的媒体人，兢兢业业，从没有放松过...</div>
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="zfitem">
+                <div class="zfimg">
+                    <img src="images/zf1.png" alt="" />
+                </div>
+                <div class="zfcontent">
+                    <div class="zftitle">对的婚姻，不是雪中送炭而是锦上</div>
+                    <div class="zfdesc">唐微，生于台湾，后随父母定居美国</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="pageTab">
+        <ul class="pagination" style="width: 280px;">
+            <li class="prev disabled"><span><img src="images/next.png" alt=""></span></li>
+            <li class="active"><a href="" data-page="0">1</a></li>
+            <li><a href="" data-page="1">2</a></li>
+            <li><a href="" data-page="2">3</a></li>
+            <li><a href="" data-page="3">4</a></li>
+            <li><a href="" data-page="4">5</a></li>
+            <li class="next"><a href="javascript:void(0);" data-page="1"><img src="images/next.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="divblank"></div>
+    <div class="bottomdiv">
+        <div class="menu">
+            <div><img src="images/kcoff.png" alt="" /></div>
+            <div><img src="images/zfon.png" alt="" /></div>
+            <div><img src="images/myoff.png" alt="" /></div>
+        </div>
+    </div>
+</body>
+</html>

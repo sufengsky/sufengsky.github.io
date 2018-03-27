@@ -1,0 +1,423 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>注册</title>
+    <link href="fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <style type="text/css">
+        * {
+            padding: 0;
+        }
+
+        .mypage {
+            height: auto;
+            min-height: 300px;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 10px;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            font: 12px/1 "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .layerdiv {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .r50 {
+            width: 60px;
+            float: right;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+
+            .r50 img {
+                width: 20px;
+                height: 20px;
+                margin-top: 5px;
+            }
+
+        .l50 {
+            width: 60px;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .m {
+            margin-left: 60px;
+            margin-right: 50px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .r100 {
+            width: 100px;
+            float: right;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+
+        .m2 {
+            margin-left: 60px;
+            margin-right: 100px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #account {
+            color: #938856;
+            width: 90%;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+
+        #pwddiv {
+            position: relative;
+            margin: 0;
+            width: 90%;
+        }
+
+        #pwd {
+            position: absolute;
+            top: 5px;
+            font-size: 14px;
+            font-family: 宋体;
+            width: 90%;
+            border: none;
+            outline: none;
+        }
+
+        #pwdv {
+            position: absolute;
+            top: 5px;
+            font-size: 14px;
+            font-family: 宋体;
+            width: 90%;
+            border: none;
+            outline: none;
+        }
+
+        #pwdhidden {
+            position: absolute;
+            top: 5px;
+            font-size: 14px;
+            font-family: 宋体;
+            -moz-opacity: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            width: 90%;
+            border: none;
+            outline: none;
+        }
+
+        #pwdicon {
+            width: 25px;
+        }
+
+        #validcodediv {
+            position: relative;
+            margin: 0;
+            width: 90%;
+        }
+
+        #validcode {
+            position: absolute;
+            top: 5px;
+            font-size: 14px;
+            font-family: 宋体;
+            width: 90%;
+            border: none;
+            outline: none;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #938856;
+        }
+
+        :-moz-placeholder {
+            color: #938856;
+        }
+
+        ::-moz-placeholder {
+            color: #938856;
+        }
+
+        :-ms-input-placeholder {
+            color: #938856;
+        }
+
+        .sf-btn {
+            border: solid 1px #938856;
+            background-color: #938856;
+            border-radius: 5px;
+            display: block;
+            margin: 10px auto;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            width: 99%;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 2%;
+            box-shadow: 0 0 0;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            outline: medium;
+        }
+
+        .denglv {
+            float: left;
+            margin-left: 5px;
+        }
+
+            .denglv a {
+                text-decoration: none;
+                color: #938856;
+            }
+
+        .sf-btn-validcode {
+            border: solid 1px #938856;
+            background-color: #e1dbbe;
+            border-radius: 5px;
+            display: block;
+            width: 90%;
+            height: 28px;
+            line-height: 28px;
+            padding: 0 2%;
+            box-shadow: 0 0 0;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            outline: medium;
+        }
+        #agreediv {
+            height: 20px;
+            line-height: 20px;
+            vertical-align: middle;
+            color: #000;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        #chkagree {
+            background-color: #fff;
+            vertical-align: middle;
+            margin-top: -2px;
+            margin-right: 5px;
+        }
+        #agreediv a {
+            text-decoration: none;
+            color: #938856;
+        }
+
+
+		#alterdialog {
+			text-align: center;
+			margin: 0 auto;
+			margin-top:25px;
+		}
+		#content {
+			font-size: 16px;
+			color:#000;			
+		}
+		.btndiv{
+			position:absolute;
+			width:100%;
+			bottom:0;
+			border-top:1px solid #e0e0e0;
+			height:30px;
+			line-height:30px;
+		}
+		.btndiv a{
+			display:inline-block;
+			width:48%;
+			text-decoration:none;
+			color:#5d54e5;
+		}
+		#btnConfirm{
+			border-left:1px solid #e0e0e0;
+		}
+		#infodialog{
+			text-align: center;
+			margin: 0 auto;
+		}
+		.infohelp{
+			font-size:14px;
+		}
+		#info{
+		    color:#000;
+			line-height:12px;
+		}
+    </style>
+</head>
+<body>
+    <div class="mypage">
+        <form action="zhucesuc.html">
+            <div class="title">
+                使用手机号码注册
+            </div>
+            <div class="layerdiv">
+                <div class="r50"><img id="accounticon" src="images/close.png" /></div>
+                <div class="l50">账号</div>
+                <div class="m">
+                    <input id="account" placeholder="请输入账号" />
+                </div>
+            </div>
+            <div class="layerdiv">
+                <div class="r50"><img id="pwdicon" src="images/eyeoff.png" /></div>
+                <div class="l50">密码</div>
+                <div class="m">
+                    <div id="pwddiv">
+                        <input id="pwd" placeholder="请输入密码" />
+                        <input id="pwdv" placeholder="请输入密码" />
+                        <input id="pwdhidden" placeholder="请输入密码" />
+                    </div>
+                </div>
+            </div>
+            <div class="layerdiv">
+                <div class="r100"><input type="button" class="sf-btn-validcode" id="btnValidateCode" value="获取验证码"></div>
+                <div class="l50">验证码</div>
+                <div class="m2">
+                    <div id="validcodediv">
+                        <input id="validcode" placeholder="请输入验证码" />
+                    </div>
+                </div>
+            </div>
+            <div id="agreediv">
+                <input type="checkbox" id="chkagree"/>我同意<a href="">《niwo课程保密协议》</a>
+            </div>
+            <div>
+                <input type="submit" class="sf-btn" value="注册">
+            </div>
+            <div>
+                <div class="denglv"><a href="denglv.html">已有用户登录</a></div>
+            </div>
+        </form>
+
+		
+    </div>
+
+	<div style="display: none">
+			<div id="alterdialog">
+				<div id="content">境外手机号请联系客服</div>
+				<div class="btndiv">
+					<a href="#" id="btnCancel">取消</a>
+					<a href="#" id="btnConfirm">联系客服</a>
+				</div>
+			</div>
+			<a href="#alterdialog" id="addbtndiv">测试</a>
+		</div>
+
+		<div style="display: none">
+			<div id="infodialog">
+				<div id="info">
+					<p>温馨提示</p>
+					<P class="infohelp">(Dear,遇到问题请联系小助手乐乐)</p>
+					<p style="color:#8d8d8d;margin-top:32px;">(微信号)</p>
+					<p style="color:#968859">niwolama</p>
+					<P style="color:#8d8d8d">(电话)</P>
+					<p style="color:#968859">400-030-3975</p>
+				</div>
+				<div class="btndiv">			   
+					<a href="#" id="btnknow">我知道了</a>
+				</div>
+			</div>
+			<a href="#infodialog" id="ainfodialog">测试</a>
+		</div>
+    <script type="text/javascript" src="jquery-1.8.2.js"></script>
+    <script src="fancybox/jquery.fancybox.pack.js"></script>
+    <script>
+        $(function () {
+            var $accounticon = $("#accounticon");
+            var $account = $("#account");
+            $accounticon.hide();
+            $account.keyup(function () {
+                if ($account.val().length > 0) {
+                    $accounticon.show();
+                } else {
+                    $accounticon.hide();
+                }
+            });
+            $accounticon.click(function () {
+                $account.val("");
+                $accounticon.hide();
+            });
+            $("#pwdv").hide();
+            $("#pwdhidden").keyup(function () {
+                $("#pwd").val($(this).val().replace(/./g, '*'));
+                $("#pwdv").val($(this).val());
+            });
+            $("#pwdicon").click(function () {
+                var imgSrc = $(this).attr("src");
+                if (imgSrc == "images/eyeoff.png") {
+                    $(this).attr("src", "images/eyeon.png");
+                    $("#pwd").hide();
+                    $("#pwdv").show();
+                } else {
+                    $(this).attr("src", "images/eyeoff.png");
+                    $("#pwd").show();
+                    $("#pwdv").hide();
+                }
+            });
+
+
+
+			$("#addbtndiv").fancybox({
+			    'padding':0,
+                'closeBtn': false,
+                'autoDimensions': false,
+                'centerOnScroll': true,
+                'scrolling': false,
+                'width': 200,
+                'height': 100,
+                'minHeight': 100,
+                'autoSize': false
+            }); 
+			$("#ainfodialog").fancybox({
+			    'padding':0,
+                'closeBtn': false,
+                'autoDimensions': false,
+                'centerOnScroll': true,
+                'scrolling': false,
+                'width': 260,
+                'height': 240,
+                'minHeight': 240,
+                'autoSize': false
+            });
+			$("#btnCancel").click(function (e) {
+                e.preventDefault();
+                $.fancybox.close();
+            });
+            $("#btnConfirm").click(function (e) {
+                 $("#ainfodialog").click();
+            });
+			$("#btnknow").click(function (e) {
+                e.preventDefault();
+                $.fancybox.close();
+            });
+			$("#btnValidateCode").click(function(){
+				$("#addbtndiv").click();
+			});
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="en-US" xmlns:wb="http://open.weibo.com/wb">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>搜索结果</title>
+    <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link href="common/common.css" rel="stylesheet" />
+    <link href="default.css" rel="stylesheet" />
+    <style type="text/css">
+        .mypage {
+            height: auto;
+            min-height: 300px;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 10px;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            font: 12px/1 "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            text-align: center;
+        }
+
+        .searcharea {
+            width: 100%;
+            height: 50px;
+            background-color: #eaeaea;
+            padding-top: 20px;
+        }
+
+        .searcharea_in {
+            margin: 0 auto;
+            width: 90%;
+            height: 30px;
+            line-height: 30px;
+            background-color: #fff;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            line-height: 25px;
+            vertical-align: middle;
+        }
+
+            .searcharea_in img {
+                width: 16px;
+                height: 16px;
+                vertical-align: middle;
+                display: inline-block;
+                margin-left: 5px;
+            }
+
+        #search {
+            height: 25px;
+            margin: 0;
+            margin-left: 5px;
+            border: none;
+            outline: none;
+            padding: 0;
+            vertical-align: middle;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #c6c6c6;
+        }
+
+        :-moz-placeholder {
+            color: #c6c6c6;
+        }
+
+        ::-moz-placeholder {
+            color: #c6c6c6;
+        }
+
+        :-ms-input-placeholder {
+            color: #c6c6c6;
+        }
+
+        .circle {
+            width: 6px;
+            height: 6px;
+            background: #938856;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-top: -4px;
+            vertical-align: middle;
+        }
+
+        .titlediv {
+            padding-bottom: 10px;
+            border-bottom: 2px dotted #d9d9d9;
+            color: #938856;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .listdiv {
+            text-align: left;
+            margin-top: 10px;
+            text-align:center;
+            
+        }
+
+            .listdiv a {
+                text-decoration: none;
+                color: #000;
+                font-size: 16px;
+            }
+
+        .item {
+            height: auto;
+            width: 43%;
+            display: inline-block;
+            border: 1px solid #b3b3b3;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        .item_margin {
+            margin-left: 10px;
+        }
+        .item_title {
+            font-size: 14px;
+            font-weight: bold;
+            border-bottom: 1px dotted #8e8e8e;
+            text-align: left;
+            padding-bottom: 10px;
+        }
+        .item_img{
+		    margin-top:10px;
+            position:relative;
+        } 
+        .item_img img{
+            height:80px;
+            width:100%;
+        }
+        .item_state {
+            position: absolute;
+            top: 5px;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 0 30px 30px 0;
+            background-color: #5c575a;
+            color: #fff;
+            font-size: 16px;
+            opacity: 0.8;
+            padding-right: 10px;
+        }
+        .item_desc {
+            font-size: 14px;
+            color: #888;
+            text-align: left;
+            line-height: 20px;
+        } 
+        .zhuanfang {
+            margin-top: 10px;
+        }
+
+        .listzhuanfang {
+            margin-top: 10px;
+        }
+
+            .listzhuanfang a {
+                text-decoration: none;
+                color: #000;
+                font-size: 16px;
+            }
+
+        .zfitem {
+            width: 100%;
+            height: 100px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .zfimg {
+            display: inline-block;
+            width: 25%;
+            height: 100px;
+            line-height: 100px;
+            text-align: left;
+        }
+
+            .zfimg img {
+                width: 100%;
+                height: 80px;
+                vertical-align: middle;
+                display: inline-block;
+            }
+
+        .zfcontent {
+            display: inline-block;
+            width: 70%;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .zftitle {
+            font-size: 15px;
+            font-weight: bold;
+            height: 25px;
+            padding-top: 20px;
+        }
+
+        .zfdesc {
+            height: 60px;
+            padding-top: 5px;
+            line-height: 18px;
+            color: #a6a6a6;
+            font-size: 12px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.8.2.js"></script>
+</head>
+<body>
+    <!--top写个公共的-->
+    <div class="top_1">
+        <img src="common/top.jpg">
+        <a href="http://www.niwolife.cn/" class="index"><img src="common/index.png" alt=""></a>
+        <span class="back" onclick="history.back();"><i class="fa fa-angle-left"></i></span>
+    </div>
+    <div class="searcharea">
+        <div class="searcharea_in">
+            <img src="images/search.png" alt="" /><input id="search" placeholder="输入关键词搜索" />
+        </div>
+    </div>
+    <div class="mypage">
+        <div class="titlediv">
+            <span class="circle"></span> 婚姻相关的课程
+        </div>
+        <div class="listdiv">
+            <div class="item">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">少量名额</div><img src="images/s1.png" alt=""/></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+            <div class="item item_margin">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">报名中</div><img src="images/s2.png" alt="" /></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+            <div class="item">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">少量名额</div><img src="images/s1.png" alt="" /></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+            <div class="item item_margin">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">报名中</div><img src="images/s2.png" alt="" /></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+            <div class="item">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">少量名额</div><img src="images/s1.png" alt="" /></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+            <div class="item item_margin">
+                <div class="item_title">对的婚姻，不是雪中送炭而是锦上添花</div>
+                <div class="item_img"><div class="item_state">报名中</div><img src="images/s2.png" alt="" /></div>
+                <div class="item_desc">前言唐徽，生于台湾，后随父母定居美国，普华永道大中华地区和全球董事会成员.</div>
+            </div>
+        </div>
+
+
+        <div class="titlediv zhuanfang">
+            <span class="circle"></span> 婚姻相关的专访
+        </div>
+        <div class="listzhuanfang">
+            <a href="">
+                <div class="zfitem">
+                    <div class="zfimg">
+                        <img src="images/zf2.png" alt="" />
+                    </div>
+                    <div class="zfcontent">
+                        <div class="zftitle">好的事业，才不在乎我从多少岁开</div>
+                        <div class="zfdesc">2014年之前，陈冠丹一直在努力成为一名优秀的媒体人，兢兢业业，从没有放松过...</div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="zfitem">
+                    <div class="zfimg">
+                        <img src="images/zf1.png" alt="" />
+                    </div>
+                    <div class="zfcontent">
+                        <div class="zftitle">对的婚姻，不是雪中送炭而是锦上</div>
+                        <div class="zfdesc">唐微，生于台湾，后随父母定居美国</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>登录</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .mypage {
+            height: auto;
+            min-height: 300px;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 10px;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            font: 12px/1 "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            text-align: center;
+        }
+        .title {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .layerdiv {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .r50 {
+            width: 60px;
+            float: right;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+
+            .r50 img {
+                width: 20px;
+                height: 20px;
+                margin-top: 5px;
+            }
+
+        .l50 {
+            width: 90px;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .m {
+            margin-left: 90px;
+            margin-right: 50px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #pwd,#pwd2 {
+            color: #938856;
+            width: 90%;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #938856;
+        }
+
+        :-moz-placeholder {
+            color: #938856;
+        }
+
+        ::-moz-placeholder {
+            color: #938856;
+        }
+
+        :-ms-input-placeholder {
+            color: #938856;
+        }
+
+        .sf-btn {
+            border: solid 1px #938856;
+            background-color: #938856;
+            border-radius: 5px;
+            display: block;
+            margin: 10px auto;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            width: 99%;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 2%;
+            box-shadow: 0 0 0;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            outline: medium;
+        }
+    </style>
+</head>
+<body>
+    <div class="mypage">
+        <form action="chongzi2.html">
+            <div class="title">
+                重置密码
+            </div>
+            <div class="layerdiv">
+                <div class="r50"><img id="pwdicon" src="images/close.png" alt="" /></div>
+                <div class="l50">新密码</div>
+                <div class="m">
+                    <input id="pwd" placeholder="请输入新密码" />
+                </div>
+            </div>
+            <div class="layerdiv">
+                <div class="r50"><img id="pwd2icon" src="images/close.png" alt="" /></div>
+                <div class="l50">确认新密码</div>
+                <div class="m">
+                    <input id="pwd2" placeholder="请再次输入新密码" />
+                </div>
+            </div>
+            <div>
+                <input type="submit" class="sf-btn" value="提交">
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="jquery-1.8.2.js"></script>
+    <script>
+        $(function () {
+            var $accounticon = $("#pwdicon");
+            var $account = $("#pwd");
+            $accounticon.hide();
+            $account.keyup(function () {
+                if ($account.val().length > 0) {
+                    $accounticon.show();
+                } else {
+                    $accounticon.hide();
+                }
+            });
+            $accounticon.click(function () {
+                $account.val("");
+                $accounticon.hide();
+            });
+            var $accounticon2 = $("#pwd2icon");
+            var $account2 = $("#pwd2");
+            $accounticon2.hide();
+            $account2.keyup(function () {
+                if ($account2.val().length > 0) {
+                    $accounticon2.show();
+                } else {
+                    $accounticon2.hide();
+                }
+            });
+            $accounticon2.click(function () {
+                $account2.val("");
+                $accounticon2.hide();
+            });
+        });
+    </script>
+</body>
+</html>

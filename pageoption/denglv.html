@@ -1,0 +1,233 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>登录</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mypage {
+            height: auto;
+            min-height: 300px;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 10px;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            font: 12px/1 "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .layerdiv {
+            width: 100%;
+            margin: 0 auto;
+            margin-top:20px;
+            border-bottom:1px solid #ccc;
+        }
+        .r50 {
+            width: 50px;
+            float: right;
+            height:30px;
+            text-align:center;
+            line-height:30px;
+            vertical-align:middle;
+        }
+            .r50 img {
+                width: 20px;
+                height: 20px;
+                margin-top:5px;
+            }
+        .l50 {
+            width: 50px;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            font-weight:bold;
+            font-size:16px;
+        }
+        .m {
+            margin-left: 50px;
+            margin-right: 50px;
+            height: 30px;
+            line-height: 30px;
+        }
+        #account {
+            color: #938856;
+            width:90%;
+            border:none;
+            outline:none;
+            font-size:15px;
+        }
+        #pwddiv {
+            position: relative;
+            margin:0;
+            width:90%;
+        }
+
+        #pwd {
+            position: absolute;
+            top: 5px;
+            font-size: 14px;
+            font-family: 宋体;
+            width: 90%;
+            border: none;
+            outline: none;
+        }
+
+        #pwdv {
+            position: absolute;
+            top: 5px;
+            font-size: 14px;
+            font-family: 宋体;
+            width: 90%;
+            border: none;
+            outline: none;
+        }
+
+        #pwdhidden {
+            position: absolute;
+            top: 5px;
+            font-size: 14px;
+            font-family: 宋体;
+            -moz-opacity: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            width: 90%;
+            border:none;
+            outline:none;
+        }
+        #pwdicon{
+            width:25px;
+        }
+        ::-webkit-input-placeholder {
+            color: #938856;
+        }
+
+        :-moz-placeholder {
+            color: #938856;
+        }
+
+        ::-moz-placeholder {
+            color: #938856;
+        }
+
+        :-ms-input-placeholder {
+            color: #938856;
+        }
+        .sf-btn {
+            border: solid 1px #938856;
+            background-color: #938856;
+            border-radius: 5px;
+            display: block;
+            margin: 10px auto;
+            margin-top:30px;
+            margin-bottom:10px;
+            width: 99%;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 2%;
+            box-shadow: 0 0 0;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            outline: medium;
+        }
+        .reg{
+            float:left;
+            margin-left:5px;
+        }
+            .reg a {
+                text-decoration: none;
+                color: #938856;
+            }
+        .forgetpwd {
+            float: right;
+            margin-right: 5px;
+        }
+            .forgetpwd a {
+                text-decoration: none;
+                color:#000;
+            }
+    </style>
+</head>
+<body>
+    <div class="mypage">
+        <form>
+            <div class="title">
+                使用手机号码登录
+            </div>
+            <div class="layerdiv">
+                <div class="r50"><img id="accounticon" src="images/close.png" /></div>
+                <div class="l50">账号</div>
+                <div class="m">
+                    <input id="account" placeholder="请输入手机号" />
+                </div>
+            </div>
+            <div class="layerdiv">
+                <div class="r50"><img id="pwdicon" src="images/eyeoff.png" /></div>
+                <div class="l50">密码</div>
+                <div class="m">
+                    <div id="pwddiv">
+                        <input id="pwd" placeholder="请输入密码" />
+                        <input id="pwdv" placeholder="请输入密码" />
+                        <input id="pwdhidden" placeholder="请输入密码" />
+                    </div>
+                </div>
+            </div>
+          <div>
+              <input type="submit" class="sf-btn" value="登录">
+          </div>
+          <div>
+              <div class="reg"><a href="zhuce.html">新用户注册</a></div>
+              <div class="forgetpwd"><a href="">忘记密码?</a></div>
+          </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="jquery-1.8.2.js"></script>
+    <script>
+        $(function () {
+            var $accounticon = $("#accounticon");
+            var $account = $("#account");
+            $accounticon.hide();
+            $account.keyup(function () {
+                if ($account.val().length > 0) {
+                    $accounticon.show();
+                } else {
+                    $accounticon.hide();
+                }
+            });
+            $accounticon.click(function () {
+                $account.val("");
+                $accounticon.hide();
+            });
+            $("#pwdv").hide();
+            $("#pwdhidden").keyup(function () {
+                $("#pwd").val($(this).val().replace(/./g, '*'));
+                $("#pwdv").val($(this).val());
+            });
+            $("#pwdicon").click(function () {
+                var imgSrc = $(this).attr("src");
+                if (imgSrc == "images/eyeoff.png") {
+                    $(this).attr("src", "images/eyeon.png");
+                    $("#pwd").hide();
+                    $("#pwdv").show();
+                } else {
+                    $(this).attr("src", "images/eyeoff.png");
+                    $("#pwd").show();
+                    $("#pwdv").hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
