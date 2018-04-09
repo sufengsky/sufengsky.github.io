@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link href="css/pure-min.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <title>考勤列表</title>
+    <style type="text/css">
+        body {
+            background-color: #f6f6f6;
+        }
+
+        .xj-top {
+            width: 100%;
+            height: 40px;
+            position: fixed !important;
+            top: 0;
+            z-index: 10;
+            background-color: #000;
+            color: #fff;
+            line-height: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .xj-grid-a i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-bottom: solid 2px #fff;
+            border-right: solid 2px #fff;
+            margin-left: 2px;
+            margin-right: -2px;
+            -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+        .xj-grid-a {
+            float: left;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding-top: 2px;
+        }
+
+        .xj-grid-b {
+            float: right;
+            width: 42px;
+            height: 40px;
+            color: #29a0d8;
+        }
+
+        .xj-grid-m {
+            height: 40px;
+            line-height: 40px;
+            margin: 0 50px 0 40px;
+            text-align: center;
+        }
+
+        .xj-blank {
+            width: 100%;
+            height: 40px;
+        }
+
+        .xj-kq-content {
+            background-color: #fff;
+        }
+
+        .xj-new-tab {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            height: 40px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+
+            .xj-new-tab div {
+                width: 80px;
+                font-size: 16px;
+                height: 38px;
+                line-height: 38px;
+                margin: 0 auto;
+            }
+
+        .xj-new-tab-selected {
+            display: block;
+            color: #29a0d8;
+            border-bottom: 2px solid #29a0d8;
+        }
+
+        .xj-kq-search-container {
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #ececec;
+            text-align: center;
+        }
+         .xj-kq-search-container select {
+                height: 30px;
+                line-height: 30px;
+                vertical-align: middle;
+                outline: none;
+                width: 70px;
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAKCAQAAAD4dX0pAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsSAAALEgHS3X78AAAAAmJLR0QAAKqNIzIAAACVSURBVBjTYzCeYlzBgBMYZxpPYTCOMf5rnIlDQaTxH+N8EKMIyPDDosDL+KdxHYzTbvzV2BFNgQ1QrBfBZTSeZvzBWBdJgT6QP8eYEVkPs/Fq48fGSlCeivEr45XGzOg2sxnvNb5tLApkyRg/Mt5qzIbN/TzGJ4BQ0fia8QFjLlyhIAqU/ml82pifAU9QyRjvAFmGDADdNin8FSflvwAAAABJRU5ErkJggg==') /*images/100/down.png*/ 85% / 28% no-repeat #fdfdfd;
+                border: 1px solid #999;
+         }
+        .xj-kq-item-index {
+            height: 120px;
+            line-height: 120px;
+            text-align: center;
+            margin: 0 auto;
+            border-bottom: 1px solid #ececec;
+            border-right: 1px solid #ececec;
+        }
+
+        .xj-kq-item-detail {
+            height: 120px;
+            border-bottom: 1px solid #ececec;
+        }
+
+        .xj-kq-item-remark {
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            padding-left: 3px;
+            font-size: 12px;
+        }
+
+            .xj-kq-item-remark input {
+                height: 25px;
+                width: 97%;
+                outline: none;
+            }
+
+        .xj-kq-item-detail-name {
+            height: 39px;
+            line-height: 39px;
+            font-size: 12px;
+            border-bottom: 1px solid #ececec;
+            border-right: 1px solid #ececec;
+            padding-left: 3px;
+        }
+
+        .xj-kq-item-detail-phone {
+            height: 39px;
+            line-height: 39px;
+            font-size: 12px;
+            border-bottom: 1px solid #ececec;
+            border-right: 1px solid #ececec;
+            padding-left: 3px;
+        }
+
+        .xj-kq-item-detail-grade {
+            height: 39px;
+            line-height: 39px;
+            font-size: 12px;
+            border-right: 1px solid #ececec;
+            border-bottom: 1px solid #ececec;
+            padding-left: 3px;
+        }
+
+        .xj-kq-item-detail-state {
+            height: 39px;
+            line-height: 39px;
+            font-size: 12px;
+            border-bottom: 1px solid #ececec;
+            padding-left: 3px;
+        }
+
+            .xj-kq-item-detail-state select {
+                height: 30px;
+                line-height: 30px;
+                vertical-align: middle;
+                outline: none;
+                width: 95%;
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAKCAQAAAD4dX0pAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsSAAALEgHS3X78AAAAAmJLR0QAAKqNIzIAAACVSURBVBjTYzCeYlzBgBMYZxpPYTCOMf5rnIlDQaTxH+N8EKMIyPDDosDL+KdxHYzTbvzV2BFNgQ1QrBfBZTSeZvzBWBdJgT6QP8eYEVkPs/Fq48fGSlCeivEr45XGzOg2sxnvNb5tLApkyRg/Mt5qzIbN/TzGJ4BQ0fia8QFjLlyhIAqU/ml82pifAU9QyRjvAFmGDADdNin8FSflvwAAAABJRU5ErkJggg==') /*images/100/down.png*/ 85% / 28% no-repeat #fdfdfd;
+                border: 1px solid #999;
+            }
+
+        .xj-kq-item-detail-tel {
+            height: 39px;
+            line-height: 39px;
+            font-size: 12px;
+            border-right: 1px solid #ececec;
+            border-bottom: 1px solid #ececec;
+            padding-left: 3px;
+        }
+
+        .xj-kq-item-detail-teacher {
+            height: 39px;
+            line-height: 39px;
+            font-size: 12px;
+            border-bottom: 1px solid #ececec;
+            padding-left: 3px;
+        }
+
+        .xj-blank-bttom {
+            width: 100%;
+            height: 54px;
+        }
+
+        .xj-submit-container {
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #29a0d8;
+            text-align: center;
+            position: fixed !important;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-top">
+                <div class="xj-grid-a">
+                    <a href="">
+                        <i></i>
+                    </a>
+                </div>
+                <div class="xj-grid-b"><span id="btnManage"></span></div>
+                <div class="xj-grid-m">
+                    考勤
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-1">
+            <div class="xj-blank"></div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div class="xj-new-tab">
+                <div class="xj-new-tab-selected" data-target="xj-list-kq">考勤</div>
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="xj-new-tab">
+                <div data-target="xj-list-kqls">历史记录</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-kq-content" id="xj-list-kq">
+                <div class="pure-g">
+                    <div class="pure-u-1-8">
+                        <div class="xj-kq-item-index">1</div>
+                    </div>
+                    <div class="pure-u-7-8">
+                        <div class="xj-kq-item-detail">
+                            <div class="pure-g">
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-name">欧阳晨源201406</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-phone">13717614311</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-state">
+                                        <select><option>出勤</option></select>
+                                    </div>
+                                </div>
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-grade">3年级1班</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-tel">01088370499</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-teacher">刘老师</div>
+                                </div>
+                                <div class="pure-u-1">
+                                    <div class="xj-kq-item-remark">
+                                        <input type="text" placeholder="请输入备注信息"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1-8">
+                        <div class="xj-kq-item-index">2</div>
+                    </div>
+                    <div class="pure-u-7-8">
+                        <div class="xj-kq-item-detail">
+                            <div class="pure-g">
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-name">欧阳晨源201406</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-phone">13717614311</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-state">
+                                        <select><option>出勤</option></select>
+                                    </div>
+                                </div>
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-grade">3年级1班</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-tel">01088370499</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-teacher">刘老师</div>
+                                </div>
+                                <div class="pure-u-1">
+                                    <div class="xj-kq-item-remark">
+                                        <input type="text" placeholder="请输入备注信息"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1-8">
+                        <div class="xj-kq-item-index">3</div>
+                    </div>
+                    <div class="pure-u-7-8">
+                        <div class="xj-kq-item-detail">
+                            <div class="pure-g">
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-name">欧阳晨源201406</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-phone">13717614311</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-state">
+                                        <select><option>出勤</option></select>
+                                    </div>
+                                </div>
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-grade">3年级1班</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-tel">01088370499</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-teacher">刘老师</div>
+                                </div>
+                                <div class="pure-u-1">
+                                    <div class="xj-kq-item-remark">
+                                        <input type="text" placeholder="请输入备注信息"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1-8">
+                        <div class="xj-kq-item-index">4</div>
+                    </div>
+                    <div class="pure-u-7-8">
+                        <div class="xj-kq-item-detail">
+                            <div class="pure-g">
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-name">欧阳晨源201406</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-phone">13717614311</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-state">
+                                        <select><option>出勤</option></select>
+                                    </div>
+                                </div>
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-grade">3年级1班</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-tel">01088370499</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-teacher">刘老师</div>
+                                </div>
+                                <div class="pure-u-1">
+                                    <div class="xj-kq-item-remark">
+                                        <input type="text" placeholder="请输入备注信息"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1-8">
+                        <div class="xj-kq-item-index">5</div>
+                    </div>
+                    <div class="pure-u-7-8">
+                        <div class="xj-kq-item-detail">
+                            <div class="pure-g">
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-name">欧阳晨源201406</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-phone">13717614311</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-state">
+                                        <select><option>出勤</option></select>
+                                    </div>
+                                </div>
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-grade">3年级1班</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-tel">01088370499</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-teacher">刘老师</div>
+                                </div>
+                                <div class="pure-u-1">
+                                    <div class="xj-kq-item-remark">
+                                        <input type="text" placeholder="请输入备注信息" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-kq-content" id="xj-list-kqls">
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        <div class="xj-kq-search-container">
+                            年:<select>
+                                <option>2015</option>
+                                <option>2016</option>
+                                <option>2017</option>
+                            </select>
+                            月:<select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                            日:<select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1-8">
+                        <div class="xj-kq-item-index">1</div>
+                    </div>
+                    <div class="pure-u-7-8">
+                        <div class="xj-kq-item-detail">
+                            <div class="pure-g">
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-name">欧阳晨源201406</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-phone">13717614311</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-state">
+                                        <select><option>出勤</option></select>
+                                    </div>
+                                </div>
+                                <div class="pure-u-5-12">
+                                    <div class="xj-kq-item-detail-grade">3年级1班</div>
+                                </div>
+                                <div class="pure-u-3-8">
+                                    <div class="xj-kq-item-detail-tel">01088370499</div>
+                                </div>
+                                <div class="pure-u-5-24">
+                                    <div class="xj-kq-item-detail-teacher">刘老师</div>
+                                </div>
+                                <div class="pure-u-1">
+                                    <div class="xj-kq-item-remark">
+                                        考勤备注信息
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-blank-bttom"></div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-submit-container" id="btnSubmit">
+                提交
+                <!--<input type="submit" class="hidden"/>-->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            //隐藏添加投票的tab页
+            $("#xj-list-kqls").hide();
+            //tab导航的点击事件
+            $(".xj-new-tab div").click(function () {
+                $(".xj-new-tab div").removeClass("xj-new-tab-selected");
+                $(this).addClass("xj-new-tab-selected");
+
+                var id = $(this).data("target");
+                $(".xj-kq-content").hide();
+                $("#" + id).show();
+            });
+        });
+    </script>
+</body>
+</html>

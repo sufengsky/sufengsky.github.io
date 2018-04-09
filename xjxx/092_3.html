@@ -1,0 +1,498 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link href="css/pure-min.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <title>兴趣课程选课</title>
+    <style type="text/css">
+        body {
+            background-color: #f6f6f6;
+        }
+
+        .xj-top {
+            width: 100%;
+            height: 40px;
+            position: fixed !important;
+            top: 0;
+            z-index: 10;
+            background-color: #000;
+            color: #fff;
+            line-height: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .xj-grid-a i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-bottom: solid 2px #fff;
+            border-right: solid 2px #fff;
+            margin-left: 2px;
+            margin-right: -2px;
+            -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+        .xj-grid-a {
+            float: left;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding-top: 2px;
+        }
+
+        .xj-grid-b {
+            float: right;
+            width: 42px;
+            height: 40px;
+            color: #29a0d8;
+        }
+
+        .xj-grid-m {
+            height: 40px;
+            line-height: 40px;
+            margin: 0 50px 0 40px;
+            text-align: center;
+        }
+
+        .xj-blank {
+            width: 100%;
+            height: 40px;
+        }
+        .xj-kc-title {
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px auto 10px auto;
+        }
+        .xj-kc-bz {
+            height: 120px;
+            color: red;
+            font-size: 12px;
+            padding-left: 10px;
+            line-height: 20px;
+        }
+        .xj-kc-info {
+            font-size: 12px;
+            height: 120px;
+            line-height: 20px;
+            color: red;
+            padding: 0 10px;
+        }
+
+        .xj-new-tab {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            height: 40px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+
+            .xj-new-tab div {
+                width: 80px;
+                font-size: 16px;
+                height: 38px;
+                line-height: 38px;
+                margin: 0 auto;
+            }
+
+        .xj-new-tab-selected {
+            display: block;
+            color: #29a0d8;
+            border-bottom: 2px solid #29a0d8;
+        }
+        .xj-list-container {
+            background-color: #fff;
+        }
+        .xj-list-kc-item {
+            height: 100px;
+            border-bottom: 1px solid #ccc;
+        }
+        .xj-list-kc-item-icon {
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+            height: 100px;
+        }
+        .xj-list-kc-item-icon-img {
+            margin-top: 10px;
+            width: 100%;
+        } 
+        .xj-list-kc-item-icon-img img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+        }
+        .xj-list-kc-item-icon-title {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            font-weight: bold;
+        }
+            .xj-list-kc-item-info {
+                font-size: 14px;
+                line-height:17px;
+            }
+        .xj-list-kc-item-info-lable {
+            color: #b3b3b3;
+            margin-left: 3px;
+        }
+        .xj-list-kc-item-info-val {
+            margin-left: 3px;
+        }
+        .xj-list-kc-item-count-default {
+            color: #b3b3b3;
+            margin-left: 3px;
+        }
+        .xj-list-kc-item-count-start {
+            color: #29a0d8;
+            margin-left: 3px;
+        }
+        .xj-list-xs-search {
+            width: 100%;
+            height: 50px;
+            background-color: #f6f6f6;
+        }
+        .xj-list-xs-search select{
+            float: left;
+            margin-top: 10px;
+            margin-left: 10px;
+            height: 30px;
+            line-height: 25px;
+            vertical-align: middle;
+            outline: none;
+            width: 20%;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAKCAQAAAD4dX0pAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsSAAALEgHS3X78AAAAAmJLR0QAAKqNIzIAAACVSURBVBjTYzCeYlzBgBMYZxpPYTCOMf5rnIlDQaTxH+N8EKMIyPDDosDL+KdxHYzTbvzV2BFNgQ1QrBfBZTSeZvzBWBdJgT6QP8eYEVkPs/Fq48fGSlCeivEr45XGzOg2sxnvNb5tLApkyRg/Mt5qzIbN/TzGJ4BQ0fia8QFjLlyhIAqU/ml82pifAU9QyRjvAFmGDADdNin8FSflvwAAAABJRU5ErkJggg==') /*images/100/down.png*/ 95% / 20% no-repeat #fdfdfd;
+            border: 1px solid #999;
+        }
+            .xj-list-xs-search span {
+                float: left;
+                margin-left: 5px;
+                margin-top: 15px;
+            }
+        .xj-button {
+            float: right;
+            margin: 0 auto;
+            margin-right: 15px;
+            margin-top: 10px;
+            width: 60px;
+            color: #fff;
+            background-color: #29a0d8;
+            height: 30px;
+            line-height: 14px;
+            font-size: 14px;
+        }
+        .xj-ls-xs-table {
+            clear: both;
+            background-color: #fff;
+        }
+        .xj-ls-xs-table-head {
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+        }
+        .xj-ls-xs-table-head-val {
+            padding-left: 5px;
+        }
+        .xj-ls-xs-table-item {
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            border-bottom: 1px solid #ccc;
+        }
+        .xj-ls-xs-table-item-val {
+            padding-left: 5px;
+            color: #666;
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-top">
+                <div class="xj-grid-a">
+                    <a href="">
+                        <i></i>
+                    </a>
+                </div>
+                <div class="xj-grid-b"><span id="btnManage"></span></div>
+                <div class="xj-grid-m">
+                    兴趣课程选课
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-1">
+            <div class="xj-blank"></div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-kc-title">进步小学网上兴趣课程选课系统</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div class="xj-kc-bz">
+                1.请先完善个人信息<br />
+                2.在课程中选择课程浏览详情<br />
+                3.对感兴趣的课程点击选择按钮
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="xj-kc-info">
+                每一位同学只能选择一项课程，请详细了解课程
+                详情及上课时间后慎重选择，已选择课程不能
+                更改，相关事宜请咨询班主任或学校相关部门
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div class="xj-new-tab">
+                <div class="xj-new-tab-selected" data-target="xj-list-kc">课程列表</div>
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="xj-new-tab">
+                <div data-target="xj-list-xs">学生列表</div>
+            </div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div id="xj-list-kc" class="xj-list-container">
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        <div class="xj-list-kc-item">
+                            <div class="pure-g">
+                                <div class="pure-u-1-3">
+                                    <div class="xj-list-kc-item-icon">
+                                        <div class="xj-list-kc-item-icon-img"><img src="images/092/xpic4035.jpg" alt="" /></div>
+                                        <div class="xj-list-kc-item-icon-title">趣味英语3班</div>
+                                    </div>
+                                </div>
+                                <div class="pure-u-2-3">
+                                    <div class="xj-list-kc-item-info">
+                                        <p><span class="xj-list-kc-item-info-lable">适合年级:</span><span class="xj-list-kc-item-info-val">1、2、3年级</span></p>
+                                        <p><span class="xj-list-kc-item-info-lable">上课时间:</span><span class="xj-list-kc-item-info-val">周四 3:40-4:40</span></p>
+                                        <p><span class="xj-list-kc-item-info-lable">学员数量:</span><span class="xj-list-kc-item-count-default">25/25</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        <div class="xj-list-kc-item">
+                            <div class="pure-g">
+                                <div class="pure-u-1-3">
+                                    <div class="xj-list-kc-item-icon">
+                                        <div class="xj-list-kc-item-icon-img"><img src="images/092/swzsjs.png" alt="" /></div>
+                                        <div class="xj-list-kc-item-icon-title">生物知识竞赛</div>
+                                    </div>
+                                </div>
+                                <div class="pure-u-2-3">
+                                    <div class="xj-list-kc-item-info">
+                                        <p><span class="xj-list-kc-item-info-lable">适合年级:</span><span class="xj-list-kc-item-info-val">4、5、6年级</span></p>
+                                        <p><span class="xj-list-kc-item-info-lable">上课时间:</span><span class="xj-list-kc-item-info-val">周四 3:40-4:40</span></p>
+                                        <p><span class="xj-list-kc-item-info-lable">学员数量:</span><span class="xj-list-kc-item-count-start">20/25</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        <div class="xj-list-kc-item">
+                            <div class="pure-g">
+                                <div class="pure-u-1-3">
+                                    <div class="xj-list-kc-item-icon">
+                                        <div class="xj-list-kc-item-icon-img"><img src="images/092/sygy.png" alt="" /></div>
+                                        <div class="xj-list-kc-item-icon-title">鲨鱼公园3班</div>
+                                    </div>
+                                </div>
+                                <div class="pure-u-2-3">
+                                    <div class="xj-list-kc-item-info">
+                                        <p><span class="xj-list-kc-item-info-lable">适合年级:</span><span class="xj-list-kc-item-info-val">1、2、3、4、5、6年级</span></p>
+                                        <p><span class="xj-list-kc-item-info-lable">上课时间:</span><span class="xj-list-kc-item-info-val">周四 3:40-4:40</span></p>
+                                        <p><span class="xj-list-kc-item-info-lable">学员数量:</span><span class="xj-list-kc-item-count-start">24/25</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        <div class="xj-list-kc-item">
+                            <div class="pure-g">
+                                <div class="pure-u-1-3">
+                                    <div class="xj-list-kc-item-icon">
+                                        <div class="xj-list-kc-item-icon-img"><img src="images/092/qwyy.png" alt="" /></div>
+                                        <div class="xj-list-kc-item-icon-title">趣味英语2班</div>
+                                    </div>
+                                </div>
+                                <div class="pure-u-2-3">
+                                    <div class="xj-list-kc-item-info">
+                                        <p><span class="xj-list-kc-item-info-lable">适合年级:</span><span class="xj-list-kc-item-info-val">1、2、3、4、5、6年级</span></p>
+                                        <p><span class="xj-list-kc-item-info-lable">上课时间:</span><span class="xj-list-kc-item-info-val">周四 3:40-4:40</span></p>
+                                        <p><span class="xj-list-kc-item-info-lable">学员数量:</span><span class="xj-list-kc-item-count-start">21/25</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div id="xj-list-xs" class="xj-list-container">
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        <div class="xj-list-xs-search">
+                            <span>年级:</span><select>
+                                                <option>一年级</option>
+                                                <option>二年级</option>
+                                                <option>三年级</option>
+                                                <option>四年级</option>
+                                                <option>五年级</option>
+                                            </select>
+                            <span>班级:</span>
+                            <select>
+                                <option>1班</option>
+                                <option>2班</option>
+                                <option>3班</option>
+                                <option>4班</option>
+                                <option>5班</option>
+                            </select>
+                            <button id="btnSearch" class="pure-button xj-button">查询</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        <div class="xj-ls-xs-table">
+                            <div class="pure-g">
+                                <div class="pure-u-1">
+                                    <div class="xj-ls-xs-table-head">
+                                        <div class="pure-g">
+                                            <div class="pure-u-1-8"><div class="xj-ls-xs-table-head-val">序号</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-head-val">名称</div></div>
+                                            <div class="pure-u-1-6"><div class="xj-ls-xs-table-head-val">班级</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-head-val">课程名称</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pure-g">
+                                <div class="pure-u-1">
+                                    <div class="xj-ls-xs-table-item">
+                                        <div class="pure-g">
+                                            <div class="pure-u-1-8"><div class="xj-ls-xs-table-item-val">1844</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-item-val">赵润涵201602</div></div>
+                                            <div class="pure-u-1-6"><div class="xj-ls-xs-table-item-val">1年级2班</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-item-val">鲨鱼公园2班</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pure-g">
+                                <div class="pure-u-1">
+                                    <div class="xj-ls-xs-table-item">
+                                        <div class="pure-g">
+                                            <div class="pure-u-1-8"><div class="xj-ls-xs-table-item-val">1844</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-item-val">赵润涵201602</div></div>
+                                            <div class="pure-u-1-6"><div class="xj-ls-xs-table-item-val">1年级2班</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-item-val">鲨鱼公园2班</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pure-g">
+                                <div class="pure-u-1">
+                                    <div class="xj-ls-xs-table-item">
+                                        <div class="pure-g">
+                                            <div class="pure-u-1-8"><div class="xj-ls-xs-table-item-val">1844</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-item-val">赵润涵201602</div></div>
+                                            <div class="pure-u-1-6"><div class="xj-ls-xs-table-item-val">1年级2班</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-item-val">鲨鱼公园2班</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pure-g">
+                                <div class="pure-u-1">
+                                    <div class="xj-ls-xs-table-item">
+                                        <div class="pure-g">
+                                            <div class="pure-u-1-8"><div class="xj-ls-xs-table-item-val">1844</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-item-val">赵润涵201602</div></div>
+                                            <div class="pure-u-1-6"><div class="xj-ls-xs-table-item-val">1年级2班</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-item-val">鲨鱼公园2班</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pure-g">
+                                <div class="pure-u-1">
+                                    <div class="xj-ls-xs-table-item">
+                                        <div class="pure-g">
+                                            <div class="pure-u-1-8"><div class="xj-ls-xs-table-item-val">1844</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-item-val">赵润涵201602</div></div>
+                                            <div class="pure-u-1-6"><div class="xj-ls-xs-table-item-val">1年级2班</div></div>
+                                            <div class="pure-u-1-3"><div class="xj-ls-xs-table-item-val">鲨鱼公园2班</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            //隐藏添加投票的tab页
+            $("#xj-list-xs").hide();
+            //tab导航的点击事件
+            $(".xj-new-tab div").click(function () {
+                $(".xj-new-tab div").removeClass("xj-new-tab-selected");
+                $(this).addClass("xj-new-tab-selected");
+
+                var id = $(this).data("target");
+                $(".xj-list-container").hide();
+                $("#" + id).show();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

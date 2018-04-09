@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link href="css/pure-min.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <title>详情-投票</title>
+    <style type="text/css">
+        body {
+            background-color: #fff;
+        }
+         .xj-top {
+             width: 100%;
+             height: 40px;
+             position: fixed !important;
+             top: 0;
+             z-index: 10;
+             background-color: #000;
+             color: #fff;
+             line-height: 40px;
+             margin: 0;
+             padding: 0;
+         }
+
+        .xj-grid-a i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-bottom: solid 2px #fff;
+            border-right: solid 2px #fff;
+            margin-left: 2px;
+            margin-right: -2px;
+            -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+        .xj-grid-a {
+            float: left;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding-top: 2px;
+        }
+
+        .xj-grid-b {
+            float: right;
+            width: 42px;
+            height: 40px;
+            color: #29a0d8;
+        }
+
+        .xj-grid-m {
+            height: 40px;
+            line-height: 40px;
+            margin: 0 50px 0 40px;
+            text-align: center;
+        }
+
+        .xj-blank {
+            width: 100%;
+            height: 40px;
+        }
+        .xj-vote-title-container {
+            padding: 0 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            line-height:30px;
+        }
+        .xj-vote-info-container {
+            height: 40px;
+            padding: 0 10px;
+            margin-top: 10px;
+        }
+        .xj-vote-info-avtor-container {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            vertical-align: middle;
+        }
+        .xj-vote-info-avtor {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            border-radius: 30px;
+        }
+        .xj-vote-info {
+            padding-left: 5px;
+            position: relative;
+            height: 40px;
+        }
+        .xj-vote-info-school {
+            width: 100%;
+            position: relative;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .xj-vote-info-time {
+            position: absolute;
+            bottom: 0;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .xj-vote-info-floor {
+            height: 40px;
+            line-height: 40px;
+            vertical-align: middle;
+            color: #29a0d8;
+            text-align: right;
+            font-size: 12px;
+        }
+        .xj-vote-item-container {
+            padding: 0 10px;
+            margin-top: 10px;
+            
+        } 
+        .xj-vote-item {
+            background-color: #ececec;
+            height: 40px;
+            line-height: 40px;
+            margin-top: 1px;
+        }
+
+        .xj-vote-item-checkicon-container {
+            text-align: center;
+            margin: 0 auto;
+        }
+        .xj-vote-item-checkicon {
+            height: 18px;
+            width: 18px;
+            vertical-align: middle;
+        }
+        .xj-vote-item-desc {
+            font-size: 16px;
+            margin-left: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .xj-vote-stop-info {
+            padding: 0 10px 0 15px;
+            margin-top: 10px;
+            color: #999;
+            font-size: 12px;
+        }
+        .xj-blank-bttom {
+            width: 100%;
+            height: 44px;
+        }
+        .xj-submit-container {
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #29a0d8;
+            text-align: center;
+            position: fixed !important;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-top">
+                <div class="xj-grid-a">
+                    <a href="">
+                        <i></i>
+                    </a>
+                </div>
+                <div class="xj-grid-b"><span id="btnManage">管理</span></div>
+                <div class="xj-grid-m">
+                    详情
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-1">
+            <div class="xj-blank"></div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-vote-title-container">
+                如果有一天神仙帮你实现愿意，你会实现哪个愿望？
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-vote-info-container">
+                <div class="pure-g">
+                    <div class="pure-u-1-12">
+                        <div class="xj-vote-info-avtor-container">
+                            <img src="images/051/default2.png" alt="" class="xj-vote-info-avtor" />
+                        </div>
+                    </div>
+                    <div class="pure-u-5-6">
+                        <div class="xj-vote-info">
+                            <div class="xj-vote-info-school">进步小学</div>
+                            <div class="xj-vote-info-time">2017.6.30 12:21</div>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-12">
+                        <div class="xj-vote-info-floor">
+                            1楼
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-vote-item-container">
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        <div class="xj-vote-item">
+                            <div class="pure-g">
+                                <div class="pure-u-1-12">
+                                    <div class="xj-vote-item-checkicon-container">
+                                        <img src="images/074/check_yes.png" class="xj-vote-item-checkicon" alt="" />
+                                        <input type="hidden" value="1" />
+                                    </div>
+                                </div>
+                                <div class="pure-u-11-12">
+                                    <div class="xj-vote-item-desc">1.富有</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pure-u-1">
+                        <div class="xj-vote-item">
+                            <div class="pure-g">
+                                <div class="pure-u-1-12">
+                                    <div class="xj-vote-item-checkicon-container">
+                                        <img src="images/074/check_no.png" class="xj-vote-item-checkicon" alt="" />
+                                        <input type="hidden" value="0" />
+                                    </div>
+                                </div>
+                                <div class="pure-u-11-12">
+                                    <div class="xj-vote-item-desc">2.才华</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pure-u-1">
+                        <div class="xj-vote-item">
+                            <div class="pure-g">
+                                <div class="pure-u-1-12">
+                                    <div class="xj-vote-item-checkicon-container">
+                                        <img src="images/074/check_no.png" class="xj-vote-item-checkicon" alt="" />
+                                        <input type="hidden" value="0" />
+                                    </div>
+                                </div>
+                                <div class="pure-u-11-12">
+                                    <div class="xj-vote-item-desc">3.美貌</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pure-u-1">
+                        <div class="xj-vote-item">
+                            <div class="pure-g">
+                                <div class="pure-u-1-12">
+                                    <div class="xj-vote-item-checkicon-container">
+                                        <img src="images/074/check_no.png" class="xj-vote-item-checkicon" alt="" />
+                                        <input type="hidden" value="0" />
+                                    </div>
+                                </div>
+                                <div class="pure-u-11-12">
+                                    <div class="xj-vote-item-desc">4.能力</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-vote-stop-info">
+                截止日期: 07-30 12:00
+            </div>
+        </div>
+    </div>
+    
+    <div class="pure-u-1">
+        <div class="xj-blank-bttom"></div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-submit-container" id="btnSubmit">
+                参与投票
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $(".xj-vote-item-checkicon").click(function () {
+                if ($(this).next().val() == 0) {
+                    $(this).prop("src", "images/074/check_yes.png");
+                    $(this).next().val(1);
+                } else {
+                    $(this).prop("src", "images/074/check_no.png");
+                    $(this).next().val(0);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

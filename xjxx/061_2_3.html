@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link href="css/pure-min.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <title>发布新帖</title>
+    <style type="text/css">
+        body {
+            background-color: #f6f6f6;
+        }
+
+        .xj-top {
+            width: 100%;
+            height: 40px;
+            position: fixed !important;
+            top: 0;
+            z-index: 10;
+            background-color: #000;
+            color: #fff;
+            line-height: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .xj-grid-a i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-bottom: solid 2px #fff;
+            border-right: solid 2px #fff;
+            margin-left: 2px;
+            margin-right: -2px;
+            -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+        .xj-grid-a {
+            float: left;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding-top: 2px;
+        }
+
+        .xj-grid-m {
+            height: 30px;
+            line-height: 30px;
+            margin: 0 50px 0 40px;
+            margin-top: 5px;
+            padding-left: 5px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .xj-blank {
+            width: 100%;
+            height: 40px;
+        }
+
+        .xj-new-tab {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            height: 40px;
+        }
+
+            .xj-new-tab div {
+                width: 80px;
+                font-size: 16px;
+                height: 38px;
+                line-height: 38px;
+                margin: 0 auto;
+            }
+
+        .xj-new-tab-selected {
+            display: block;
+            color: #29a0d8;
+            border-bottom: 2px solid #29a0d8;
+        }
+
+        .xj-page {
+            background-color: #f6f6f6;
+            padding: 0 5px;
+            margin-top: 5px;
+        }
+
+        .xj-thread-title {
+            border: 1px solid #ececec;
+            height: auto;
+        }
+
+            .xj-thread-title input {
+                width: 100%;
+                height: 35px;
+                vertical-align: middle;
+                border: none;
+                outline: medium;
+                font-size: 18px;
+            }
+
+        .xj-thread-content {
+            border: 1px solid #ececec;
+            height: 200px;
+            margin-top: 15px;
+            padding: 0;
+        }
+
+            .xj-thread-content textarea {
+                width: 100%;
+                border: none;
+                height: 200px;
+                margin: 0;
+                padding: 0;
+                font-size: 18px;
+                outline: none;
+                -moz-resize: none;
+                -ms-resize: none;
+                -o-resize: none;
+                resize: none;
+            }
+
+        .xj-thread-img {
+            margin-top: 15px;
+            position: relative;
+        }
+
+            .xj-thread-img input {
+                z-index: 10;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 90px;
+                height: 90px;
+            }
+        .uploadImgs {
+            width: 100%;
+        }
+        .uploadImg {
+            width: 100%;
+            height: 50px;
+        }
+        .imgDiv {
+            display: inline-block;
+            position: relative;
+            width: 23%;
+            margin: 3px;
+        } 
+          .delete {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+        }
+            .xj-new-vote-title-container {
+                border: 1px solid #ececec;
+                height: auto;
+                width: 100%;
+            }
+
+            .xj-new-vote-title-container input {
+                width: 100%;
+                height: 34px;
+                vertical-align: middle;
+                border: none;
+                outline: medium;
+                font-size: 18px;
+            }
+
+        .vote-title-count-container {
+            height: 36px;
+            line-height: 36px;
+            background-color: #fff;
+            color: #ccc;
+        }
+
+        .xj-vote-content {
+            margin-top: 10px;
+            background-color: #fff;
+        }
+
+        .xj-vote-item {
+            height: 35px;
+            line-height: 35px;
+            border: 1px solid #ececec;
+            margin-top: 5px;
+            margin-right: 10px;
+        }
+
+            .xj-vote-item input {
+                outline: medium;
+                width: 100%;
+                border: none;
+            }
+
+        .xj-vote-item-img-container {
+            border: 1px solid #ececec;
+            height: 35px;
+            line-height: 35px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            margin-top: 5px;
+        }
+
+            .xj-vote-item-img-container img {
+                vertical-align: middle;
+                text-align: center;
+                margin: 0 auto;
+                width: 25px;
+                height: 25px;
+            }
+
+            .xj-vote-item-img-container input {
+                z-index: 10;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 35px;
+                font-size: 9px;
+            }
+
+        .xj-vote-item-add-container {
+            height: 60px;
+            line-height: 60px;
+        }
+
+            .xj-vote-item-add-container img {
+                vertical-align: middle;
+                height: 30px;
+                width: 30px;
+                border: 1px solid #ececec;
+                margin-left: 5px;
+                padding: 5px;
+            }
+        .xj-vote-maxcount-container {
+            height: 35px;
+            line-height: 35px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+            .xj-vote-maxcount-container input {
+                width: 40px;
+                height: 25px;
+                vertical-align: middle;
+                margin: 0 5px;
+                outline: none;
+                vertical-align: baseline;
+            }
+        .xj-vote-spandays-container {
+            height: 35px;
+            line-height: 35px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+            .xj-vote-spandays-container input {
+                width: 40px;
+                height: 25px;
+                vertical-align: middle;
+                margin: 0 5px;
+                outline: none;
+            }
+        .xj-check-container {
+            height: 35px;
+            line-height: 35px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+            .xj-check-container img {
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+             .xj-submit-container {
+                height: 50px;
+                line-height: 50px;
+                font-size: 16px;
+                color: #ffffff;
+                background-color: #29a0d8;
+                text-align: center;
+                position: fixed !important;
+                bottom: 0;
+                width: 100%;
+            }
+        .xj-blank-bottom {
+            width: 100%;
+            height: 60px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-top">
+                <div class="xj-grid-a">
+                    <a href="#"><i></i></a>
+                </div>
+                <div class="xj-grid-m">
+                    发布新帖
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-1">
+            <div class="xj-blank"></div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div class="xj-new-tab">
+                <div class="xj-new-tab-selected" data-target="xj-new-thread">发表帖子</div>
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="xj-new-tab">
+                <div data-target="xj-new-vote">发起投票</div>
+            </div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div id="xj-new-thread" class="xj-page">
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        <div class="xj-thread-title">
+                            <input type="text" placeholder="请你输入标题" />
+                        </div>
+                    </div>
+                    <div class="pure-u-1">
+                        <div class="xj-thread-content">
+                            <textarea rows="5" cols="20" placeholder="请你输入正文"></textarea>
+                        </div>
+                    </div>
+                    <div class="pure-u-1">
+                        <div class="xj-thread-img">
+                            <img src="images/061/upload.png" alt="" onclick="" />
+                            <input id="uploadfile" type="file" multiple />
+                        </div>
+                    </div>
+                    <div class="pure-u-1">
+                        <div class="uploadImgs" id="imglist">
+                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="xj-new-vote" class="xj-page">
+                <div>
+                    <div class="pure-g xj-new-vote-title-container">
+                        <div class="pure-u-5-6">
+                            <div>
+                                <input type="text" id="vote-title" placeholder="请你输入标题" />
+                            </div>
+                        </div>
+                        <div class="pure-u-1-6">
+                            <div class="vote-title-count-container"><span id="xj-vote-title-count">0</span>/80</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xj-vote-content">
+                    <div id="xj-vote-items" class="pure-g">
+                        <div class="pure-u-5-6">
+                            <div class="xj-vote-item">
+                                <input type="text" placeholder="请您输入选项1" />
+                            </div>
+                        </div>
+                        <div class="pure-u-1-6">
+                            <div class="xj-vote-item-img-container">
+                                <img src="images/061/photo.png" alt="" />
+                                <input type="file" />
+                            </div>
+                        </div>
+                        <div class="pure-u-5-6">
+                            <div class="xj-vote-item">
+                                <input type="text" placeholder="请您输入选项2" />
+                            </div>
+                        </div>
+                        <div class="pure-u-1-6">
+                            <div class="xj-vote-item-img-container">
+                                <img src="images/061/photo.png" alt="" />
+                                <input type="file" />
+                            </div>
+                        </div>
+                        <div class="pure-u-5-6">
+                            <div class="xj-vote-item">
+                                <input type="text" placeholder="请您输入选项3" />
+                            </div>
+                        </div>
+                        <div class="pure-u-1-6">
+                            <div class="xj-vote-item-img-container">
+                                <img src="images/061/photo.png" alt="" />
+                                <input type="file" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-1">
+                            <div class="xj-vote-item-add-container">
+                                <div >
+                                    <img src="images/061/add.png" alt="" id="btnAdd" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-1-2">
+                            <div class="xj-vote-maxcount-container">最多可选:<input type="text" id="xj-vote-maxcount"/>项</div>
+                        </div>
+                        <div class="pure-u-1-2">
+                            <div class="xj-vote-spandays-container">计票天数:<input type="text" id="xj-vote-spandays"/>天</div>
+                        </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-2-5">
+                            <div class="xj-check-container">
+                                <img src="images/061/check_yes.png" alt="" id="btnImgVisble"/>投票后结果可见
+                                <input type="checkbox" class="hidden" id="xj-vote-visible" checked/>
+                            </div>
+                        </div>
+                        <div class="pure-u-2-5">
+                            <div class="xj-check-container">
+                                <img src="images/061/check_no.png" alt="" id="btnImgPublic" />公开投票参与人
+                                <input type="checkbox" class="hidden" id="xj-vote-public" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-blank-bottom"></div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-submit-container" id="btnSubmit">
+                提交
+                <!--<input type="submit" class="hidden"/>-->
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            //隐藏添加投票的tab页
+            $("#xj-new-vote").hide();
+            //tab导航的点击事件
+            $(".xj-new-tab div").click(function () {
+                $(".xj-new-tab div").removeClass("xj-new-tab-selected");
+                $(this).addClass("xj-new-tab-selected");
+
+                var id = $(this).data("target");
+                $(".xj-page").hide();
+                $("#" + id).show();
+            });
+            //控制标题的长度不能超过80个字符
+            $("#vote-title").keypress(function () {
+                return $(this).val().length < 80;
+            }).bind("input propertychange", function () {
+                var len = $(this).val().length;
+                $("#xj-vote-title-count").text(len);
+            });
+            //添加投票选择的按钮事件
+            $("#btnAdd").click(function () {
+                var itemCount = $(".xj-vote-item").length+1;
+                var itemHtml = '<div class="pure-u-5-6">'+
+                            '<div class="xj-vote-item">'+
+                                '<input type="text" placeholder="请您输入选项'+itemCount+'" />'+
+                            '</div>'+
+                        '</div>'+
+                        '<div class="pure-u-1-6">'+
+                            '<div class="xj-vote-item-img-container">'+
+                                '<img src="images/061/photo.png" alt="" />'+
+                                '<input type="file" />'+
+                            '</div>'+
+                        '</div>';
+                $("#xj-vote-items").append(itemHtml);
+            });
+            $("#btnImgVisble").click(function () {
+                var imgPath = "images/061/";
+                var val = $("#xj-vote-visible").prop("checked");
+                if (val) {
+                    $("#xj-vote-visible").prop("checked", false);
+                    $(this).prop("src", imgPath+"check_no.png");
+                } else {
+                    $("#xj-vote-visible").prop("checked", true);
+                    $(this).prop("src", imgPath + "check_yes.png");
+                }
+            });
+            $("#btnImgPublic").click(function () {
+                var imgPath = "images/061/";
+                var val = $("#xj-vote-public").prop("checked");
+                if (val) {
+                    $("#xj-vote-public").prop("checked", false);
+                    $(this).prop("src", imgPath + "check_no.png");
+                } else {
+                    $("#xj-vote-public").prop("checked", true);
+                    $(this).prop("src", imgPath + "check_yes.png");
+                }
+            });
+
+            $("#btnSubmit").click(function () {
+                $(".xj-vote-item-img-container input").each(function () {
+                    alert($(this).val());
+                });
+            });
+
+            //图片上传
+            $("#uploadfile").change(function () {
+                for (var i = 0; i < this.files.length; i++) {
+                    var file = this.files[i];
+                    if (window.FileReader) {
+                        var reader = new FileReader();
+                        reader.readAsDataURL(file);
+                        //监听文件读取结束后事件    
+                        reader.onloadend = function (e) {
+                            $("#imglist").append('<div class="imgDiv"><img src="' + e.target.result + '" class="uploadImg" alt=""/>' +
+                                '<img src="images/061/delete.png" class="delete" /></div>');
+                        };
+                    }
+                }
+            });
+
+            $("#imglist").on("click", ".delete", function() {
+                $(this).parent().remove();
+            });
+        });
+    </script>
+</body>
+</html>

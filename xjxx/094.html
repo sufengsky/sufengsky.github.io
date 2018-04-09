@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link href="css/pure-min.css" rel="stylesheet" />
+    <title>课程详情</title>
+    <style type="text/css">
+          body {
+            background-color: #f6f6f6;
+        }
+
+        .xj-top {
+            width: 100%;
+            height: 40px;
+            position: fixed !important;
+            top: 0;
+            z-index: 10;
+            background-color: #000;
+            color: #fff;
+            line-height: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .xj-grid-a i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-bottom: solid 2px #fff;
+            border-right: solid 2px #fff;
+            margin-left: 2px;
+            margin-right: -2px;
+            -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+        .xj-grid-a {
+            float: left;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding-top: 2px;
+        }
+
+        .xj-grid-b {
+            float: right;
+            width: 42px;
+            height: 40px;
+            color: #29a0d8;
+        }
+
+        .xj-grid-m {
+            height: 40px;
+            line-height: 40px;
+            margin: 0 50px 0 40px;
+            text-align: center;
+        }
+        .xj-blank {
+            width: 100%;
+            height: 40px;
+        }
+        .xj-kc-title {
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px auto 10px auto;
+        }
+        .xj-kc-bz {
+            height: 120px;
+            color: red;
+            font-size: 12px;
+            padding-left: 10px;
+            line-height: 20px;
+        }
+
+        .xj-kc-info {
+            font-size: 12px;
+            height: 120px;
+            line-height: 20px;
+            color: red;
+            padding: 0 10px;
+        }
+        .xj-kc-detail-title {
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #ececec;
+            font-size: 16px;
+            text-align: center;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        .xj-kc-detail-item-a {
+            border-bottom: 1px solid #ececec;
+            border-right: 1px solid #ececec;
+            text-align: right;
+            height: 40px;
+            line-height: 40px;
+            background-color: #fff;
+            padding-right: 20px;
+            color: #333;
+        }
+
+        .xj-kc-detail-item-b {
+            border-bottom: 1px solid #ececec;
+            height: 40px;
+            line-height: 40px;
+            background-color: #fff;
+            padding-left: 10px;
+            color: #333;
+        }
+        .xj-blank-bttom {
+            width: 100%;
+            height: 54px;  
+        }
+         .xj-submit-container {
+                height: 50px;
+                line-height: 50px;
+                font-size: 16px;
+                color: #fff;
+                background-color: #d2d2d2;
+                text-align: center;
+                position: fixed !important;
+                bottom: 0;
+                width: 100%;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-top">
+                <div class="xj-grid-a">
+                    <a href="">
+                        <i></i>
+                    </a>
+                </div>
+                <div class="xj-grid-b"><span id="btnManage"></span></div>
+                <div class="xj-grid-m">
+                    趣味英语3班
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-1">
+            <div class="xj-blank"></div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-kc-title">进步小学网上兴趣课程选课系统</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div class="xj-kc-bz">
+                1.请先完善个人信息<br />
+                2.在课程中选择课程浏览详情<br />
+                3.对感兴趣的课程点击选择按钮
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="xj-kc-info">
+                每一位同学只能选择一项课程，请详细了解课程
+                详情及上课时间后慎重选择，已选择课程不能
+                更改，相关事宜请咨询班主任或学校相关部门
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-kc-detail-title">
+                课程详情
+            </div>
+        </div>
+    </div>
+
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-a">
+            课程名称:
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-b">
+            趣味英语3班
+        </div>
+    </div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-a">
+            适合年级:
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-b">
+            3、4年级
+        </div>
+    </div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-a">
+            任课教师:
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-b">
+            外聘教师
+        </div>
+    </div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-a">
+            上课时间:
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-b">
+            周四 3:40--4:40
+        </div>
+    </div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-a">
+            课程类型:
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-b">
+            其他
+        </div>
+    </div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-a">
+            补充说明:
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-b">
+
+        </div>
+    </div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-a">
+            内容:
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-b">
+            趣味英语
+        </div>
+    </div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-a">
+            需要工具:
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-b">
+
+        </div>
+    </div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-a">
+            学员数量:
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-b">
+            25/25
+        </div>
+    </div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-a">
+            管理教师:
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-b">
+
+        </div>
+    </div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-a">
+            课程图标:
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <div class="xj-kc-detail-item-b">
+
+        </div>
+    </div>
+</div>
+    <div class="pure-u-1">
+        <div class="xj-blank-bttom"></div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="xj-submit-container" id="btnSubmit">
+                提交
+                <!--<input type="submit" class="hidden"/>-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
