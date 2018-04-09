@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <script src="js/jquery.min.js"></script>
+    <title>中奖名单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, STHeiti, sans-serif;
+            font-size: 14px;
+        }
+
+        img {
+            border: 0;
+            vertical-align: top;
+        }
+
+        .wrapper {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-background-size: 100%;
+            background-size: 100% 100%;
+        }
+
+        #preload {
+            width: 100%;
+        }
+
+        .item {
+            color: #000;
+            width: 80%;
+            margin-left: 10%;
+            color: #fff;
+            margin-top: 5px;
+        }
+        .xuhao {
+            display: inline-block;
+            background-color: #001c63;
+            width: 25%;
+            text-align: center;
+            margin: 0 auto;
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .phone {
+            background-color: #380037;
+            width: 70%;
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+            height: 20px;
+            line-height: 20px;
+        }
+
+        #today {
+            position: absolute;
+            left: 10%;
+            color: #fff;
+            width: 80%;
+        }
+        #history {
+            position: absolute;
+            left: 10%;
+            color: #fff;
+            width: 80%;
+        }
+        .content {
+            max-height: 250px;
+            overflow: hidden;
+        }
+        .list {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img id="preload" src="images/010/bg.png" alt="" />
+    </div>
+    <div id="today">
+        <div id="todayhead">
+            <div class="item">
+                <div class="xuhao">序号</div>
+                <div class="phone">手机号码</div>
+            </div>
+        </div>
+        <div id="todaycontent" class="content">
+            <div class="list">
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888-0</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888-x</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  id="history">
+        <div id="historyhead">
+            <div class="item">
+                <div class="xuhao">序号</div>
+                <div class="phone">手机号码</div>
+            </div>
+        </div>
+        <div id="historycontent" class="content">
+            <div class="list">
+                <!--<div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888_0</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>-->
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888</div>
+                </div>
+                <div class="item">
+                    <div class="xuhao">08</div>
+                    <div class="phone">130福田圆梦888_x</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var todaytop = $("#preload").height() * 0.21;
+            $("#today").css("top", todaytop + "px");
+            var historytop = $("#preload").height() * 0.62;
+            $("#history").css("top", historytop + "px");
+        };
+        $(function () {
+            if ($("#todaycontent .item").length > 10) {
+                setInterval(function () {
+                    scrollNews($("#todaycontent"));
+                }, 2000);
+            }
+            if ($("#historycontent .item").length > 10) {
+                setInterval(function () {
+                    scrollNews($("#historycontent"));
+                }, 2000);
+            }
+            function scrollNews(obj) {
+                var $self = obj.find(".list");
+                var lineHeight = $self.find(".item").first().height();
+                console.log(lineHeight);
+                $self.animate({
+                    "marginTop": -lineHeight + "px"
+                }, 800, function () {
+                        $self.css({
+                            marginTop: 0
+                        }).find(".item").first().appendTo($self);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

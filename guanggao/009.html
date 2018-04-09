@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <script src="js/jquery.min.js"></script>
+    <title>未中奖弹出层界面</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+         .failedcontainer {
+             position: fixed !important;
+             bottom: 0;
+             opacity: 0.8;
+             width: 100%;
+             height: 100%;
+             background-color: #07000a;
+             z-index: 5;
+         }
+        .content {
+            width: 99%;
+            position: absolute;
+            top: 15%;
+            left: 1%;
+        }
+        .content img {
+            width: 100%;
+            height: 100%;
+        }
+        .info {
+            position: absolute;
+            z-index: 6;
+            top: 42%;
+            left: 22%;
+            color: #fff0f5;
+            width: 58%;
+            font-size: 10px;
+        }
+        .info span {
+            font-size: 18px;
+            color: red;
+            font-weight: bold;
+        }
+        .sfclose {
+            position: absolute;
+            z-index: 7;
+            top: 28%;
+            left: 76%;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="failedcontainer" id="poplayer">
+        <div class="content">
+            <div class="info">
+                您是第<span>2323</span>个参与的客户，很遗憾，今天未能成为幸运会员，明天继续。
+            </div>
+            <img src="images/009/bg3.png" alt="" />
+        </div>
+        <img src="images/009/close.png" alt="" class="sfclose" id="btnClose" />
+    </div>  
+    <input type="button" id="btnTest" value="测试"/>
+    <script>
+        $(function() {
+            $("#poplayer").hide();
+            $("#btnTest").click(function() {
+                $("#poplayer").show();
+            });
+            $("#poplayer").click(function() {
+               window.location.href="011.html";
+            });
+            $("#btnClose").click(function() {
+                $("#poplayer").hide();
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

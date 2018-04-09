@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <script src="js/jquery.min.js"></script>
+    <title>用户登录界面</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, STHeiti, sans-serif;
+            font-size: 14px;
+        }
+
+        img {
+            border: 0;
+            vertical-align: top;
+        }
+
+        .wrapper {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-background-size: 100%;
+            background-size: 100% 100%;
+        }
+
+        #preload {
+            width: 100%;
+        }
+        #btnLogin {
+            width: 68%;
+            position: absolute;
+            left: 15%;
+            top: 67%;
+        }
+        .linkcontainer {
+            width: 67%;
+            position: absolute;
+            left: 16%;
+            top: 75%;
+        }
+            .linkcontainer a {
+                text-decoration: none;
+                font-size: 18px;
+                color: #fff;
+            }.linkcontainer div {
+                display: inline-block;
+                width: 48%;
+            }
+        .aregist {
+            
+        }
+        .afogotpassword {
+            text-align: right;
+        }
+        ::-webkit-input-placeholder {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        :-moz-placeholder {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        ::-moz-placeholder {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        :-ms-input-placeholder {
+            color: #fff;
+            font-size: 18px;
+        }
+        .usernamecontainer {
+            width: 67%;
+            position: absolute;
+            left: 27%;
+            top: 53.2%;
+        }
+            .usernamecontainer input {
+                color: #fff;
+                font-size: 18px;
+                height: 25px;
+                width: 65%;
+                border: none;
+                background: transparent;
+                outline: none;
+            }
+            .usernamecontainer img {
+                height: 30px;
+                width: 30px;
+            } .passwordcontainer {
+                width: 67%;
+                position: absolute;
+                left: 27%;
+                top: 60.8%;
+                height: 30px;
+                line-height: 30px;
+            }
+            .passwordcontainer input {
+                color: #fff;
+                font-size: 18px;
+                height: 25px;
+                width: 65%;
+                border: none;
+                background: transparent;
+                outline: none;
+            }
+                .passwordcontainer img {
+                    height: 30px;
+                    width: 30px;
+                }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img id="preload" src="images/002login/bg.png" alt="" />
+        <img src="images/002login/btnLogin.png" id="btnLogin" alt="" />
+        <div class="linkcontainer">
+            <div class="aregist"><a href="003regist.html">立即注册</a></div> 
+            <div class="afogotpassword"><a href="">忘记密码</a></div>
+        </div>
+        <div class="usernamecontainer">
+            <input type="text" placeholder="会员账号|手机号"/>
+<img src="images/002login/erroricon.png" alt="" />
+        </div>
+        <div class="passwordcontainer">
+            <input type="password" placeholder="密码" />
+<img src="images/002login/erroricon.png" alt="" />
+        </div>
+    </div>
+    
+    <script>
+        $(function() {
+            $("#btnLogin").click(function() {
+                window.location.href = "004start.html";
+            });
+        });
+    </script>
+</body>
+</html>

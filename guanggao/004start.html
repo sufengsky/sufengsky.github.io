@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <script src="js/jquery.min.js"></script>
+    <title>开始答题</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            border: 0;
+            vertical-align: top;
+        }
+        .wrapper {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-background-size: 100%;
+            background-size: 100% 100%;
+        }
+
+        #preload {
+            width: 100%;
+        }
+
+        #btnNext {
+            height: 50px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+        #t1 {
+            position: absolute;
+            width: 80%;
+            left: 15%;
+            top: 0;
+            color: #fff0f5;
+        }
+        #t2 {
+            position: absolute;
+            width: 80%;
+            left: 15%;
+            top: 0;
+            color: #fff0f5;
+        }
+        .sfrow {
+            width: 100%;
+        }
+        .sfcloumn {
+            display: inline-block;
+            width: 48%;
+            height: 28px;
+            line-height: 28px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .sfcloumn img {
+            vertical-align: middle;
+        }
+        ::-webkit-input-placeholder {
+            color: #9478bc;
+            font-size: 12px;
+        }
+
+        :-moz-placeholder {
+            color: #9478bc;
+            font-size: 12px;
+        }
+
+        ::-moz-placeholder {
+            color: #9478bc;
+            font-size: 12px;
+        }
+
+        :-ms-input-placeholder {
+            color: #9478bc;
+            font-size: 12px;
+        }
+        .sfremark {
+            border: 1px solid #9478bc;
+            background-color: transparent;
+            height: 20px;
+            font-size: 12px;
+            line-height: 12px;
+            font-weight: normal;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <img id="preload" src="images/004/bg.png" alt="" />
+    <a href="#"><img src="images/004/3.png" alt="" id="btnNext"></a>
+    <div id="t1">
+        <div class="sfrow">
+            <div class="sfcloumn"><input type="hidden" value="1"/><img src="images/004/check_yes.png" alt="" /><span> A 免费保养</span></div>
+            <div class="sfcloumn"><input type="hidden" value="0" /><img src="images/004/check_no.png" alt="" /><span> B 维修打折</span></div>
+        </div>
+        <div class="sfrow">
+            <div class="sfcloumn"><input type="hidden" value="0" /><img src="images/004/check_no.png" alt="" /><span> C 免费救援</span></div>
+            <div class="sfcloumn"><input type="hidden" value="0" /><img src="images/004/check_no.png" alt="" /><span> D 终身检测</span></div>
+        </div>
+        <div class="sfrow">
+            <div class="sfcloumn" style="width:35%;"><input type="hidden" value="0" /><img src="images/004/check_no.png" alt="" id="otheritem"/><span> E 其他</span></div>
+            <div class="sfcloumn"><input class="sfremark" type="text" placeholder="请输入:30字以内"/></div>
+        </div>
+    </div>
+    <div id="t2">
+        <div class="sfrow">
+            <div class="sfcloumn"><input type="hidden" value="1" /><img src="images/004/check_yes.png" alt="" /><span> A 欧曼</span></div>
+            <div class="sfcloumn"><input type="hidden" value="0" /><img src="images/004/check_no.png" alt="" /><span> B 欧可马</span></div>
+        </div>
+        <div class="sfrow">
+            <div class="sfcloumn"><input type="hidden" value="0" /><img src="images/004/check_no.png" alt="" /><span> C 奥灵</span></div>
+            <div class="sfcloumn"><input type="hidden" value="0" /><img src="images/004/check_no.png" alt="" /><span> D 时代</span></div>
+        </div>
+        <div class="sfrow">
+            <div class="sfcloumn"><input type="hidden" value="0" /><img src="images/004/check_no.png" alt="" /><span> E 商务车</span></div>
+            <div class="sfcloumn"><input type="hidden" value="0" /><img src="images/004/check_no.png" alt="" /><span> F 乘用车</span></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        window.onload = function () {
+            var height = $("#preload").height() * 0.87;
+            $("#btnNext").css("top", height + "px");
+            $("#btnNext").click(function () {
+                window.location.href = "005.html";
+            });
+
+            var t1 = $("#preload").height() * 0.52;
+            $("#t1").css("top", t1 + "px");
+            var t2 = $("#preload").height() * 0.72;
+            $("#t2").css("top", t2 + "px");
+        };
+        $(function () {
+            $(".sfcloumn img").click(function () {
+                var p = $(this).parent().parent().parent();
+                $(".sfcloumn img", p).prop("src", "images/004/check_no.png");
+                $(".sfcloumn input[type='hidden']", p).val(0);
+                $(this).prev().val(1);
+                $(this).prop("src", "images/004/check_yes.png");
+                if ($(this).prop("id") != "otheritem") {
+                    $("input[type='text']").val("");
+                }
+            });
+            $(".sfcloumn span").click(function () {
+                $(this).prev().click();
+            });
+            $("input[type='text']").focus(function() {
+                $("#otheritem").click();
+            });
+        });
+    </script>
+
+
+
+</body>
+</html>
