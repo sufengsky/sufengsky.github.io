@@ -1,0 +1,101 @@
+.warp{
+	width: 100%;
+	height: auto;
+	
+	background: #FFFFFF;
+	clear: both;
+}
+.warpper{
+	background: #f3f3f3;
+}
+.top{
+	width: 1200px;
+	height: 80px;
+	margin: 0 auto;
+	font-size: 18px;
+	position: relative;
+	z-index: 99;
+}
+.logo{
+	float: left;
+	padding-top: 10px;	
+}
+.client{
+	float: right;
+	line-height: 80px;
+	cursor: pointer;
+}
+
+.app{
+	width: 280px;
+	height: 160px;
+	background: #ffffff url(../images/client_a.png) center top no-repeat;
+	position: absolute;
+	top: 71px;
+	right: -86px;
+	z-index: 99;
+	display: none;
+}
+.app_left{
+	width: 50%;
+	float: left;
+	font-size: 18px;
+	color: #ad914c;
+	padding-top: 36px;
+	padding-left: 40px;
+}
+.app_right{
+	width: 50%;
+	float: left;
+	text-align: right;
+	padding-top: 33px;
+	padding-right: 25px;
+}
+.app_right img{
+	width: 104px;
+}
+nav{
+	float: right;
+	padding-top: 22px;
+}
+.nav li{
+	float: left;
+	margin-right: 120px;
+    padding: 0 5px;
+	line-height: 38px;
+	border-bottom: transparent 4px solid;
+}
+.nav li a{
+	color: #333;
+}
+.nav li a:hover{
+	color:  #b49b5e;
+}
+.footer{
+	width: 1200px;
+	height: 376px;
+	margin: 0 auto;
+	clear: both;
+	text-align: center;
+	padding-top: 18px;
+}
+.code_box1{
+	float: left;
+	margin:0 60px 0 342px;
+}
+.code_box2{
+	float: left;
+
+}
+.footer_code{
+	width: 227px;
+}
+.footer p img{
+	margin: 20px 0;
+}
+.copyright{
+	clear: both;
+	font-size: 28px;
+	color: #50422d;
+	
+}

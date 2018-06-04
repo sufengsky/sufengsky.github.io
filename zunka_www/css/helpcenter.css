@@ -1,0 +1,52 @@
+.nav li:first-child+li{
+	color:  #b49b5e;
+	border-bottom:  #b49b5e 4px solid;
+}
+.nav li:first-child+li a{
+	color:  #b49b5e;
+}
+.warp_banner{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+    background: url(../images/bannerbg_h.png) center top no-repeat;
+	clear: both;
+}
+.banner{
+	width: 1200px;
+	height: 500px;
+	margin: 0 auto;
+	padding-top: 142px;
+	text-align: center;
+}
+.main{
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+.issue{
+	padding-top: 10px;
+}
+.issue_bt{
+	font-size: 30px;
+	color: #64533b;
+	line-height: 75px;
+	font-weight: 600;
+}
+.issue dl{
+	margin-bottom: 10px;
+}
+.issue dl dt{
+	font-size: 24px;
+	color: #b09550;
+	padding-left: 32px;
+	line-height: 48px;
+	background: url(../images/q_bg.png) left center no-repeat;
+}
+.issue dl dd{
+	font-size: 24px;
+	padding-left: 32px;
+	line-height: 40px;
+	background: url(../images/a_bg.png) left 7px no-repeat;
+}

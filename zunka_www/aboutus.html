@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>关于我们</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+			<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/aboutus.css?v=4" />
+		<script src="js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div id="header"></div>
+		<div class="warp_banner">
+			<div class="banner">
+				<img src="images/banner_a.png" />
+			</div>
+		</div>
+		<div class="warp_choose">
+			<div class="choose">
+				<div class="choose_item active">
+					<img src="images/choose1.png " />
+					<p>产品简介</p>
+				</div>
+				<div class="choose_item">
+					<img src="images/choose2.png " />
+					<p>公司介绍</p>
+				</div>
+				<div class="choose_item">
+					<img src="images/choose3.png " />
+					<p>产品特色</p>
+				</div>
+			</div>
+		</div>
+        <div class="warp">
+        	<div class="main show">
+        		<h2>产品简介 | PRODUCT</h2>
+        		<p class="text">尊卡一款简单便捷的信用借款产品，简单认证即可借款。最快30分钟到账，操作简单，服务费用低。国内首批
+利用大数据、人工智能实现风控审批的信贷服务平台。信用越优质的用户无需任何抵押，即可更方便、快借的
+实现信用“变现”，解决个人短期资金紧张问题。</p>
+        	</div>
+        	<div class="main">
+        		<h2>公司介绍 | INTRODUCTION</h2>
+        		<p class="text">尊卡隶属于爱筹科技有限公司，公司致力于个人信用借贷、消费金融业务，拥有互联网+金融双重背景，值得信赖。 </p>
+        	</div>
+        	<div class="main ">
+        		<h2>产品特色 | FEATURE</h2>
+        		<div class="main_con">
+        			<div class="item item3">
+        				<img src="images/con1.png" />
+        				<p>一分钟认证</p>
+        				<span>刷脸即可认证借钱简单快捷</span>
+        			</div>
+        			<div class="item item3">
+        				<img src="images/con2.png" />
+        				<p>10分钟放款</p>
+        				<span>认证简单，一分钟授信，20分钟放款</span>
+        			</div>
+        			<div class="item item3">
+        				<img src="images/con3.png" />
+        				<p>无需任何抵押</p>
+        				<span>纯信用贷款，无需任何抵押</span>
+        			</div>
+        			<div class="item item4">
+        				<img src="images/con4.png" />
+        				<p>随时随地借款</p>
+        				<span>可移动的ATM，随时可以申请借款</span>
+        			</div>
+        			<div class="item item4">
+        				<img src="images/con5.png" />
+        				<p>提升额度简单</p>
+        				<span>一键提额、简单快捷</span>
+        			</div>
+        			<div class="item item4">
+        				<img src="images/con6.png" />
+        				<p>还款方式多样</p>
+        				<span>支持支付宝还款，主动还款，还款方式多样</span>
+        				<br />
+        				<span>不用担心逾期带来的信用问题</span>
+        			</div>
+        			<div class="item item4">
+        				<img src="images/con7.png" />
+        				<p>信用优质好处多</p>
+        				<span>信用评级越高审核越快</span>
+        			</div>
+        			
+        		</div>
+        	</div>
+        </div>
+        <div id="footer"></div>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			$(".choose_item").click(function(){
+				$(".choose_item").removeClass("active");
+				$(this).addClass("active");
+				$(".main").hide().eq($(this).index()).show();
+			})
+		</script>
+	</body>
+
+</html>

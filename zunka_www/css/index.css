@@ -1,0 +1,162 @@
+
+.nav li:first-child{
+	color:  #b49b5e;
+	border-bottom:  #b49b5e 4px solid;
+}
+.nav li:first-child a{
+	color:  #b49b5e;
+}
+
+.warp_banner{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+    background: url(../images/bannerbg.png) center top no-repeat;
+	clear: both;
+}
+
+.banner{
+	width: 1200px;
+	height: 500px;
+	margin: 0 auto;
+	padding-top: 87px;
+}
+.banner_left{
+	float: left;
+	padding-top: 25px;
+}
+.banner_left img{
+	margin-left: 100px;
+	
+}
+.banner_left p{
+	width: 585px;
+	height: 86px;
+	color: #64533b;
+	text-align: center;
+	line-height:68px;
+	font-weight: 600;
+	font-size: 30px;
+	margin-top: 26px;
+	margin-left: 65px;
+	background: url(../images/bannertext_bg.png) center top no-repeat;
+}
+.banner_left p span{
+	float: left;
+	margin-right: 30px;
+	
+}
+.banner_right{
+	float: right;
+	width: 336px;
+	height: 336px;
+	background: #b59b54;
+	text-align: center;
+	padding-top: 40px;
+}
+.banner_right img{
+width: 214px;
+}
+.banner_right p{
+	font-size: 24px;
+	color: #faeec0;
+	margin-top: 20px;
+}
+
+
+.main1{
+	width: 1200px;
+	height: 260px;
+	margin: 0 auto;
+	
+}
+.advantage{
+	float: left;
+	width: 25%;
+	text-align: center;
+	padding-top: 32px;
+}
+.adv_bt{
+	font-size: 24px;
+	color: #524430;
+	line-height: 44px;
+	margin-top: 5px;
+	font-weight: 600;
+}
+.adv_text{
+	font-size: 16px;
+	color: #7d6537;
+	padding: 0 20px;
+	line-height: 24px;
+}
+.advno{
+	background:none;
+}
+.main2{
+	width: 1200px;
+	height: 469px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+.main2_bt{
+	width: 100%;
+	height: 120px;
+	text-align: center;
+}
+.main2_con{
+	width: 100%;
+	height: 349px;
+	padding-top: 200px;
+	background: url(../images/main2_img.png) center 68px no-repeat;
+}
+
+.main2_con ul li{
+	float: left;
+	font-size: 28px;
+	color: #524430;
+	width: 25%;
+	text-align: center;
+}
+.main3{
+	width: 1200px;
+	height: 360px;
+	text-align: center;
+	margin: 0 auto;
+	
+}
+.main3 div{
+	width: 50%;
+}
+.main3 p{
+	color: #7d6537;
+	font-size: 30px;
+	line-height: 52px;
+}
+.img_left{
+	float: left;
+	padding: 50px 0 0 60px;
+	text-align: left;
+}
+
+.text_right{
+	float: left;
+	text-align: right;
+	padding-top: 100px;
+}
+.text_right img{
+	margin-bottom: 20px;
+}
+.text_left img{
+	margin-bottom: 20px;
+}
+.img_right{
+	float: left;
+	padding: 50px 60px 0 0 ;
+	text-align: right;	
+}
+.text_left{
+	float: left;
+	text-align: left;
+	padding-top: 100px;
+}
