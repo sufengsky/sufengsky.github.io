@@ -1,0 +1,245 @@
+.nav li:first-child+li+li+li{
+	color: #F86936;
+	border-bottom: #f86936 4px solid;
+}
+.nav li:first-child+li+li+li a{
+	color: #F86936;
+}
+
+
+.warp_banner {
+    width: 100%;
+    clear: both;
+    background: url(bannerbg-a.png) center center no-repeat;
+}
+
+.banner {
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 144px 0 0 167px;
+}
+
+.warp_tap {
+    width: 100%;
+    clear: both;
+    background: url(warp_tap.png) center center no-repeat;
+}
+
+.main_tap {
+    width: 1200px;
+    height: 90px;
+    padding: 0 140px;
+    margin: 0 auto;
+}
+
+    .main_tap p {
+        line-height: 90px;
+        font-size: 26px;
+        float: left;
+        width: 33.33%;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .main_tap .active {
+        color: #F86936;
+    }
+
+.warp_con {
+    width: 100%;
+    clear: both;
+    background: #fbfbfb;
+}
+
+.main {
+    width: 1200px;
+    min-height: 460px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.profile_part {
+    width: 100%;
+    padding-top: 95px;
+}
+
+.pp_left {
+    float: left;
+}
+
+.pp_right {
+    width: 880px;
+    float: left;
+    margin-left: 48px;
+}
+
+    .pp_right p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+.announcement_part {
+    width: 100%;
+    padding: 25px 0 20px 0;
+    display: none;
+}
+
+.ann_item {
+    width: 100%;
+    background: #FFFFFF;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+    .ann_item:hover {
+        border-color:#4a4a4a;
+        background-size: 1200px;
+    }
+
+.ann_title {
+    overflow: hidden;
+}
+
+.ann_bt {
+    float: left;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.ann_time {
+    float: right;
+    font-size: 14px;
+    color: #999999;
+    padding-top: 20px;
+}
+
+.ann_con {
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 15px;
+}
+
+    .ann_con a {
+        color: #666666;
+    }
+.ann_con {
+	text-align: left;
+}
+div.badoo {
+}
+
+div.badoo {
+    padding-right: 0px;
+    padding-left: 0px;
+    font-size: 13px;
+    padding-bottom: 10px;
+    color: #333333;
+    padding-top: 10px;
+    font-family: arial, helvetica, sans-serif;
+    background-color: #fbfbfb;
+    text-align: center;
+}
+
+    div.badoo a {
+        border: #777777 1px solid;
+        padding: 8px 11px;
+        margin: 0px 2px;
+        color: #333333;
+        text-decoration: none;
+        line-height: 20px;
+        background: #fbfbfb;
+        width: 40px;
+        height: 42px;
+    }
+
+        div.badoo a:hover {
+            border: #F86936 1px solid;
+            padding: 8px 11px;
+            margin: 0px 2px;
+            color: #F86936;
+            text-decoration: none;
+            line-height: 20px;
+            background: #FFFFFF;
+        }
+
+    div.badoo span.current {
+        color: #F86936;
+        background: #eaeaea;
+        border: #F86936 1px solid;
+        padding: 8px 11px;
+        margin: 0px 2px;
+        text-decoration: none;
+        line-height: 20px;
+    }
+
+.contact_part {
+    width: 100%;
+    display: none;
+}
+
+.address {
+    margin: 45px 0;
+}
+
+    .address p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+.map {
+    width: 100%;
+    height: 230px;
+    border: 1px solid #bdbdbd;
+    overflow: hidden;
+}
+
+    .map iframe {
+        width: 100%;
+        height: 230px;
+        border: none;
+    }
+
+.custompage {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+    font-size: 0;
+}
+.custompage-pitch{
+    position: relative;
+        border-radius: 2px 0 0 2px;
+            color: #999;
+    font-weight: 700;
+        display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    border: 1px solid #e2e2e2;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+}
+.page-item{
+        display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    border: 1px solid #e2e2e2;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+}
+#myPagination{
+    text-align:center;
+}
+.pagepick{
+    background-color:#f86936;
+    color:#ffffff;
+}
+
+#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"΢���ź�";}

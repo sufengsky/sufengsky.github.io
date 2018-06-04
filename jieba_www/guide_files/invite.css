@@ -1,0 +1,90 @@
+.nav li:first-child+li+li{
+	color: #F86936;
+	border-bottom: #f86936 4px solid;
+}
+.nav li:first-child+li+li a{
+	color: #F86936;
+}
+.warpper{
+	width: 100%;
+	clear: both;
+	background: #fbfbfb;
+}
+.main1,.main2{
+	width: 1200px;
+	height: 400px;
+	margin: 0 auto;
+}
+.main1_left{
+	float: left;
+	width: 50%;
+	height: 400px;
+	padding-top: 33px;
+}
+.main1_right{
+	float: left;
+	width: 50%;
+	height: 400px;
+	padding-left: 200px;
+	padding-top: 127px;
+}
+.main1_right p{
+	font-size: 30px;
+	margin-top: 50px;	
+}
+.main2_left{
+	float: left;
+	width: 50%;
+	height: 400px;	
+	padding-left: 145px;
+	padding-top: 127px;
+}
+.main2_right{
+	float: left;
+	width: 50%;
+	height: 400px;
+	padding-top: 33px;
+	padding-left: 66px;
+}
+.main2_left p{
+	font-size: 30px;
+	margin-top: 50px;
+}
+.warp_btn{
+	width: 100%;
+	clear: both;
+	background: #f8f8f8;
+}
+.main3{
+	width: 100%;
+	height: 415px;
+	text-align: center;
+	padding-top: 36px;
+}
+
+.borrow_btn{
+	width: 300px;
+	height: 58px;
+	margin: 0 auto;
+	background: #F86936;
+	color: #FFFFFF;
+	font-size: 30px;
+	line-height: 58px;
+	text-align: center;
+	margin-top: 30px;
+	border-radius: 29px;
+ 	-webkit-border-radius: 29px;
+ 	-moz-border-radius: 29px;
+ 	-ms-border-radius: 29px;
+ 	-o-border-radius: 29px;
+ 	cursor: pointer;
+}
+.borrow_btn:hover{
+	background: #F85216;
+}
+.borrow_btn a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	color: #FFFFff;
+}

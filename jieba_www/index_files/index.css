@@ -1,0 +1,262 @@
+.warp_banner,.warp_1,.warp_2{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	background: #FFFFFF;
+	clear: both;
+}
+.nav li:first-child{
+	color: #F86936;
+	border-bottom: #f86936 4px solid;
+}
+.nav li:first-child a{
+	color: #F86936;
+}
+.warp_banner{
+	background: url(banner_bg.jpg);
+}
+.banner{
+	width: 1200px;
+	height: 400px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+.banner_left{
+	float: left;
+	padding-top: 86px;
+}
+.banner_left p{
+	color: #FFFFFF;
+	font-size: 38px;
+	margin-top: 35px;
+	padding-left: 4px;
+}
+.banner_left p span{
+	float: left;
+	margin-right: 30px;
+	
+}
+.banner_right{
+	float: right;
+	width: 346px;
+	height: 340px;
+	background: #fff4f4;
+	text-align: center;
+	padding: 23px 43px;
+}
+.banner_right img{
+	margin-bottom: 2px;
+}
+.banner_right p{
+	font-size: 14px;
+	color: #F86936;
+}
+.borrow_btn{
+	width: 100%;
+	height: 58px;
+	background: #F86936;
+	color: #FFFFFF;
+	font-size: 24px;
+	line-height: 58px;
+	text-align: center;
+	border-radius: 29px;
+ 	-webkit-border-radius: 29px;
+ 	-moz-border-radius: 29px;
+ 	-ms-border-radius: 29px;
+ 	-o-border-radius: 29px;
+ 	margin-top: 10px;
+}
+.borrow_btn a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	color: #FFFFff;
+}
+.borrow_btn:hover{
+	background:#F85216;
+	cursor: pointer;
+}
+.warp_1{
+	background: #fbfbfb;
+}
+.main1{
+	width: 1200px;
+	height: 315px;
+	margin: 0 auto;
+	padding: 45px 0 30px;
+}
+.advantage{
+	float: left;
+	width: 20%;
+	text-align: center;
+	background: url(adv_line.png) right  center  no-repeat;
+}
+.adv_bt{
+	font-size: 20px;
+	line-height: 44px;
+	margin-top: 5px;
+}
+.adv_text{
+	font-size: 14px;
+	color: #999999;
+	padding: 0 20px;
+	line-height: 24px;
+}
+.advno{
+	background:none;
+}
+.main2{
+	width: 1200px;
+	height: 400px;
+	margin: 0 auto;
+	padding: 25px 0;
+}
+.borrow_records{
+	width: 580px;
+	float: left;
+	
+}
+.main2_bt{
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #b2b2b2;
+	font-size: 16px;
+}
+.br_bt{
+	line-height: 38px;
+	padding-left: 28px;
+	background: url(br_bt.png) 3px center no-repeat;
+	border-bottom: 3px solid #F86936;
+	display: inline-block;
+	padding-right: 5px;
+	font-weight: 600;
+}
+.br_con{
+	overflow: hidden;
+	height: 300px;
+}
+.br_item{
+	width: 100%;
+	height: 50px;
+	line-height: 49px;
+	font-size: 14px;
+	border-bottom: 1px dashed #e2e2e2;
+}
+.br_name,.br_tel,.br_info{
+	float: left;
+}
+.br_name{
+	width: 120px;
+	padding-left: 10px;
+}
+.br_tel{
+	width: 210px;
+	text-align: center;
+}
+.br_info{
+	width: 250px;
+	padding-left: 70px;
+}
+.orange{
+	color: #F86936;
+}
+.announcement{
+	width: 600px;
+	float: right;
+}
+.am_bt{
+	line-height: 38px;
+	padding-left: 28px;
+	background: url(am_bt.png) 3px center no-repeat;
+	border-bottom: 3px solid #F86936;
+	display: inline-block;
+	padding-right: 5px;
+	font-weight: 600;
+	
+}
+.am_list{
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+}
+.am_list li{
+	width: 100%;
+	height: 50px;
+	line-height: 49px;
+	font-size: 14px;
+	border-bottom: 1px dashed #e2e2e2;
+}
+.am_list li p{
+	float: left;
+}
+.am_list li p a{
+	color: #333333;
+}
+.am_list li p a:hover{
+	color: #F86936;
+}
+.am_list li span{
+	float: right;
+	color: #999999;
+}
+.warp_2{
+	background: url(main3_bg.png) center center no-repeat;
+}
+.main3{
+	width: 1200px;
+	height: 366px;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 105px;
+}
+.main3 p{
+	width: 440px;
+	margin: 0 auto;
+	font-size: 48px;
+	color: #FFFFFF;
+	line-height: 70px;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	margin-top: 30px;
+	
+}
+.main4{
+	width: 1200px;
+	height: 307px;
+	text-align: center;
+	margin: 0 auto;
+}
+.main4_top{
+	width: 100%;
+	height: 96px;
+	line-height: 96px;
+	font-size: 20px;
+}
+.line_left,.line_right,.main4_bt{
+	float: left;
+	width: 527px;
+	height: 96px;
+}
+.main4_bt{
+	width: 146px;
+	text-align: center;
+	font-weight: 600;
+}
+.line_left{
+	background: url(line_left.png) center center no-repeat;
+}
+.line_right{
+	background: url(line_right.png) center center no-repeat;
+}
+.partners li{
+	float: left;
+	width: 230px;
+	height: 80px;
+	border: 1px solid #eeeeee;
+	margin-bottom: 12px;
+	margin-right: 12px;
+	text-align: center;
+}
+.partners .marginnone{
+	margin-right: 0;
+}

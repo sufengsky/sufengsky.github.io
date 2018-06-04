@@ -1,0 +1,99 @@
+a{
+    cursor:pointer;
+    text-decoration:none;
+}
+.warp,.warp_footer{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	background: #FFFFFF;
+	clear: both;
+}
+.top{
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+}
+.logo{
+	float: left;
+	padding-top: 10px;
+    cursor:pointer;
+}
+nav{
+	float: right;
+	padding-top: 20px;
+}
+.nav li{
+	float: left;
+	margin-left: 82px;
+	font-size: 18px;
+	line-height: 50px;
+	border-bottom: transparent 4px solid;
+}
+.nav li a{
+	color: #333;
+}
+.nav li a:hover{
+	color: #F86936;
+}
+
+.warp_footer{
+	background: #333333;
+}
+.footer{
+	width: 1200px;
+	height: 199px;
+	margin: 0 auto;
+	padding-top: 37px;
+	color: #d0d0d0;
+}
+.footer_left{
+	float: left;
+	width: 337px;
+	height: 115px;
+	border-right:1px solid #999999;
+	padding-left: 90px;
+	font-size: 14px;
+}
+.fl_tel{
+	font-size: 25px;
+	padding-top: 25px;
+}
+.footer_center{
+	float: left;
+	padding: 0 60px;
+}
+.fc_nav {
+	overflow: hidden;
+	margin-bottom: 14px;
+}
+.fc_nav li{
+	float: left;
+	margin-right: 48px;
+}
+.fc_nav li a{
+	color: #D0D0D0;
+	font-size: 14px;
+}
+.footer_center p{
+	clear: both;
+	line-height: 28px;
+	font-size: 14px;
+}
+.footer_center p span{
+	margin-right: 20px;
+}
+.footer_right{
+	float: left;
+	padding-left: 20px;
+}
+.footer_right div{
+	float: left;
+	width: 108px;
+	text-align: center;
+	margin-right: 30px;
+}
+.footer_right p{
+	font-size: 14px;
+	line-height: 34px
+}
