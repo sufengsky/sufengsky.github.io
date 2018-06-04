@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta content="telephone=no" name="format-detection">
+		<title>邀请好友</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"> 
+		<link rel="stylesheet" type="text/css" href="css/invitefriend.css?v=4" />
+
+		<script src="../js/zepto.min.js"></script>
+		<script src="../js/rem.js"></script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
+      
+	</head>
+	<body>
+		<div class="banner">
+			<ul>
+				<li>139XXXX9668刚刚获得13元奖励</li>
+				<li>156XXXX0633刚刚获得20元奖励</li>
+				<li>188XXXX1890刚刚获得10元奖励</li>				
+				<li>150XXXX4785刚刚获得15元奖励</li>
+				<li>131XXXX9818刚刚获得20元奖励</li>
+				<li>138XXXX3663刚刚获得12元奖励</li>
+				<li>150XXXX4211刚刚获得30元奖励</li>
+				<li>185XXXX9717刚刚获得15元奖励</li>				
+				<li>139XXXX0757刚刚获得15元奖励</li>
+				<li>131XXXX5620刚刚获得18元奖励</li>
+			</ul>
+			<img src="images/banner1.png" class="banner1 animated bounce " />
+			<img src="images/banner2.png" class="banner2 animated fadeInLeftBig"/>
+			<img src="images/banner3.png" class="banner3 animated tada"/>
+		</div>
+		
+		<div class="main">
+			<img src="images/con1.png" class="con1"/>
+			<img src="images/con2.png" class="con2"/>
+			<img src="images/con3.png" class="con3"/>
+			
+			<div class="con4">
+				<div class="reward reward1">
+					<span class="purple">￥</span>
+					<span class="red"><font id="txtMoney"></font>元</span>
+				</div>
+				<div class="reward reward2">				
+					<span class="red"><font id="txtCount"></font>人</span>
+				</div>
+				<div class="reward reward3">					
+					<span class="red"><font id="txtPayMoney"></font>元</span>
+				</div>
+				<div class="rule">
+					<img src="images/rule.png"/>
+				</div>
+			</div>
+			<p class="apple">
+				<img src="images/apple.png"/>
+			</p>
+		</div>
+		<div class="empty"></div>
+		<div class="invite_btn" onclick="wapShare()" id="btnshare">
+			<img src="images/invite_img.png"/>
+		</div>
+		<div class="layer">
+			<div class="gz">
+				<div class="close_btn"></div>
+				<div class="gz_bt">活动规则</div>
+				<div class="gz_con">
+					<p><span class="bold">活动时间：</span>2017年9月1日起</p>
+					<p class="margin"><span class="bold">参与对象：</span>所有借吧注册用户均可参与</p>
+					<p class="margin"><span class="bold">邀请人奖励：</span></p>
+					<p class="margin">活动期间，好友通过邀请人链接注册即为建立邀请关系，且两级好友在30天内首次申请借款，邀请人即获邀请奖励，奖励如下</p>
+					<p class="red">一级奖励：</p>
+					<p class="red margin">邀请好友，邀请人可获得好友申请金额的1%</p>
+					<p class="red">二级奖励：</p>
+					<p class="red margin">好友再邀请好友，邀请人可获得再邀请好友申请金额的0.1%</p>
+					<p class="margin"><span class="red">* </span>邀请奖励奖励将在1个工作日内发放至邀请人“现金红包”账户</p>
+					<p class="margin"><span class="red">* </span>奖励金额可在【<span class="red">我的</span>】-【<span class="red">现金红包</span>】中提现至绑定的收款银行卡</p>
+					<p class="bold margin">好友奖励</p>
+					<p class="margin"><span class="bold">首借免息</span>--每天定点放出300个名额，按完成借款时间先后顺序为准，先到先得</p>
+				    <p class="margin"><span class="bold">注册送120元红包</span>--好友注册后，系统将自动发放120元优惠券（100元提额券、10元抵扣券、10元续期券）至其账户中，可至APP【我的】-【优惠券】中查看，优惠券有效期20天</p>
+				    <p class="bold margin">活动期间有恶意刷奖励的用户，平台有权取消用户奖励资格</p>
+				    <p class="center" id="unlink">本活动最终解释权归借吧所有<span style="display: none;">，与Apple.Inc无关</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="layer_invite">
+			<div class="back"></div>
+			<div class="share"></div>
+			<div class="share_box">
+				<div class="arrow">
+					<img src="images/arrow.png"/>
+				</div>
+				<p class="share_text1">
+					<img src="images/share_text1.png"/>
+				</p>
+				<p class="share_text2">
+					<img src="images/share_text2.png"/>
+				</p>
+			</div>
+			<div class="know" id="knowclose">
+				<img src="images/know_text.png"/>
+			</div>
+		</div> 
+        <input type="hidden" id="hidData"/>
+	</body>  
+</html> 
+<script src="js/invitefriend.js"></script>

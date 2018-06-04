@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>银行卡</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" href="css/mobileSelect.css" type="text/css" />
+
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/bankcard.css?v=3" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/mobileSelect.js"></script>
+		<script src="js/rem.js"></script>
+		<script src="js/common.js"></script>
+        <script src="js/bankcard.js"></script>
+	</head>
+
+	<body>
+		<div id="prompt"></div>
+		<div class="certication_tap">
+			<dl>
+				<dt>
+					<img src="images/ci_bt1_a.png" />
+				</dt>
+				<dd>身份认证</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt2_a.png" />
+				</dt>
+				<dd>基本信息</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt3_a.png" />
+				</dt>
+				<dd>银行卡</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt4.png" />
+				</dt>
+				<dd class="color999">紧急联系人</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt5.png" />
+				</dt>
+				<dd class="color999">手机运营商</dd>
+			</dl>
+			<p class="bg_line"></p>
+			<p class="bg_triangle"></p>
+		</div>
+		<p class="zhu">必须绑定本人储蓄卡，否则无法通过验证</p>
+		<div class="item">
+			<div class="item_bt">银行卡号</div>
+			<input type="text" placeholder="请输入银行卡号" class="item_insert item_insert1" id="account" />
+		</div>
+		<div class="item">
+			<div class="item_bt">开户银行</div>
+			<div class="select-single bank"></div>
+			<div class="select-single bankhide" style="display: none;"></div>
+		</div>
+		<div class="item">
+			<div class="item_bt">预留手机号</div>
+			<input type="text" placeholder="请输入银行预留手机号码" class="item_insert item_insert2" pattern="[0-9]*" maxlength="11" id="reservephone"/>
+		</div>
+		<p class="banktype">
+			<a href="banklist.html">查看支持的银行卡</a>
+		</p>
+		<div class="submit_btn">提交</div>
+		<div class="bottom_tap">
+			<p class="borrow "><a href="http://m.jieba.cc/borrow/index">借款</a></p>
+			<p class="certification active"><a href="index.html">认证</a></p>
+			<p class="mine"><a href="http://m.jieba.cc/usercenter/index">我的</a></p>
+		</div>
+        
+		
+	</body>
+
+</html>

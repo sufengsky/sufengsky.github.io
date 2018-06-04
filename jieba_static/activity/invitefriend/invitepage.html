@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta content="telephone=no" name="format-detection">
+		<title>新手豪礼 限时领取</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/invitepage.css?v=4" />
+		<script src="../js/zepto.min.js"></script>
+		<script src="../js/rem.js"></script>
+		<script src="../js/fastclick.js"></script>
+		<script src="js/invitepage.js"></script>
+	</head>
+
+	<body>
+		<div id="prompt"></div>
+		<div class="banner">
+			<ul>
+				<li>139XXXX9668刚刚获得13元奖励</li>
+				<li>156XXXX0633刚刚获得20元奖励</li>
+				<li>188XXXX1890刚刚获得10元奖励</li>
+				<li>150XXXX4785刚刚获得15元奖励</li>
+				<li>131XXXX9818刚刚获得20元奖励</li>
+				<li>138XXXX3663刚刚获得12元奖励</li>
+				<li>150XXXX4211刚刚获得30元奖励</li>
+				<li>185XXXX9717刚刚获得15元奖励</li>
+				<li>139XXXX0757刚刚获得15元奖励</li>
+				<li>131XXXX5620刚刚获得18元奖励</li>
+			</ul>
+			<div class="logo">
+				<img src="images/logo.png" />
+			</div>
+			<div class="banner_con">
+				<img src="images/banner11.png" class="banner11" />
+				<img src="images/banner22.png" class="banner22" />
+				
+			</div>
+
+		</div>
+		<div class="main">
+			<div class="friend">
+				<div class="headimg">
+					<img src="images/headimg.png"/>
+				</div>
+				<div class="friendmsg">
+					<p>你的好友  王月月</p>
+					<p>送您  120元  代金券</p>
+				</div>
+			</div>
+			<div class="register_part">
+				<div class="item item1">
+					<input type="number" placeholder="请输入您的手机号码" pattern="[0-9]*" oninput="if(value.length>11)value=value.slice(0,11)" class="insert mobile" />
+				</div>
+				<div class="item item2">
+					<input type="text" placeholder="请输入图形验证码" class="insert vcode" maxlength="4"/>
+					<p>
+						<img src="https://api.jieba.cc/vcode.aspx" onclick="this.src = 'https://api.jieba.cc/vcode.aspx?rnd=' + Math.random()" id="vcodeimg"/>
+					</p>
+				</div>
+				<div class="item item3">
+					<input type="number" placeholder="请输入验证码" class="insert smscode" oninput="if(value.length>6)value=value.slice(0,6)"/>		
+					<div class="smscode_btn">
+						<input type="button" value="获取验证码" id="smscode_btn"  onclick="Count()" />
+					</div>
+				</div>
+				<div class="register_btn" onclick="register()">马上领券</div>
+				<div class="agree_part">
+					<p class="agree p1"><span>1</span>我已阅读并同意</p>
+				<p  class="p2">《<a href="#">借吧用户注册协议</a>》</p>
+				</div>
+				
+			</div>
+			<div class="adv_part">
+				<div class="adv adv1">
+					<p class="adv_bt">门槛超低</p>
+					<p class="adv_text">只需身份证及手机号</p>
+				</div>
+				<div class="adv adv2">
+					<p class="adv_bt">高通过率</p>
+					<p class="adv_text">通过率高达90%</p>
+				</div>
+				<div class="adv adv3">
+					<p class="adv_bt">额度灵活</p>
+					<p class="adv_text">500-3000元</p>
+					<p class="adv_text">额度任意借</p>
+				</div>
+				<div class="adv adv4">
+					<p class="adv_bt">急速放款</p>
+					<p class="adv_text">最快10分钟放款</p>
+				</div>
+			</div>
+			<p class="inc">借吧-小额借贷专业平台</p>
+		</div>
+	</body>
+
+</html>

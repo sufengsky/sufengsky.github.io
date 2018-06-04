@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta content="telephone=no" name="format-detection">
+		<title>关于我们</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/aboutus.css?v=4" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/rem.js"></script>
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="top">
+				<img src="images/logo.png" />
+				<p>关于借吧</p>
+				<span></span>
+			</div>
+			<p class="introduce">借吧是爱筹科技有限公司旗下的一款简单的信用借款 产品，认证简单，最快10分钟到账。操作简单，服务 费低。用户无需任何抵押，即可更方便、快捷的实现 信用“变现”，解决个人短期资金紧张问题。
+			</p>
+
+		</div>
+		<div class="adv_part">
+			<div class="adv">
+				<img src="images/adv1.png" />
+				<p>门槛超低</p>
+			</div>
+			<div class="adv">
+				<img src="images/adv2.png" />
+				<p>额度灵活</p>
+			</div>
+			<div class="adv">
+				<img src="images/adv3.png" />
+				<p>操作简单</p>
+			</div>
+			<div class="adv">
+				<img src="images/adv4.png" />
+				<p>审核迅速</p>
+			</div>
+			<div class="adv">
+				<img src="images/adv5.png" />
+				<p>高通过率</p>
+			</div>
+			<div class="adv">
+				<img src="images/adv6.png" />
+				<p>极速放款</p>
+			</div>
+		</div>
+		<div class="bottom">
+			<p>客服咨询</p>
+			<p class="tel">
+				<a href="tel:17053894815">17053894815</a>
+			</p>
+		</div>
+		<script>
+			function getQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) {
+					return unescape(r[2])
+				} else {
+					return "";
+				}
+			}
+			var version=getQueryString("version");
+			$(function() {
+				if(version!="") {
+					$(".top span").text("Ver"+version);
+				} else {
+					$(".top span").hide();
+				}
+			})
+		</script>
+	</body>
+
+</html>

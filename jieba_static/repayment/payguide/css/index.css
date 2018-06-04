@@ -1,0 +1,162 @@
+body{
+	
+}
+.banner{
+	width: 100%;
+}
+.banner img{
+	width: 100%;
+	display: block;
+}
+.main{
+	width: 100%;
+	overflow: hidden;
+	background: #fc7b07;
+	padding: 0.4rem 0.3rem 0.5rem;
+}
+.text{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	line-height: 0.38rem;
+    margin-bottom: 0.3rem;
+}
+.pay_account {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+.mobile{
+    display: inline-block;
+    float: left;
+    width: 4.5rem;
+	font-size: 0.32rem;
+	color: #fc7b07;
+	padding-left: 0.95rem;
+	box-shadow: -2px 1px 3px 2px #ddd inset;
+	-webkit-box-shadow: -2px 1px 3px 2px #ddd inset;
+	background:#FFFFFF url(../images/mobile_bg.png) 0.15rem center no-repeat;
+	background-size: 0.68rem;
+}
+.alipay_btn{
+	width:5.2rem;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	background: url(../images/alipay_bg.png) center center no-repeat;
+	background-size: 5.2rem;
+	color: #ffffff;
+	font-size: 0.4rem;
+	border-radius: 0.45rem;
+	padding-left: 1.4rem;
+	margin: 0 auto;
+	margin-top: 0.3rem;
+}
+.wxpay_btn{
+	width:5.2rem;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	background: url(../images/wxpay_bg.png) center center no-repeat;
+	background-size: 5.2rem;
+	color: #ffffff;
+	font-size: 0.4rem;
+	border-radius: 0.45rem;
+	padding-left: 1.64rem;
+	margin: 0 auto;
+	margin-top: 0.3rem;
+}
+.prompt_text{
+	width: 100%;
+	height: auto;
+	font-size: 0.26rem;
+	background: #e5e5e5;
+	border-radius: 0.15rem;
+	border: 1px dashed #eb6a3d;
+	margin-top: 0.5rem;
+	line-height: 0.4rem;
+	color: #666666;
+	padding: 0.2rem 0.4rem;
+}
+.prompt_text span{
+	color: #fc7b07;
+}
+
+.alipay_bg {
+    background: url(../images/alipay_icon.png) left no-repeat;
+    background-size: 0.8rem;
+}
+
+.wechat_bg {
+    background: url(../images/wechat_icon.png) left no-repeat;
+    background-size: 0.8rem;
+}
+
+.title {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.45rem;
+    color: #fff;
+    padding-left: 1rem;
+    font-weight: bold;
+    /*margin-top: 0.2rem;*/
+}
+
+.mobile_copy {
+    display: inline-block;
+    width: 1.5rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    /*background-color: #52AAE6;*/
+    color: #fff;
+    border-top-right-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;
+    font-size: 0.33rem;
+}
+
+.alipay_copy {
+    background-color: #52AAE6;
+}
+.wechat_copy {
+    background-color: #35B22B;
+}
+.mobile.mobile_wechat {
+    background: #fff url(../images/mobile_wechat_bg.png) 0.15rem center no-repeat;
+    background-size: 0.68rem;
+}
+
+.title.title_bank {
+    padding-left: 0;
+    height: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.mobile.bank {
+    width: 5.8rem;
+    height: 1.4rem;
+    background: #fff url(../images/bank_icon.png) 0.15rem 0.2rem no-repeat;
+    background-size: 0.68rem;
+}
+.account {
+    height: 0.8rem;
+    line-height: 0.8rem;
+}
+
+.address, .name {
+    display: inline-block;
+}
+
+.address {
+    font-size: 0.25rem;
+    color: gray;
+}
+
+.name {
+    color:black;
+    font-size: 0.3rem;
+}
+
+.bank_copy {
+    background-color: #52AAE6;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    width: 1.1rem;
+}

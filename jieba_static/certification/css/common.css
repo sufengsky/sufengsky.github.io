@@ -1,0 +1,162 @@
+body{
+	background: #eeeeee;
+	position: relative;
+	padding-bottom: 1rem;
+}
+.mobileSelect .content .btnBar{
+	height: 0.7rem;
+	background: #dbdbdb;
+	    border: 0;
+	    line-height: 0.7rem;
+}
+.mobileSelect .content .btnBar .cancel, .mobileSelect .content .btnBar .ensure {
+    height:0.7rem;
+    width: 55px;
+    line-height: 0.7rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    font-size: 0.3rem;
+    color: #f86936;
+}
+.mobileSelect .content .btnBar .title {
+	height:0.7rem;
+	line-height: 0.7rem;
+    font-size: 0.3rem;
+    color: #999999;
+}
+.mobileSelect .content .panel .fixWidth {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.mobileSelect .grayLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #eee;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 888;
+    display: block;
+}
+.mobileSelect .content .panel .wheel .selectContainer li {
+    font-size: 15px;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.area_btn_box{
+	background-color: #dbdbdb;
+}
+.area_btn{
+	line-height: 0.7rem;
+	    padding: 0 1em;
+}
+.area_roll_mask {
+    -webkit-mask: -webkit-gradient(linear, 0% 70%, 0% 0%, from(#debb47), torgba(0,0,0,0.7)));
+    -webkit-mask: -webkit-linear-gradient(bottom, #debb47 70%, rgba(0,0,0,0.7));
+    padding: 0;
+}
+.area_roll {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    -webkit-mask: -webkit-gradient(linear, 0% 60%, 0% 100%, from(#debb47), to(rgba(0,0,0,0.7)));
+    -webkit-mask: -webkit-linear-gradient(top, #debb47 60%, rgba(0,0,0,0.7));
+}
+.gearArea {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    overflow: hidden;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.larea_cancel,.larea_finish{
+	color: #F86936;
+}
+.larea_name{
+	color: #999999;
+}
+
+.area_ctrl {
+	color: #333333;
+}
+#prompt {
+	width: 50%;
+	height: auto;
+	font-size: 0.3rem;
+	background: rgba(0, 0, 0, .5);
+	border-radius: 0.1rem;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 0.4rem;
+	padding: 0.3rem 0.2rem;
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	margin-left: -25%;
+	z-index: 9999;
+}
+.bottom_tap{
+	width: 100%;
+	height: 1rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	background: #FFFFFF;
+	border-top: 1px solid #d9d9d9;
+}
+
+.bottom_tap p{
+	width: 33.33%;
+	float: left;
+	text-align: center;
+	font-size: 0.22rem;
+	color: #999999;
+	padding-top: 0.6rem;
+}
+.bottom_tap p a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	color: #999999;
+}
+.bottom_tap .active{
+	color: #f86936;
+}
+.bottom_tap a .active{
+	color: #f86936;
+}
+.borrow{
+	background: url(../images/borrow.png) center 0.12rem  no-repeat;
+	background-size: 0.48rem;
+}
+.certification{
+	background: url(../images/certification_a.png) center 0.12rem  no-repeat;
+	background-size: 0.48rem;
+}
+.mine{
+	background: url(../images/mine.png) center 0.12rem  no-repeat;
+	background-size: 0.48rem;
+}

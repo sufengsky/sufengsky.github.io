@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>借款详情</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/borrowdetails.css?v=4" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/rem.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/borrowdetails.js"></script>
+	</head>
+
+	<body>
+		<div id="prompt"></div>
+		<div class="box">
+			<div class="borrow_bt">借款状态</div>
+			<div class="status_con">
+				
+			</div>
+		</div>
+		<div class="box">
+			<div class="borrow_bt">借款明细</div>
+			<div class="item_con">
+				<div class="item">
+					<div class="item_left">借款金额</div>
+					<div class="item_right" id="BorrowAccount"></div>
+				</div>
+				<!--<div class="item">
+					<div class="item_left">实际到账</div>
+					<div class="item_right" id="LoanAccount"></div>
+				</div>
+				<div class="item">
+					<div class="item_left fee">综合费用</div>
+					<div class="item_right" id="TotalServiceFee"></div>
+				</div>-->
+				<div class="item">
+					<div class="item_left">借款期限</div>
+					<div class="item_right" id="SpanDays"></div>
+				</div>
+				<div class="item">
+					<div class="item_left">日利率</div>
+					<div class="item_right" id="DayInterestRate"></div>
+				</div>
+				<!--<div class="item">
+					<div class="item_left">抵扣金额</div>
+					<div class="item_right orange " id="DiscountAccount"></div>
+				</div>-->
+				
+				<!--<div class="item">
+					<div class="item_left">申请日期</div>
+					<div class="item_right" id="CTime"></div>
+				</div>-->
+				<div class="item">
+					<div class="item_left">收款银行</div>
+					<div class="item_right" id="BankCard"></div>
+				</div>
+				<div class="item_pro">
+					<div class="pro_left">查看借款合同</div>
+					<div class="pro_right" onclick="Protocol()">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box">
+			<div class="borrow_bt">还款明细</div>
+			<div class="item_con">
+				<div class="item">
+					<div class="item_left">最迟还款日期</div>
+					<div class="item_right" id="LastRepayDate"></div>
+				</div>
+				<!--<div class="item">
+					<div class="item_left">还款总金额</div>
+					<div class="item_right" id="TotalRepayAccount"></div>
+				</div>-->
+				<div class="item">
+					<div class="item_left">待还金额</div>
+					<div class="item_right" id="ToRepayAccount"></div>
+				</div>
+				<div class="item">
+					<div class="item_left">已还本金</div>
+					<div class="item_right" id="RepaidBenjin"></div>
+				</div>
+				<div class="item">
+					<div class="item_left">已还利息</div>
+					<div class="item_right" id="RepaidInterest"></div>
+				</div>
+				<div class="item">
+					<div class="item_left">已还罚息</div>
+					<div class="item_right" id="RepaidFaxi"></div>
+				</div>
+
+			</div>
+		</div>
+		<!--<div class="box">
+			<p class="item_prompt">
+				<span class="red">*</span> 提示：若在借款期间内未主动发起还款，则默认于还款日当天从绑定收款银行卡<span class="BankCard"> </span>自动扣除所借款项，请保证在扣款之前账户资金充足。
+			</p>
+		</div>-->
+		<div class="empty"></div>
+		<div class="repay_part">
+			<div class="repay_left">
+				待还款
+				<span class="ToRepayAccount"></span>
+			</div>
+		
+			<div class="repay_btn">
+				立即还款
+			</div>
+				<div class="change_btn">修改金额</div>
+		</div>
+		<div class="layer">
+			<div class="fee_tan">
+                 <p class="fee_bt">服务费用</p>
+                 <div class="item_fee">
+                 	<div class="fee_name">平台服务费</div>
+                 	<div class="fee_val" id="PlatFee"></div>
+                 </div>
+                  <div class="item_fee">
+                 	<div class="fee_name">信息认证费</div>
+                 	<div class="fee_val" id="AuthFee"></div>
+                 </div>
+                  <div class="item_fee">
+                 	<div class="fee_name">风控服务费</div>
+                 	<div class="fee_val" id="RiskFee"></div>
+                 </div>
+                  <div class="item_fee">
+                 	<div class="fee_name">风险准备金</div>
+                 	<div class="fee_val" id="RiskPrepareFee"></div>
+                 </div>
+                 <div class="item_total">
+                 	<div class="total_name">总计</div>
+                 	<div class="total_val" id="Total"></div>
+                 </div>
+                 
+                 <div class="know_btn">知道了</div>
+                 <p class="fee_text">1. 服务费用将在借款成功时收取</p>
+                 <p class="fee_text">2. 利息将在还款时收取，请在交易成功后于订单页的借款协议查看具体信息（年化利率6%~9.5%取决于为您撮合的借款人)</p>
+			</div>
+			<div class="part_tan">
+				<div class="part_bt">部分还款
+				   <div class="part_closebtn"></div>
+				</div>
+				<div class="repaypart">
+					<p class="amount_text">当前全部待还款：<span></span></p>
+					<div class="sub unsub"></div>
+					<div class="amount">200.00</div>
+					<div class="add"></div>
+				</div>
+				<div class="btn_part">
+					<div class="cancel_btn">取消</div>
+					<div class="pay_btn">去还款</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

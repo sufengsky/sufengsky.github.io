@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>紧急联系人</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" href="css/mobileSelect.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/contactman.css" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/mobileSelect.js"></script>
+		<script src="js/rem.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/contactmaninfo.js"></script>
+	</head>
+
+	<body>
+		<div id="prompt"></div>
+		<div class="certication_tap">
+			<dl>
+				<dt>
+					<img src="images/ci_bt1_a.png" />
+				</dt>
+				<dd>身份认证</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt2_a.png" />
+				</dt>
+				<dd>基本信息</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt3_a.png" />
+				</dt>
+				<dd>银行卡</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt4_a.png" />
+				</dt>
+				<dd>紧急联系人</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt5.png" />
+				</dt>
+				<dd class="color999">手机运营商</dd>
+			</dl>
+			<p class="bg_line"></p>
+			<p class="bg_triangle"></p>
+		</div>
+		<p class="zhu">请添加紧急联系人，并修改联系人真实姓名为真实姓名</p>
+
+		<div class="item">
+			<div class="item_bt">与本人关系</div>
+			<div class="select-single relation1"></div>
+
+		</div>
+		<div class="item">
+			<div class="item_bt">紧急联系人</div>
+			<input type="text" placeholder="请填写联系人姓名" class="item_insert item_insert1"  id="familyname"/>
+		</div>
+		<div class="item">
+			<div class="item_bt">联系方式</div>
+			<input type="number" placeholder="请输入您的手机号码" pattern="[0-9]*" oninput="if(value.length>11)value=value.slice(0,11)" class="item_insert item_insert2" id="familymobile"/>
+		</div>
+		<br />
+		<div class="item">
+			<div class="item_bt">与本人关系</div>
+			<div class="select-single relation2"></div>
+		</div>
+		<div class="item">
+			<div class="item_bt">紧急联系人</div>
+			<input type="text" placeholder="请填写联系人姓名" class="item_insert item_insert3" id="othername"/>
+		</div>
+		<div class="item">
+			<div class="item_bt">联系方式</div>
+			<input type="number" placeholder="请输入您的手机号码" pattern="[0-9]*" oninput="if(value.length>11)value=value.slice(0,11)" class="item_insert item_insert4" id="othermobile"/>
+		</div>
+		<div class="submit_btn ">提交</div>
+		<div class="bottom_tap">
+			<p class="borrow "><a href="http://m.jieba.cc/borrow/index">借款</a></p>
+			<p class="certification active"><a href="index.html">认证</a></p>
+			<p class="mine"><a href="http://m.jieba.cc/usercenter/index">我的</a></p>
+		</div>
+
+		
+	</body>
+
+</html>

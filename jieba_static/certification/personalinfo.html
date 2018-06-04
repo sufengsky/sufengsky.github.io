@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>基本信息</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" href="css/mobileSelect.css" type="text/css" />
+		<link rel="stylesheet" href="css/LArea.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/personalinfo.css?v=3" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/rem.js"></script>
+		<script src="js/mobileSelect.js"></script>
+		<script src="js/common.js"></script>		
+        <script src="js/personalinfo.js"></script>
+	</head>
+
+	<body>
+		<div id="prompt"></div>
+		<div class="certication_tap">
+			<dl>
+				<dt>
+					<img src="images/ci_bt1_a.png" />
+				</dt>
+				<dd>身份认证</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt2_a.png" />
+				</dt>
+				<dd>基本信息</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt3.png" />
+				</dt>
+				<dd class="color999">银行卡</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt4.png" />
+				</dt>
+				<dd class="color999">紧急联系人</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt5.png" />
+				</dt>
+				<dd class="color999">手机运营商</dd>
+			</dl>
+			<p class="bg_line"></p>
+			<p class="bg_triangle"></p>
+		</div>
+		<p class="zhu">详细、真实的信息可加快审核，提高额度</p>
+		<div class="item">
+			<div class="item_bt">工作类型</div>
+			<div class="select-single worktype"></div>
+		</div>
+		<div class="item">
+			<div class="item_bt">学历</div>
+			<div class="select-single education"></div>
+		</div>
+		<div class="item">
+			<div class="item_bt">现居住地址</div>
+			<div class="select-single">
+				<p id="address"></p>
+				<input id="value1" type="hidden" value="110000,110100,110101" readonly="readonly">
+			</div>
+			<div class="address">
+				<div class="item_bt"></div>
+				<input type="text" placeholder="请填写具体街道门牌号" class="address_insert" />
+			</div>
+		</div>
+		<div class="submit_btn" onclick="subMit()">提交</div>
+		<div class="bottom_tap">
+			<p class="borrow "><a href="http://m.jieba.cc/borrow/index">借款</a></p>
+			<p class="certification active"><a href="index.html">认证</a></p>
+			<p class="mine"><a href="http://m.jieba.cc/usercenter/index">我的</a></p>
+		</div>
+		<script src="js/LArea.js"></script>
+		<script src="js/areajson.js"></script>
+
+		
+	</body>
+
+</html>

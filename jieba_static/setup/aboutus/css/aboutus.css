@@ -1,0 +1,61 @@
+body{
+	background: #fafafa;
+}
+.main{
+	text-align: center;
+	padding-top: 0.6rem;
+}
+.top img{
+	width: 1.56rem;
+}
+.top p{
+	font-size: 0.4rem;
+	color: #F86936;
+	margin-top: 0.24rem;
+}
+.top img{
+	font-size: 0.24rem;
+	color: #666666;
+}
+.introduce{
+	padding: 0 0.7rem;
+	font-size: 0.26rem;
+	color: #020202;
+	text-align: left;
+	line-height: 0.4rem;
+	margin-top: 0.58rem;
+}
+.adv_part{
+	overflow: hidden;
+	margin-top: 0.85rem;
+	padding: 0 0.15rem;
+}
+.adv{
+	width: 33.33%;
+	overflow: hidden;
+	float: left;
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+.adv img{
+	width: 0.98rem;
+}
+.adv p{
+	font-size: 0.26rem;
+	color: #F86936;
+	margin-top: 0.12rem;
+}
+.bottom{
+	text-align: center;
+	padding: 1.2rem 0 0.3rem 0;
+}
+.bottom p{
+	font-size: 0.24rem;
+	color: #666666;
+	line-height: 0.52rem;
+}
+ .bottom p a{
+	font-size: 0.4rem;
+	color: #F86936;
+	
+}

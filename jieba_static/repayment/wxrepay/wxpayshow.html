@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta content="telephone=no" name="format-detection">
+		<title>微信还款流程</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/wxpayshow.css?v=4" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/fastclick.js"></script>
+		<script src="js/rem.js"></script>
+	</head>
+
+	<body>
+
+		<div class="main">
+			<p class="step">进入<span>【微信】</span>点击<span>【添加朋友】</span></p>
+			<div class="img1"><img src="images/img1.png" /></div>
+			<p class="step">选择<span>【公众号】</span></p>
+			<div class="img2"><img src="images/img22.png" /></div>
+			<p class="step">粘贴<span>【aichoucaifu】</span>或输入<span>【急速快批】</span></p>
+			<div class="img3"><img src="images/img33.png" /></div>
+			<p class="step">点击<span>【关注】借吧微信公众号</span></p>
+			<div class="img4"><img src="images/img44.png" /></div>
+			<p class="step">点击<span>【更多功能】</span>选择<span>【我要还款】</span></p>
+			<div class="img5"><img src="images/img55.png" /></div>
+			<p class="step">登录后点击<span>【立即还款】</span>选择<span>【微信支付】</span></p>
+			<div class="img6"><img src="images/img66.png" /></div>
+			<p class="step step7">完成</p>
+			
+		</div>
+		<div class="open_btn" onclick="openwebchat()">打开微信，立即支付</div>
+		<script>
+			$(function() {
+				FastClick.attach(document.body);
+			});
+
+
+			 function openwebchat()
+            {
+                if (navigator.userAgent.match(/(iPhone|iPad|ios)/i)) {
+                    window.webkit.messageHandlers.IosWeChatPay.postMessage("aichoucaifu");
+                }
+                else {
+                    android.jsOnClickWeChatPay("aichoucaifu");
+                }
+            } 
+		</script>
+	</body>
+
+</html>

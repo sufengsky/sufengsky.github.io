@@ -1,0 +1,119 @@
+body{
+	width: 100%;
+	background: #eeeeee;
+}
+.top_box{
+	padding: 0.2rem 0.3rem;
+	
+}
+.top{
+	width: 100%;
+	height: 2.2rem;
+	color: #f86936;
+	padding-left: 0.48rem;
+	border-radius: 0.15rem;
+	-webkit-border-radius: 0.15rem;
+	-moz-border-radius: 0.15rem;	
+	-ms-border-radius: 0.15rem;
+	-o-border-radius: 0.15rem;
+	background: #f9dcd2 url(../images/top_bg.png) right 0.5rem no-repeat;
+	background-size: 3.18rem;
+	padding-top: 0.34rem;
+}
+.top p{
+	font-size:0.46rem ;
+}
+.top span{
+	font-size:0.26rem ;
+	line-height: 0.56rem;
+}
+.main{
+	overflow: hidden;
+	background: #ffffff;
+	border-top:1px solid  #dcdcdc;
+	border-bottom:1px solid  #dcdcdc;
+	margin-bottom: 0.2rem;
+}
+.main_bt{
+	padding-left: 0.88rem;
+	font-size: 0.3rem;
+	line-height: 1rem;
+	background: url(../images/main_bt.png) 0.3rem center no-repeat;
+	background-size: 0.43rem;
+	border-bottom: 1px solid #dcdcdc;
+}
+.main ul li{
+	width: 33.33%;
+	float: left;
+	height: 1.8rem;
+	
+}
+.br{
+	border-right: 1px solid #dcdcdc;
+}
+.bb{
+	border-bottom: 1px solid #dcdcdc;
+}
+.main ul li a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	text-align: center;
+	padding-top: 0.32rem;
+}
+.main ul li a img{
+	width: 0.64rem;
+	
+}
+.main ul li a p{
+	margin-top: 0.1rem;
+	color: #333333;
+	font-size: 0.26rem;
+}
+
+.item{
+	width: 100%;
+	height: 1rem;
+	background: #ffffff;	
+	border-bottom:1px solid  #dcdcdc;	
+	padding: 0 0.3rem;
+}
+.item_bt{
+	padding-left: 0.88rem;
+	font-size: 0.3rem;
+	line-height: 1rem;
+	background:#ffffff url(../images/item_bt.png) 0.3rem center no-repeat;
+	background-size: 0.48rem;
+	border-top:1px solid  #dcdcdc;
+}
+.item a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	padding-left: 0.02rem;
+	line-height:1rem;
+	color: #333333;
+	background: url(../images/arrow.png) right center no-repeat;
+	background-size: 0.18rem;
+}
+.tel{
+	width: 100%;
+	height: 1.08rem;
+	position: fixed;
+	left:0;
+	bottom: 0;
+	background: #f86936;
+	
+}
+.tel a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	color: #ffffff;
+	font-size: 0.36rem;
+	text-align: center;
+	line-height: 1.08rem;
+	background: url(../images/service_tel.png) 2.3rem center no-repeat;
+	background-size: 0.58rem;
+	padding-left: 0.58rem;
+}

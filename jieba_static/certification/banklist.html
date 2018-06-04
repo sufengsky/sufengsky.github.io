@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>支持的银行卡</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/banklist.css?v=4" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/rem.js"></script>
+		<script src="js/common.js"></script>
+
+	</head>
+
+	<body>
+		<p class="zhu">基础认证必填，完成所有基础认证后才可激活额度</p>
+		<div class="banklist">
+			<div class="bankitem">
+				<div class="bank_left">
+					<img src="images/bank1.png" />
+				</div>
+				<div class="bank_right">
+					<p class="bankname">农业银行</p>
+
+				</div>
+			</div>
+			<div class="bankitem">
+				<div class="bank_left">
+					<img src="images/bank2.png" />
+				</div>
+				<div class="bank_right">
+					<p class="bankname">农业银行</p>
+
+				</div>
+			</div>
+			<div class="bankitem">
+				<div class="bank_left">
+					<img src="images/bank3.png" />
+				</div>
+				<div class="bank_right">
+					<p class="bankname">农业银行</p>
+
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var str = "";
+			$(function() {
+				$.get("js/banklist.js", function(msg) {
+                     var data=$.parseJSON(msg);
+					for(i = 0; i < data.data.list.length; i++) {
+						str += '<div class="bankitem">'+
+				                 '<div class="bank_left">'+
+				                 '<img src="'+data.data.list[i].IconUrl+'" />'+
+				                 '</div>'+
+				                 '<div class="bank_right">'+
+				                 '<p class="bankname">'+data.data.list[i].BankShortName+'</p>'+
+				                 '</div>'	+
+				                 '</div>'
+					}
+					$(".banklist").html(str)
+
+				});
+			})
+		</script>
+	</body>
+
+</html>

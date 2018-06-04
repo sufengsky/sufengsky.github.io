@@ -1,0 +1,178 @@
+body{
+	background: #eeeeee;
+	margin: 0 auto;
+	width: 7.5rem;;
+}
+.head_main{
+	width: 100%;
+	height: 3.4rem;
+	background: url(../images/head_main_ml.png) center center no-repeat;
+	background-size: 7.5rem;
+	position: relative;
+	color: #FFFFFF;
+	padding-top: 0.3rem;
+}
+.head_bt{
+	font-size: 0.3rem;
+	text-align: center;
+	line-height: 0.6rem;
+}
+.head_con{
+	font-size: 1rem;
+	text-align: center;
+}
+.head_prompt{
+	width: 100%;
+	height: 0.7rem;
+	line-height: 0.7rem;
+	color: #FFFFFF;
+	font-size: 0.3rem;
+	padding-left: 1.2rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background:url(../images/head_ml_prompt.png) 0.6rem  center no-repeat rgba(0,0,0,0.1);
+	background-size: 0.4rem;
+}
+.con_limit{
+	padding-bottom: 0.8rem;
+}
+.cl_bt{
+	line-height: 0.7rem;
+	overflow: hidden;
+	color: #666666;
+	font-size: 0.24rem;
+	padding-left: 0.7rem;
+	background: url(../images/zhu.png) 0.3rem center no-repeat;
+	background-size: 0.24rem;
+}
+
+
+.cl_con{
+	width: 100%;
+	background: #FFFFFF;
+	overflow: hidden;
+}
+.cl_item{
+	width:100%;
+	height: 1rem;
+	border-bottom: 1px solid #e5e5e5;
+	padding:0 0.3rem;
+	line-height: 1rem;
+}
+
+.ci_bt{
+	float: left;
+	padding-left: 0.7rem;
+	font-size: 0.3rem;
+}
+.ci_bt1{
+	background: url(../images/ci_bt1.png) left center no-repeat;
+	background-size: 0.52rem;
+}
+.ci_bt2{
+	background: url(../images/ci_bt2.png) left center no-repeat;
+	background-size: 0.52rem;
+}
+.ci_bt3{
+	background: url(../images/ci_bt3.png) left center no-repeat;
+	background-size: 0.52rem;
+}
+.ci_bt4{
+	background: url(../images/ci_bt4.png) left center no-repeat;
+	background-size: 0.52rem;
+}
+.ci_bt5{
+	background: url(../images/ci_bt5.png) left center no-repeat;
+	background-size: 0.52rem;
+}
+.ci_bt1_a{
+	background: url(../images/ci_bt1_a.png) left center no-repeat;
+	background-size: 0.52rem;
+}
+.ci_bt2_a{
+	background: url(../images/ci_bt2_a.png) left center no-repeat;
+	background-size: 0.52rem;
+}
+.ci_bt3_a{
+	background: url(../images/ci_bt3_a.png) left center no-repeat;
+	background-size: 0.52rem;
+}
+.ci_bt4_a{
+	background: url(../images/ci_bt4_a.png) left center no-repeat;
+	background-size: 0.52rem;
+}
+.ci_bt5_a{
+	background: url(../images/ci_bt5_a.png) left center no-repeat;
+	background-size: 0.52rem;
+}
+.complete_tag{
+	width: 3.2rem;
+	height: 1rem;
+	float: right;
+	color: #999999;
+	font-size: 0.26rem;
+	text-align: right;
+	padding-right: 0.3rem;
+	background: url(../images/arrow_right.png) right center no-repeat;
+	background-size: 0.15rem;
+}
+.com_active{
+	background: url(../images/complete.png) right center no-repeat;
+	background-size: 0.32rem;
+}
+.complete_tag a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	color: #999999;
+}
+.certication_btn{
+	width: 7.1rem;
+	height: 0.88rem;
+	background: #F86936;
+	color: #FFFFFF;
+	font-size: 0.36rem;
+	text-align: center;
+	line-height: 0.88rem;
+	border-radius: 0.44rem;
+	-webkit-border-radius: 0.44rem;
+	-moz-border-radius: 0.44rem;	
+	-o-border-radius: 0.44rem;
+	-ms-border-radius: 0.44rem;
+	margin: 0 auto;
+	margin-top: 0.44rem;
+}
+.bottom_tap{
+	width: 100%;
+	height: 1rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #FFFFFF;
+	border-top: 1px solid #d9d9d9;
+}
+
+.bottom_tap p{
+	width: 33.33%;
+	float: left;
+	text-align: center;
+	font-size: 0.22rem;
+	color: #999999;
+	padding-top: 0.6rem;
+}
+.bottom_tap .active{
+	color: #f86936;
+}
+.borrow{
+	background: url(../images/borrow.png) center 0.12rem  no-repeat;
+	background-size: 0.48rem;
+}
+.certification{
+	background: url(../images/certification_a.png) center 0.12rem  no-repeat;
+	background-size: 0.48rem;
+}
+.mine{
+	background: url(../images/mine.png) center 0.12rem  no-repeat;
+	background-size: 0.48rem;
+}

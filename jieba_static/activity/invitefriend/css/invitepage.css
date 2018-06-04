@@ -1,0 +1,290 @@
+body {
+	background: #ffffff;
+	width: 7.5rem;
+	position: relative;
+}
+#prompt {
+	width: 50%;
+	height: auto;
+	font-size: 0.3rem;
+	background: rgba(0, 0, 0, .5);
+	border-radius: 0.1rem;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 0.4rem;
+	padding: 0.3rem 0.2rem;
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	margin-left: -25%;
+	z-index: 9999;
+}
+.banner {
+	width: 100%;
+	height: 4rem;
+	background: url(../images/bannerbg2.png) center top no-repeat;
+	background-size: 100%;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	padding-top: 0.82rem;
+}
+
+.banner ul {
+	width: 42rem;
+	background: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	left: 0;
+	top: 0;
+	animation: 50s move infinite linear;
+	-webkit-animation: 50s move infinite linear;
+}
+
+.banner ul li {
+	width: 3.8rem;
+	margin: 0 0.2rem;
+	float: left;
+	height: 0.7rem;
+	color: #ffffff;
+	text-align: left;
+	line-height: 0.7rem;
+}
+.logo{
+	text-align: left;
+	padding-left: 0.3rem;
+}
+.logo img{
+	width: 1.4rem;
+}
+.banner11{
+	width:4.82rem;
+	margin-top: 0.1rem;
+}
+.banner22 {
+	width: 4.18rem;
+	margin-top: 0.15rem;
+}
+.main{
+	width: 100%;
+	padding: 0.3rem 0.3rem 0;
+}
+.friend{
+	width: 100%;
+	height: 1.32rem;
+	background: url(../images/friendbg.png) right center no-repeat;
+	background-size: 5.9rem;
+	margin-bottom: 0.3rem;
+}
+.headimg{
+	width: 1.3rem;
+	height: 1.3rem;
+	border-radius: 0.65rem;
+	-webkit-border-radius: 0.65rem;
+	-moz-border-radius: 0.65rem;
+	-o-border-radius: 0.65rem;
+	-ms-border-radius: 0.65rem;
+	float: left;
+	overflow: hidden;
+}
+.headimg img{
+	width: 1.3rem;
+}
+.friendmsg{
+	width: 2.8rem;
+	float: left;
+	margin-left: 0.5rem;
+	padding: 0.21rem 0;
+}
+.friendmsg p{
+	font-size: 0.26rem;
+	font-weight: 600;
+	line-height: 0.46rem;
+	color: #845018;
+}
+.register_part{
+	width: 100%;
+}
+.item{
+	width: 100%;
+	height: 0.9rem;
+	border: 1px solid #fa4f47;
+	border-radius: 0.1rem;
+	-webkit-border-radius: 0.1rem;
+	-moz-border-radius: 0.1rem;
+	-o-border-radius: 0.1rem;
+	-ms-border-radius: 0.1rem;
+	margin-bottom: 0.15rem;
+	padding-left: 0.78rem;
+	overflow: hidden;
+}
+.item1{
+	background: url(../images/mobile_icon.png) 0.26rem  center no-repeat;
+	background-size: 0.3rem;
+}
+.item2{
+	background: url(../images/vcode_icon.png) 0.24rem  center no-repeat;
+	background-size: 0.34rem;
+	display: none;
+}
+.item3{
+	background: url(../images/smscode_icon.png) 0.22rem  center no-repeat;
+	background-size: 0.37rem;
+}
+.insert{
+	width: 4.08rem;
+	line-height: 0.44rem;
+	padding: 0.2rem 0;
+	font-size: 0.28rem;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+   color: #999; 
+   font-size: 0.24rem;
+} 
+.item2 p{
+	width: 2rem;
+	float: right;
+	height: 0.86rem;
+	border-left: 1px solid #fa4f47;
+	overflow: hidden;
+}
+#vcodeimg{
+	width: 2rem;
+}
+.smscode{
+	float: left;
+}
+.smscode_btn{
+	width: 2rem;
+	float: right;
+	height: 0.86rem;
+	background: #FA4F47;
+	text-align: center;
+	line-height: 0.86rem;
+	
+}
+#smscode_btn{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	color: #ffffff;
+	font-size: 0.26rem;
+}
+.register_btn{
+	width: 100%;
+	height: 0.9rem;
+	background: #bdbdbd;
+	border-radius: 0.1rem;
+	-webkit-border-radius: 0.1rem;
+	-moz-border-radius: 0.1rem;
+	-o-border-radius: 0.1rem;
+	-ms-border-radius: 0.1rem;
+	text-align: center;
+	line-height: 0.9rem;
+	color: #FFFFFF;
+	font-size: 0.32rem;
+	font-weight: 600;
+	margin-top: 0.3rem;
+	
+}
+.agree_part{
+	overflow: hidden;
+}
+.agree{
+	background: url(../images/agree.png) 0.02rem center no-repeat;
+	background-size: 0.28rem;
+	padding-left: 0.4rem;
+}
+.agree span{
+	display: none;
+}
+.p1,.p2{
+	float: left;
+	line-height: 0.7rem;
+	font-size: 0.24rem;
+	color: #999999;
+	overflow: hidden;
+}
+.p2 a{
+	color: #999999;
+}
+.adv_part{
+	overflow: hidden;
+	margin-top: 0.3rem;
+	clear: both;
+}
+.adv{
+	float: left;
+	padding-left: 1.25rem;
+	margin-bottom: 0.45rem;
+	min-height: 1.1rem;
+	padding-top: 0.04rem;
+}
+.adv_bt{
+	font-size: 0.3rem;
+	line-height: 0.58rem;
+}
+.adv_text{
+	font-size: 0.24rem;
+}
+.adv1{
+	width: 3.75rem;
+	background: url(../images/adv1.png) left top no-repeat;
+	background-size: 1.05rem;
+}
+.adv2{
+
+	background: url(../images/adv2.png) left top no-repeat;
+	background-size: 1.05rem;
+}
+.adv3{
+	width: 3.75rem;
+	background: url(../images/adv3.png) left top no-repeat;
+	background-size: 1.05rem;
+}
+.adv4{
+
+	background: url(../images/adv4.png) left top no-repeat;
+	background-size: 1.05rem;
+}
+.inc{
+	text-align: center;
+	color: #999999;
+	font-size: 0.24rem;
+	padding-bottom: 0.3rem;
+}
+@keyframes move {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -34.5rem;
+	}
+}
+
+@-moz-keyframes move {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -34.5rem;
+	}
+}
+
+@-webkit-keyframes move {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -34.5rem;
+	}
+}
+
+@-o-keyframes move {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -34.5rem;
+	}
+}

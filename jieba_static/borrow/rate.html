@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>费率计算</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/rate.css?v=3" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/rem.js"></script>
+		<script src="js/rangeslider.js"></script>
+	</head>
+
+	<body>
+		<div class="item">
+			<div class="item_bt">借款金额(元)</div>
+			<div class="item_val orange" id="borrowMoney">500</div>
+		</div>
+		<div class="item">
+			<div class="item_bt">借款期限(天)</div>
+			<div class="item_val blue" id="borrowLimit">7</div>
+		</div>
+		<div class="item">
+			<div class="item_bt br_none">应还金额(元)</div>
+			<div class="item_val br_none green" id="repayAmount">502.28</div>
+		</div>
+		<div class="box">
+			<div class="amount">
+				<p>贷款金额</p>
+				<div class="range_box"><input type="range" value="0" class="amount_range" /></div>
+			</div>
+			<div class="deadline">
+				<p>贷款期限</p>
+				<div class="range_box"><input type="range" value="0" class="deadline_range" /></div>
+			</div>
+		</div>
+		<div class="fee">费用说明</div>
+		<div class="fee_part">
+			<div class="fee_item">
+				<p class="orange">一、借款费用说明</p>
+				<p>借吧的贷后综合管理费用，按实际的借款天数收取，按每天借款额的0.065%收取，期限为7天，可提前还款。</p>
+			</div>
+			<div class="fee_item">
+				<p class="orange">二、逾期费用说明</p>
+				<p>当您借款超过7天仍未还款时，我们将根据剩余未还本金，按日收违约金。每日收取借款本金的0.15%作为违约金。</p>
+			</div>
+			<div class="fee_item">
+				<p class="orange">三、友情提示</p>
+				<p>请保持良好的还款习惯和信用记录，否则将影响您在借吧的信用额度、申请通过率及人行征信的信用评分。</p>
+			</div>
+		</div>
+
+		<script>
+			$(function() {
+				var $val = $("#borrowMoney").text();
+				$('.amount_range').RangeSlider({
+					min: 500,
+					max: $val == null ? 3000 : $val,
+					step: 100,
+					callback: rangeChange1,
+				});
+				$('.amount_range').val($val);
+				$('.amount_range').css('background', 'linear-gradient(to right, #f86936, #f86936  100%,#f86936)');
+			})
+
+			function rangeChange1(obj) {
+				var $val = $(obj).val();
+				var $val2 = $("#borrowLimit").text();
+				$("#borrowMoney").text($val);
+				var total = Number($val) + Number($val * 0.00065 * $val2)
+				total = keepTwoDecimalFull(total);
+				$("#repayAmount").text(total);
+
+			}
+			$(function() {
+				var $val = $("#borrowLimit").text();
+				$('.deadline_range').RangeSlider({
+					min: 1,
+					max: $val == null ? 14 : $val,
+					step: 1,
+					callback: rangeChange2,
+				});
+				$('.deadline_range').val($val);
+				$('.deadline_range').css('background', 'linear-gradient(to right, #3799fb, #3799fb  100%,#3799fb)');
+			})
+
+			function rangeChange2(obj) {
+				var $val = $(obj).val();
+				var $val2 = $("#borrowMoney").text();
+				$("#borrowLimit").text($val);
+				var total = Number($val2) + Number($val2 * 0.00065 * $val);
+				total = keepTwoDecimalFull(total);
+				$("#repayAmount").text(total);
+			}
+
+			function keepTwoDecimalFull(num) {
+				var result = parseFloat(num);
+				if(isNaN(result)) {
+					alert('传递参数错误，请检查！');
+					return false;
+				}
+				result = Math.round(num * 100) / 100;
+				var s_x = result.toString();
+				var pos_decimal = s_x.indexOf('.');
+				if(pos_decimal < 0) {
+					pos_decimal = s_x.length;
+					s_x += '.';
+				}
+				while(s_x.length <= pos_decimal + 2) {
+					s_x += '0';
+				}
+				return s_x;
+			}
+		</script>
+	</body>
+
+</html>

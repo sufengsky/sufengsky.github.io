@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>申请续期</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		
+		<link rel="stylesheet" type="text/css" href="css/deferrepayment.css?v=4" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/rem.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/deferrepayment.js"></script>
+	</head>
+
+	<body>
+		<div id="prompt"></div>
+		<p class="prompt_text"><span>*</span> 申请还款续期服务需要支付费用，请确认并支付！</p>
+		<div class="box">
+			<div class="item">
+				<div class="item_left">待还本金</div>
+				<div class="item_right" id="ToRepayAccount">998.00元</div>
+			</div>
+			<div class="item">
+				<div class="item_left">续期天数</div>
+				<div class="item_right" id="DelayDays">7天</div>
+			</div>
+			<div class="item">
+				<div class="item_left">服务费</div>
+				<div class="item_right" id="ServiceFee">49.9元</div>
+			</div>
+			<div class="item">
+				<div class="item_left">手续费</div>
+				<div class="item_right" id="Poundage">49.9元 </div>
+			</div>
+			<div class="item">
+				<div class="item_left">逾期费</div>
+				<div class="item_right" id="OverDueFee">0.00元</div>
+			</div>
+		</div>
+		<div class="box box2">
+			<div class="item">
+				<div class="item_left quan_left">可用券</div>
+				<div class="item_right quan_right">
+					
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_right amount">
+					应付总额：<span id="Total">99.80元</span>
+				</div>
+			</div>
+		</div>
+		<p class="prompt_text prompt_text2">完成支付续期费用后，即可成功续期</p>
+		<div class="pay_btn">立即支付</div>
+		<div class="bottom_tap">
+			<p class="borrow ">
+				<a href="http://m.jieba.cc/borrow/index">借款</a>
+			</p>
+			<p class="certification active">
+				<a href="index.html">认证</a>
+			</p>
+			<p class="mine">
+				<a href="http://m.jieba.cc/usercenter/index">我的</a>
+			</p>
+		</div>
+		<div class="layer">
+			<div class="quan_part">
+				<div class="quan_bt">
+					可用优惠券
+					<div class="quan_cancel">取消</div>
+				</div>
+				<div class="quan_con">
+					<div class="quan_list">
+						<div class="quan">
+							<div class="quan_amount">￥<span>10</span></div>
+							<div class="quan_msg">
+								<p class="msg_bt">抵扣券</p>
+								<p class="msg_condition">使用条件：服务费抵扣</p>
+								<p class="msg_deadline">有效期：2017.06.24-2017.07.14</p>
+							</div>
+							<div class="select_btn noselect"></div>
+						</div>
+						
+						
+					</div>
+					<div class="no_use">
+						不使用优惠券
+						<div class="nouse_btn  select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

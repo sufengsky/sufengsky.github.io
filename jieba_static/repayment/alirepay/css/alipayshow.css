@@ -1,0 +1,70 @@
+body{
+	background: #FFFFFF;
+	width: 7.5rem;
+	margin: 0 auto;
+	position: relative;
+}
+.main{
+	background: ;
+	margin-top: 0.5rem;	
+	background: url(../images/main_bg.png) 0.52rem top no-repeat;
+	background-size: 0.72rem;
+	padding-right: 0.3rem;
+	padding-bottom: 1rem;
+}
+.step{
+	font-size: 0.3rem;
+	line-height: 0.7rem;
+	padding-left: 1.8rem;
+}
+.step span{
+	color:#fec24d ;
+}
+.main div{
+	width: 100%;
+	text-align: right;
+}
+.main div img{
+	display: inline-block
+}
+.img1 img{
+	width: 6.4rem;
+	margin: 0.25rem 0  0.4rem 0;
+}
+.img2 img{
+	width: 4.46rem;
+	margin: 0.25rem 0  0.53rem 0;
+}
+.img3 img{
+	width: 6.52rem;
+	margin: 0.28rem 0  0.38rem 0;
+}
+.img4 img{
+	width: 4.4rem;
+	margin: 0.3rem 0  0.4rem 0;
+}
+.img5 img{
+	width: 4.53rem;
+	margin: 0.4rem 0  0.5rem 0;
+}
+.img6 img{
+	width: 6.16rem;
+	margin: 0.3rem 0  0.8rem 0;
+}
+.img7 img{
+	width:4.49rem;
+	margin: 0.5rem 0  0.85rem 0;
+}
+.open_btn{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1rem;
+	background: #fec24d;
+	color: #FFFFFF;
+	font-size: 0.36rem;
+	text-align: center;
+	line-height:1rem;
+	z-index: 99;
+}

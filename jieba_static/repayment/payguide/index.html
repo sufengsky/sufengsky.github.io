@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="telephone=no" name="format-detection">
+    <title>借吧还款</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css?v=4" />
+    <script src="js/zepto.min.js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <style>
+    .ac_toast {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    text-align: center;
+    display: none;
+}
+
+.ac_toast_dialog {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.ac_toast_backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.ac_toast_content {
+    position: relative;
+    min-width: 120px;
+    display: inline-block;
+    background: rgba(40,40,40,0.75);
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.ac_toast_content span {
+    padding: 15px;
+    display: block;
+}
+
+.ac_toast_success .ac_toast_content {
+    min-height: 120px;
+}
+
+.ac_toast_success .ac_toast_content .icon {
+    width: 44px;
+    height: 44px;
+    display: block;
+    margin: 10px auto;
+}
+
+.ac_toast_loading .ac_toast_content {
+    min-height: 120px;
+}
+
+.ac_toast_loading .ac_toast_content span {
+    font-size: 14px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <img src="images/banner.png" />
+    </div>
+    <div class="main">
+        <div class="text">
+            <p>尊敬的借吧用户：</p>
+            <p>为了提升广大用户还款处理的速度，现借吧新增微信、支付宝还款账户。具体如下所示：</p>
+        </div>
+        <!--<div class="mobile">手机号：13121252172</div>
+    <div class="alipay_btn" onclick="AliPay()">打开支付宝客户端</div>
+    <div class="mobile">手机号：13121252172</div>
+    <div class="wxpay_btn" onclick="WxPay()">打开微信客户端 </div>-->
+
+        <div class="alipay_bg title">支付宝客户端</div>
+        <div class="pay_account">
+            <div class="mobile">账号：13121252172</div>
+            <div class="mobile_copy alipay_copy" onclick="AliPay()">复制</div>
+        </div>
+
+        <div class="wechat_bg title">微信客户端</div>
+        <div class="pay_account">
+            <div class="mobile mobile_wechat">账号：13121252172</div>
+            <div class="mobile_copy wechat_copy" onclick="WxPay1()">复制</div>
+        </div>
+        <div class="pay_account">
+            <div class="mobile mobile_wechat">账号：18301651995</div>
+            <div class="mobile_copy wechat_copy" onclick="WxPay2()">复制</div>
+        </div>
+
+        <div class="title title_bank">农业银行</div>
+        <div class="bank_account">
+            <div class="mobile bank">
+                <div class="account">账号：6230520010028556576</div>
+                <div class="address">北京金鼎支行</div>
+                <div class="name">王冀川</div>
+            </div>
+            <div class="mobile_copy bank_copy btn1">复制</div>
+        </div>
+
+        <div class="title title_bank">工商银行</div>
+        <div class="bank_account">
+            <div class="mobile bank">
+                <div class="account">账号：6212260200117334405</div>
+                <div class="address">北京石景山政达路支行</div>
+                <div class="name">张晟昱</div>
+            </div>
+            <div class="mobile_copy bank_copy btn2">复制</div>
+        </div>
+
+
+        <div class="prompt_text">
+            提示：可根据您的情况选择任意一种还款方式，还款后将在一小时内更新您的还款状态。以上账号均为
+            <span>官方认证账号</span>，无需担心你的资金安全问题。如有任何疑问请联系客服。客服电话：0755-33944447。
+        </div>
+    </div>
+    <script>
+        function AliPay() {
+
+            if (navigator.userAgent.match(/(iPhone|iPad|ios)/i)) {
+                window.webkit.messageHandlers.IosAliPay.postMessage("13121252172");
+            } else {
+                android.jsOnClickAliPay("13121252172");
+            }
+
+        }
+
+        function WxPay1() {
+            if (navigator.userAgent.match(/(iPhone|iPad|ios)/i)) {
+                window.webkit.messageHandlers.IosWeChatPay.postMessage("13121252172");
+            } else {
+                android.jsOnWebChat("13121252172");
+            }
+        }
+
+        function WxPay2() {
+            if (navigator.userAgent.match(/(iPhone|iPad|ios)/i)) {
+                window.webkit.messageHandlers.IosWeChatPay.postMessage("18301651995");
+            } else {
+                android.jsOnWebChat("18301651995");
+            }
+        }
+        var clipboard1 = new ClipboardJS('.btn1', {
+            text: function () {
+                return '6230520010028556576';
+            }
+
+        });
+        clipboard1.on('success', function (e) {
+            showMessage("复制成功");
+        });
+        clipboard1.on('error', function (e) {
+            showMessage(e);
+        });
+
+        var clipboard2 = new ClipboardJS('.btn2', {
+            text: function () {
+                return '6212260200117334405';
+            }
+        });
+        clipboard2.on('success', function (e) {
+            showMessage("复制成功");
+        });
+        clipboard2.on('error', function (e) {
+            showMessage(e);
+        });
+
+function showMessage(message) {
+    var info = "<div class='ac_toast' id='toast-default' style='display:block;'><div class='ac_toast_backdrop'></div>"+
+    "<div class='ac_toast_dialog'><div class='ac_toast_content'><span>" + message + "</span></div></div></div>";
+    $("body").append(info);
+    setTimeout(function () { $("#toast-default").remove() }, 1000);
+}
+
+
+    </script>
+</body>
+
+</html>

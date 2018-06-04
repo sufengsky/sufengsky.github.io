@@ -1,0 +1,24 @@
+body{
+	width: 100%;
+	background: #eeeeee;
+}
+.main{
+	margin: 0.2rem 0;
+	background: #ffffff;
+	border-top: 1px solid #dcdcdc;
+}
+.main ul li{
+	height: 1rem;
+	padding: 0 0.3rem;
+	border-bottom: 1px solid #dcdcdc;
+}
+.main ul li a{
+	width: 100%;
+	height: 100%;
+	font-size: 0.3rem;
+	display: inline-block;
+	line-height: 1rem;
+	color: #333333;
+	background: url(../images/arrow.png) right center no-repeat;
+	background-size: 0.18rem;
+}

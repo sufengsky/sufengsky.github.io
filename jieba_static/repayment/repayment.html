@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>立即还款</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/repayment.css?v=4" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/rem.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/repayment.js"></script>
+	</head>
+
+	<body>
+		<div id="prompt"></div>
+		<div class="main">
+			<p class="main_bt">还款金额（元）</p>
+			<p class="main_amount">￥<span></span></p>
+			<div class="quan_usable">
+				<div class="qu_left">可用优惠券</div>
+				<div class="quan_cid"></div>
+				<div class="qu_right"><span>3</span>张优惠券</div>
+			</div>
+		</div>
+		<div class="item_bt">银行卡支付</div>
+		<div class="item_box">
+			<div class="item bank_pay">
+				<div class="item_left bp_left">
+					<img src="" />
+					<p></p>
+					<span></span>
+				</div>
+				<div class="item_right bp_right">
+					<div class="select_bank selectp"></div>
+				</div>
+			</div>
+			<div class="bank_other">
+				<p class="bo_left">其他银行卡</p>
+				<p class="bo_right"></p>
+			</div>
+		</div>
+		<div class="item_bt">其他支付方式</div>
+		<div class="item_box">
+			<div class="item alipay">
+				<div class="item_left alipay_left">
+					<img src="images/alipay.png" />
+					<p>支付宝支付</p>
+				</div>
+				<div class="item_right alipay_right">
+					<div class="select_alipay selectp"></div>
+				</div>
+			</div>
+			<div class="item wxpay">
+				<div class="item_left wxpay_left">
+					<img src="images/wxpay.png" />
+					<p>微信支付</p>
+				</div>
+				<div class="item_right wxpay_right">
+					<div class="select_wxpay selectp"></div>
+				</div>
+			</div>
+		</div>
+		<div class="prompt_text"><p class="pt_text"></p><p class="pt_amount"></p><p class="q"></p></div>
+
+		<div class="pay_btn">银行卡支付<span>998.00</span>元</div>
+		<div class="layer">
+			<div class="prompt_tan">
+				<p><span class="ptan_text"></span><span class="ptan_amount"></span></p>
+				<div class="know">知道了</div>
+			</div>
+			<div class="tan tan_ani">
+				<div class="tan_close"></div>
+				<div class="tan_bt">选择银行卡</div>
+				<div class="bank_part">
+					<div class="bank">
+						<div class="item_left bank_left">
+							<img src="images/bank1.png" />
+							<p>农业银行</p>
+						</div>
+						<div class="item_right bank_right">
+							<div class="select_btn select"></div>
+						</div>
+					</div>
+					<div class="bank">
+						<div class="item_left bank_left">
+							<img src="images/bank1.png" />
+							<p>工商银行</p>
+						</div>
+						<div class="item_right bank_right">
+							<div class="select_btn"></div>
+						</div>
+					</div>
+					
+					
+				</div>
+				
+			</div>
+			<div class="quan_part">
+				<div class="quan_bt">
+					可用优惠券
+					<div class="quan_cancel">取消</div>
+				</div>
+				<div class="quan_con">
+					<div class="quan_list">
+						<div class="quan">
+							<div class="quan_amount">￥<span>10</span></div>
+							<div class="quan_msg">
+								<p class="msg_bt">抵扣券</p>
+								<p class="msg_condition">使用条件：服务费抵扣</p>
+								<p class="msg_deadline">有效期：2017.06.24-2017.07.14</p>
+							</div>
+							<div class="select_btn noselect"></div>
+						</div>
+					</div>
+					<div class="no_use">
+						不使用优惠券
+						<div class="nouse_btn  select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+
+</html>

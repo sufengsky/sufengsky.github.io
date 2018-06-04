@@ -1,0 +1,78 @@
+body{
+	width: 100%;
+	background: #eeeeee;
+}
+.main{
+	margin: 0.2rem 0;
+	background: #ffffff;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+}
+.main_bt{
+	padding-left: 0.56rem;
+	font-size: 0.3rem;
+	line-height: 1rem;
+	background: url(../images/main_bt_d.png) 0.3rem center no-repeat;
+	background-size: 0.1rem;
+	border-bottom: 1px solid #dcdcdc;
+}
+.main_con{
+	padding: 0.25rem 0.3rem 0.5rem;
+	overflow: hidden;
+}
+.answer{
+	font-size: 0.3rem;
+	line-height: 0.4rem;
+	padding-right: 0.2rem;
+}
+.solve_bt{
+	font-size: 0.3rem;
+	margin: 0.7rem 0 0.5rem;
+}
+.btnlist{
+	padding: 0 0.3rem;
+}
+.solve_btn,.nosolve_btn{
+	width: 2.3rem;
+	height: 0.88rem;
+	border:1px solid #f86936;
+	border-radius: 0.44rem;
+	-webkit-border-radius: 0.44rem;
+	-moz-border-radius: 0.44rem;	
+	-ms-border-radius: 0.44rem;
+	-o-border-radius: 0.44rem;
+	float: left;
+	font-size: 0.3rem;
+	line-height: 0.83rem;
+	
+	margin: 0 0.4rem;
+	padding-left: 0.96rem;
+}
+.solve_btn{
+	background: url(../images/up.png) 0.4rem center no-repeat;
+	background-size: 0.44rem;
+}
+.nosolve_btn{
+	background: url(../images/down.png) 0.4rem center no-repeat;
+	background-size: 0.44rem;
+}
+.tel{
+	width: 100%;
+	height: 1.08rem;
+	position: fixed;
+	left:0;
+	bottom: 0;
+	background: #f86936;	
+}
+.tel a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	color: #ffffff;
+	font-size: 0.36rem;
+	text-align: center;
+	line-height: 1.08rem;
+	background: url(../images/service_tel.png) 2.3rem center no-repeat;
+	background-size: 0.58rem;
+	padding-left: 0.58rem;
+}

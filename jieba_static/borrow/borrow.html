@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>借款详情</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="http://webapi.amap.com/theme/v1.3/style1503546983737.css">
+		<link rel="stylesheet" type="text/css" href="css/borrow.css?v=3" />
+		
+		<script src="js/zepto.min.js"></script>
+		<script src="js/rem.js"></script>
+	
+		<script src="../js/common.js"></script>
+		<script src="js/borrow.js"></script>
+	</head>
+
+	<body>
+		<div id="prompt"></div>
+		<div class="borrow_item borrow_item1">
+			<div class="bi_left">借款金额</div>
+			<div class="bi BorrowAccount"></div>
+		</div>
+		<div class="prompt_txt">贷款发放日起，开始计息</div>
+		<div class="borrow_item">
+			<div class="bi_left">借款期限</div>
+			<div class="bi_right SpanDays"></div>
+		</div>
+		<div class="borrow_item">
+			<div class="bi_left">计算方式</div>
+			<div class="bi_right">
+				<p class="InterestType"></p>
+				<p class="color666 InterestTypeInfo"></p>
+			</div>
+		</div>
+		<div class="borrow_item ">
+			<div class="bi_left">到期应还</div>
+			<div class="bi_right arrow" onclick="Repay()">
+				<p class="DueRepaySum"></p>
+				<p class="color666 DueRepayDate"></p>
+			</div>
+		</div>
+		<div class="borrow_item borrow_item5">
+			<div class="bi_left">收款账户</div>
+			<span class="UserBankCardId"></span>
+			<div class="bi_right Bankcard arrow"></div>
+		</div>
+		<div class="borrow_btn" onclick="SureBorrow()">确认借款</div>
+		<div class="prompt_txt">点击“确认借款”按钮，意味着你同意
+			<a href="/doc/explain?strtype=jkxgxy ">相关协议</a>
+		</div>
+		<div class="layer">
+			<div class="tang_part">
+				<div class="close_btn"></div>
+				<div class="tang_bt">确认借款</div>
+				<div class="tang_con">
+					<div class="tc_item">
+						<p class="tc_left">借款金额</p>
+						<p class="tc_right BorrowAccount" id="BorrowAccount"></p>
+					</div>
+
+					<div class="tc_item">
+						<p class="tc_left">期限</p>
+						<p class="tc_right SpanDays" id="SpanDays"></p>
+					</div>
+					<div class="tc_item">
+						<p class="tc_left">收款银行</p>
+						<p class="tc_right Bankcard"></p>
+					</div>
+					<div class="sure_btn" id="submitInfo" onclick="Borrow()">确认借款</div>
+				</div>
+			</div>
+            
+			<div class="repaymsg_part">
+				<div class="repay_bt">
+					还款信息
+					<div class="cancel_btn">取消</div>
+				</div>
+				<div class="repay_con">
+					<div class="repay_txt">还款总额（元）</div>
+					<div class="repay_val"><span class="symbol">￥</span><span class="dueRepaySum">1008.40</span></div>
+					<div class="repay_info">应还款本金￥<span class="borrowAccount">1000.00 </span> 借款<span class="SpanDays">14天</span>  利息￥<span class="dueRepayIntrest">8.40</span></div>
+				</div>
+				<div class="repay_text">按时还款有助于提高借款额度</div>
+			</div>
+			<div class="bank_tan">
+				<div class="tan_close"></div>
+				<div class="tan_bt">选择银行卡</div>
+				<div class="bank_part">
+				</div>				
+			</div>
+			<div class="know_part">
+				<p class="know_bt">申请成功</p>
+				<p class="know_text">您申请的借款已进入审核阶段，请耐心等待。</p>
+				<div class="know" onclick="GoIndex()">知道了</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=fb2be8dcadc6b151deafa755949619dd"></script>
+
+	</body>
+
+</html>

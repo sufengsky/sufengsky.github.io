@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta content="telephone=no" name="format-detection">
+		<title>支付宝还款流程</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/alipayshow.css?v=4" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/fastclick.js"></script>
+		<script src="js/rem.js"></script>
+	</head>
+
+	<body>
+
+		<div class="main">
+			<p class="step">进入<span>【支付宝】</span>选择<span>【转账】</span></p>
+			<div class="img1"><img src="images/img1.png" /></div>
+			<p class="step">选择<span>【转到支付宝账户】</span></p>
+			<div class="img2"><img src="images/img2.png" /></div>
+			<p class="step">输入手机号<span>【18301651995】</span></p>
+			<div class="img3"><img src="images/img3.png" /></div>
+			<p class="step">点击验证补全姓名<span>【张晟昱】</span></p>
+			<div class="img4"><img src="images/img4.png" /></div>
+			<p class="step">输入<span>【还款金额】（与借吧待还金额一致）</span></p>
+			<div class="img5"><img src="images/img5.png" /></div>
+			<p class="step">输入<span>【备注】（您的姓名+手机号）</span></p>
+			<div class="img6"><img src="images/img6.png" /></div>
+			<p class="step">立即付款后<span>【一小时内】</span>更新您的还款状态</p>
+			<div class="img7"><img src="images/img7.png" /></div>
+		</div>
+		<div class="open_btn" onclick="openalipay()">打开支付宝，立即支付</div>
+		<script>
+			$(function() {
+				FastClick.attach(document.body);
+			});
+
+			function openalipay() {
+
+				if(navigator.userAgent.match(/(iPhone|iPod|ios)/i)) {
+					window.webkit.messageHandlers.IosAliPay.postMessage("18301651995");
+				} else {
+					android.jsOnClickAliPay("18301651995");
+				}
+
+			}
+		</script>
+	</body>
+
+</html>

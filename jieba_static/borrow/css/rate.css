@@ -1,0 +1,207 @@
+.item {
+	width: 33.33%;
+	float: left;
+	overflow: hidden;
+	background: #FFFFFF;
+}
+
+.item_bt {
+	width: 100%;
+	height: 0.8rem;
+	font-size: 0.3rem;
+	text-align: center;
+	line-height: 0.78rem;
+	border-bottom: 1px solid #dcdcdc;
+	border-right: 1px solid #dcdcdc;
+}
+
+.item_val {
+	width: 100%;
+	height: 1rem;
+	font-size: 0.3rem;
+	text-align: center;
+	line-height: 0.98rem;
+	border-bottom: 1px solid #dcdcdc;
+	border-right: 1px solid #dcdcdc;
+}
+
+body {
+	width: 100%;
+	position: relative;
+}
+
+.br_none {
+	border-right: none;
+}
+
+.orange {
+	color: #f86936;
+}
+
+.blue {
+	color: #3799fb;
+}
+
+.green {
+	color: #5dc129;
+}
+
+.box {
+	clear: both;
+	width: 100%;
+	height: 2.4rem;
+	background: #FFFFFF;
+	padding: 0.4rem 0.3rem 0;
+}
+
+.amount {
+	width: 100%;
+	height: 0.6rem;
+	margin-bottom: 0.3rem;
+}
+
+.box p {
+	float: left;
+	font-size: 0.3rem;
+	line-height: 0.6rem;
+}
+
+.range_box {
+	float: left;
+	font-size: 0.3rem;
+	line-height: 0.6rem;
+	width: 5.04rem;
+	margin-left: 0.3rem;
+}
+
+
+/*横条样式*/
+
+.amount_range {
+	-webkit-appearance: none;
+	/*清除系统默认样式*/
+	width: 100%;
+	background: -webkit-linear-gradient( #f86936, #f86936) no-repeat;
+	background-size: 0% 100%;
+	border: 1px solid #DEDEDE;
+	height: 0.12rem;
+	/*横条的高度*/
+	border-radius: 0.08rem;
+}
+
+
+/*获取焦点时横条样式*/
+
+.amount_range:focus {
+	outline: none;
+}
+
+
+/*拖动块的样式*/
+
+.amount_range::-webkit-slider-thumb {
+	appearance: none;
+	-webkit-appearance: none;
+	height: 0.6rem;
+	width: 0.6rem;
+	background: url(../images/amount_range.png) center center no-repeat;
+	background-size: 0.6rem;
+	border: 0;
+}
+
+
+/*横条样式*/
+
+.deadline_range {
+		appearance: none;
+	-webkit-appearance: none;
+	/*清除系统默认样式*/
+	width: 100%;
+	border: 1px solid #DEDEDE;
+	height: 0.12rem;
+	/*横条的高度*/
+	border-radius: 0.08rem;
+	background: -webkit-linear-gradient( #3799fb, #3799fb) no-repeat;
+	background-size: 0% 100%;
+	
+}
+
+
+/*获取焦点时横条样式*/
+
+.deadline_range:focus {
+	outline: none;
+}
+
+
+/*拖动块的样式*/
+
+.deadline_range::-webkit-slider-thumb {
+	appearance: none;
+	-webkit-appearance: none;
+	height: 0.6rem;
+	width: 0.6rem;
+	background: url(../images/deadline_range.png) center center no-repeat;
+	background-size: 0.6rem;
+	border: 0;
+}
+
+.fee {
+	width: 100%;
+	height: 0.7rem;
+	line-height: 0.7rem;
+	padding-left: 0.3rem;
+	font-size: 0.3rem;
+	background: #eeeeee;
+}
+
+.fee_part {
+	width: 100%;
+	padding: 0.5rem 0.3rem;
+	background: #FFFFFF;
+}
+
+.fee_item {
+	font-size: 0.26rem;
+	line-height: 0.4rem;
+	margin-bottom: 0.5rem;
+}
+.bottom_tap{
+	width: 100%;
+	height: 1rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #FFFFFF;
+	border-top: 1px solid #d9d9d9;
+}
+
+.bottom_tap p{
+	width: 33.33%;
+	float: left;
+	text-align: center;
+	font-size: 0.22rem;
+	color: #999999;
+	padding-top: 0.6rem;
+}
+.bottom_tap p a{
+	color: #333333;
+}
+.bottom_tap .active{
+	color: #f86936;
+}
+.bottom_tap .active a{
+	color: #f86936;
+}
+.borrow{
+	background: url(../images/borrow.png) center 0.12rem  no-repeat;
+	background-size: 0.48rem;
+}
+.certification{
+	background: url(../images/certification_a.png) center 0.12rem  no-repeat;
+	background-size: 0.48rem;
+}
+.mine{
+	background: url(../images/mine.png) center 0.12rem  no-repeat;
+	background-size: 0.48rem;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>身份认证</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/idcard.css?v=4" />
+		<link href="/js/layer/mobile/need/layer.css?2.0" type="text/css" rel="styleSheet" id="layermcss">
+		<script src="js/zepto.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/rem.js"></script>
+		<script src="js/idcard.js"></script>
+		
+
+	</head>
+
+	<body>
+		<div id="prompt"></div>
+		<div class="certication_tap">
+			<dl>
+				<dt>
+					<img src="images/ci_bt1_a.png" />
+				</dt>
+				<dd>身份认证</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt2.png" />
+				</dt>
+				<dd class="color999">基本信息</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt3.png" />
+				</dt>
+				<dd class="color999">银行卡</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt4.png" />
+				</dt>
+				<dd class="color999">紧急联系人</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/ci_bt5.png" />
+				</dt>
+				<dd class="color999">手机运营商</dd>
+			</dl>
+			<p class="bg_line"></p>
+			<p class="bg_triangle"></p>
+		</div>
+		<p class="zhu">身份证认证信息保存后将无法修改，请保存正确</p>
+		<div class="item bordertop">
+			<div class="idcard">
+				<p>身份证人像面</p>
+				<div class="idcard_front photo_take1" id="photo_take1" onclick="photoT1()">
+					<div class="photoed"></div>
+				</div>
+				<input id="file_front" type="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" style="display:none">
+			</div>
+			<div class="idcard">
+				<p>身份证国徽面</p>
+				<div class="idcard_back photo_take2" id="photo_take2" onclick="photoT2()">
+					<div class="photoed"></div>
+				</div>
+				<input id="file_back" type="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" style="display:none">
+			</div>
+		</div>
+		<div class="item">
+			<div class="item_bt">真实姓名</div>
+			<div class="item_insert item_insert1" id="txtname"></div>
+		</div>
+		<div class="item">
+			<div class="item_bt">身份证号</div>
+			<div class="item_insert item_insert2" id="txtidcard"></div>
+		</div>
+		<p class="zhu">身份证认证信息保存后将无法修改，请保存正确</p>
+		<form id="f_video" method="post" enctype="multipart/form-data" action="VerifyIdNumberBySlient">
+			<div class="item bordertop">
+				<div class="item_bt">拍摄人脸</div>
+				<p class="item_text" onclick="photoT3()">前往拍摄</p>
+				<div class="take" onclick="photoT3()"></div>
+				<div id="photo_take3" style="display: none;"></div>
+				<input type="file" name="file" accept="video/*" capture="camcorder" id="take_input" style="display:none;">
+			</div>
+		</form>
+		<div class="submit_btn saveBtn" onclick="saveBtn()">提交</div>
+		<div class="back_btn" onclick="Back()">返回</div>
+		<div class="bottom_tap">
+			<p class="borrow ">
+				<a href="http://m.jieba.cc/borrow/index">借款</a>
+			</p>
+			<p class="certification active">
+				<a href="index.html">认证</a>
+			</p>
+			<p class="mine">
+				<a href="http://m.jieba.cc/usercenter/index">我的</a>
+			</p>
+		</div>
+        <script src="js/jquery.min.js"></script>
+		<script src="/js/jquery-form.js"></script>
+		<script src="/js/layer/mobile/layer.js"></script>
+		<script>
+			function onInput(a) { //删除按钮的 显示隐藏
+				if($(".item_insert" + a).val() !== "") {
+					$(".item_insert" + a).siblings(".delete").show();
+				} else {
+					$(".item_insert" + a).siblings(".delete").hide();
+				}
+			}
+			$(function() { //删除按钮
+				$(".delete").click(function() {
+					$(this).siblings("input").val("");
+					$(this).hide()
+				})
+			})
+
+			$(function() { //input输入完 按钮变色
+				$('input').on('input propertychange', function() {
+					if(($.trim($('.item_insert1').val()) !== "") && ($.trim($('.item_insert2').val()) !== "")) {
+						$('.submit_btn').css({
+							'background-color': '#F86936',
+						});
+					} else {
+						$('.submit_btn').css({
+							'background-color': '#ffb196',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

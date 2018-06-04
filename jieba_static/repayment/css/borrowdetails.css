@@ -1,0 +1,373 @@
+body {
+	background: #eeeeee;
+	position: relative;
+	
+}
+#prompt {
+	width: 50%;
+	height: auto;
+	font-size: 0.3rem;
+	background: rgba(0, 0, 0, .5);
+	border-radius: 0.1rem;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 0.4rem;
+	padding: 0.3rem 0.2rem;
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	margin-left: -25%;
+	z-index: 9999;
+}
+.box {
+	overflow: hidden;
+	margin: 0.2rem 0;
+	background: #FFFFFF;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+}
+
+.borrow_bt {
+	height: 0.88rem;
+	background: #FFFFFF;
+	border-bottom: 1px solid #EEEEEE;
+	padding-left: 0.3rem;
+	line-height: 0.88rem;
+	font-size: 0.3rem;
+}
+
+.status_con {
+	width: 100%;
+	height: auto;
+	padding: 0.4rem 0.56rem;
+	overflow: hidden;
+	background: #FFFFFF;
+}
+
+.status {
+	width: 100%;
+	height: 1.7rem;
+	padding-left: 0.56rem;
+	border-left: 1px solid #dbdbdb;
+	position: relative;
+}
+
+.status:last-child {
+	height: 1.12rem;
+	border-left: none;
+}
+.status1{
+	border-left: 1px solid #F86936;
+}
+.status1 .step_icon{
+	background: url(../images/step_icon_a.png) center top no-repeat;
+	background-size: 0.5rem;
+}
+.status1 .status_bt{
+	color: #F86936;
+	
+}
+
+.status_bt {
+	font-size: 0.3rem;
+	line-height: 0.5rem;
+}
+
+.status_bt span {
+	font-size: 0.24rem;
+	margin-left: 0.1rem;
+	color: #333333!important;
+}
+
+.step_icon {
+	width: 0.5rem;
+	height: 0.6rem;
+	background: url(../images/step_icon.png) center top no-repeat;
+	background-size: 0.5rem;
+	position: absolute;
+	left: -0.26rem;
+	top: 0;
+}
+
+.status_text {
+	font-size: 0.24rem;
+	line-height: 0.36rem;
+	color: #999999;
+	margin-top: 0.08rem;
+}
+
+.orange {
+	color: #F86936;
+}
+.item_con{
+	padding: 0.15rem 0;
+}
+.item{
+	overflow: hidden;
+	line-height: 0.56rem;
+	font-size: 0.26rem;
+	padding: 0 0.3rem;
+}
+.item_left{
+	float: left;
+}
+.item_right{
+	text-align: right;
+	float: right;
+	width: 60%;
+}
+.item_right span{
+	color: #1E95FB;
+}
+.fee{
+	padding-right: 0.5rem;
+	background:url(../images/zhu.png) 1.12rem center no-repeat;
+	background-size: 0.32rem;
+}
+.item_prompt{
+	font-size: 0.24rem;
+	line-height: 0.38rem;
+	padding: 0.15rem 0.3rem;
+	
+}
+.item_pro{
+	overflow: hidden;
+	height: 0.9rem;
+	line-height: 1rem;
+	font-size: 0.26rem;
+	padding: 0 0.3rem;
+	border-top: 1px solid #EEEEEE;
+}
+.pro_left{
+	float: left;
+}
+.pro_right{
+	float: right;
+	height: 0.9rem;
+	width: 60%;
+	background: url(../images/arrow_right.png) right 0.4rem no-repeat;
+	background-size: 0.15rem;
+}
+.red{
+	color: red;
+}
+.empty{
+	height: 1.18rem;
+}
+.repay_part{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1.18rem;
+	overflow: hidden;
+	background: #FFFFFF;
+	padding: 0 0.3rem;
+	box-shadow:0px  -2px 5px   #eeeeee;
+	-webkit-box-shadow:0px  -2px 5px   #eeeeee;
+	-moz-box-shadow:0px  -2px 5px   #eeeeee;
+	-o-box-shadow:0px  -2px 5px   #eeeeee;
+	-ms-box-shadow:0px  -2px 5px   #eeeeee;
+}
+.repay_left{
+	float: left;
+	font-size: 0.3rem;
+	line-height: 1.18rem;
+}
+.repay_left span{
+	color: #F86936;
+}
+.repay_btn{
+	float: right;
+	width: 1.8rem;
+	height: 0.7rem;
+	background: #F86936;
+	color: #FFFFFF;
+	line-height: 0.7rem;
+	text-align: center;
+	font-size: 0.3rem;
+	border-radius: 0.35rem;
+	-webkit-border-radius: 0.35rem;
+	-moz-border-radius: 0.35rem;
+	-o-border-radius: 0.35rem;
+	-ms-border-radius: 0.35rem;
+	margin-top: 0.24rem;
+}
+.repay_btn a{
+	color: #FFFFFF;
+}
+.change_btn{
+	float: right;
+	width: 1.8rem;
+	height: 0.7rem;	
+	line-height: 0.66rem;
+	text-align: center;
+	font-size: 0.3rem;
+	-ms-border-radius: 0.35rem;
+	margin-top: 0.24rem;
+	color: #f86936;	
+}
+.layer{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top:0;
+	background: rgba(0,0,0,0.4);
+	z-index: 9;
+	display: none;
+}
+.fee_tan{
+	width: 5.7rem;
+	height: 7rem;
+	overflow: hidden;
+	background: #FFFFFF;
+	position: absolute;
+	left: 0.9rem;
+	top:50%;
+	margin-top: -3.6rem;
+	padding: 0 0.3rem ;
+	display: none;
+}
+.fee_bt{
+	font-size: 0.32rem;
+    line-height: 1rem;
+    text-align: center;
+}
+.item_fee{
+	width: 100%;
+    line-height: 0.58rem;
+    overflow: hidden;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 0.26rem;
+    color: #666666;
+   
+}
+.fee_name{
+	float: left;
+}
+.fee_val{
+	float: right;
+}
+.item_total{
+	width: 100%;
+    line-height: 0.9rem;
+    overflow: hidden;
+    font-size: 0.32rem;
+}
+.total_name{
+	float: left;
+}
+.total_val{
+	float: right;
+	min-width: 1rem;
+	height: 0.9rem;
+}
+.know_btn{
+	width: 100%;
+    height: 0.56rem;
+    background: #f86936;
+    color: #FFFFFF;
+    font-size:0.28rem;
+    text-align: center;
+    line-height: 0.56rem;
+    border-radius: 0.3rem;
+    margin: 0.1rem 0 0.2rem;
+}
+.fee_text{
+	font-size: 0.22rem;
+	line-height: 0.38rem;
+}
+.part_tan{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #FFFFFF;
+		display: none;
+}
+.part_bt{
+	font-size: 0.3rem;
+	text-align: center;
+	line-height: 0.94rem;
+	position: relative;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.part_closebtn{
+	width: 0.94rem;
+	height: 0.94rem;
+	background: url(../images/tan_close.png) 0.3rem center no-repeat;
+	background-size: 0.3rem;
+	position: absolute;
+	left: 0;
+	top:0;	
+}
+.repaypart{
+	width: 100%;
+	height: 2.9rem;
+	padding: 0 0.3rem;
+}
+.amount_text{
+	font-size: 0.3rem;
+	line-height: 0.9rem;
+	margin-bottom: 0.3rem;
+}
+.amount_text span{
+	color: #f86936;
+}
+.add{
+	float: left;
+	width: 1rem;
+	height: 1rem;
+	background: url(../images/add.png) center center no-repeat;
+	background-size: 1rem;
+}
+.unadd{
+	background: url(../images/add_x.png) center center no-repeat;
+	background-size: 1rem;
+}
+.amount{
+	float: left;
+	line-height: 0.98rem;
+	width: 4.9rem;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: center;
+	font-size: 0.5rem;
+}
+.sub{
+	float: left;
+	width: 1rem;
+	height: 1rem;
+	background: url(../images/sub.png) center center no-repeat;
+	background-size: 1rem;
+}
+.unsub{
+	background: url(../images/sub_x.png) center center no-repeat;
+	background-size: 1rem;
+}
+.btn_part{
+	overflow: hidden;
+}
+.cancel_btn{
+	float: left;
+	width: 50%;
+	font-size: 0.36rem;
+	text-align: center;
+	line-height: 0.98rem;
+	color: #F86936;
+	border-top: 1px solid #e5e5e5;
+}
+.pay_btn{
+	float: left;
+	width: 50%;
+	font-size: 0.36rem;
+	text-align: center;
+	line-height: 1rem;
+	color: #FFFFFF;
+	background: #F86936;
+}

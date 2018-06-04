@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>我的额度</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css?v=4" />
+		<link rel="stylesheet" type="text/css" href="css/mylimit.css?v=4" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/rem.js"></script>
+		<script src="js/mylimit.js"></script>
+	</head>
+	<body>
+		<div id="prompt"></div>
+		<div class="head_main">
+			<div class="head_bt">我的额度（元）</div>
+			<div class="head_con">
+				
+			</div>
+			<div class="head_prompt">借款次数越多，并及时还款，额度增加越快</div>
+		</div>
+		<div class="con_limit">
+			<div class="cl_bt">
+				<p>基础认证必填，完成所有基础认证后才可激活额度</p>
+			</div>
+			<div class="cl_con">
+				<div class="cl_item">
+					<p class="ci_bt ci_bt1">身份验证</p>
+					<p class="complete_tag"><a href="idcard.html">未完成</a></p>
+				</div>
+				<div class="cl_item">
+					<p class="ci_bt ci_bt2">基本信息</p>
+					<p class="complete_tag"><a href="personalinfo.html">未完成</a></p>
+				</div>	
+				<div class="cl_item">
+					<p class="ci_bt ci_bt3">银行卡</p>
+					<p class="complete_tag"><a href="bankcard.html">未完成</a></p>
+				</div>
+				<div class="cl_item">
+					<p class="ci_bt ci_bt4">紧急联系人</p>
+					<p class="complete_tag"><a href="contactmaninfo.html">未完成</a></p>
+				</div>
+				<div class="cl_item">
+					<p class="ci_bt ci_bt5">手机运营商</p>
+					<p class="complete_tag" id="phonebus">未完成</p>
+				</div>
+			</div>
+			<p class="certication_btn" onclick="Certication()">开始认证</p>
+		</div>
+		
+		<div class="bottom_tap">
+			<p class="borrow "><a href="http://m.jieba.cc/borrow/index">借款</a></p>
+			<p class="certification active"><a href="index.html">认证</a></p>
+			<p class="mine"><a href="http://m.jieba.cc/usercenter/index">我的</a></p>
+		</div>
+	</body>
+</html>
