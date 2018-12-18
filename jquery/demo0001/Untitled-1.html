@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='jquery-1.8.3.min.js'></script>
+    <script>
+    $(function () {
+        //appendd方法如果是添加的页面中已经存在的元素，会把原来的元素删除，而不是clone。详情可以参考jquery的api官网
+        $('#btn').click(function(){
+            // var t=$("#t").children().clone();
+            var t=$("#t").children();
+            $("#test").append(t);
+            alert($("#t").html());
+        });
+    });
+    </script>
+</head>
+<body>
+   <div id="test">
+       
+   </div>
+----------------------------------
+   <div id="t">
+       <p>abc</p>
+   </div>
+   <input type="button" value="test" id="btn"/>
+</body>
+</html>
