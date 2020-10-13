@@ -1,0 +1,20 @@
+https://cn.vuejs.org/v2/examples/tree-view.html
+
+vue如何用递归组件写树形控件
+https://blog.csdn.net/zhaoxiang66/article/details/80940762
+element-ui tree 根据不同叶子节点设置是否显示复选框
+https://www.cnblogs.com/js123/p/11732180.html
+https://blog.csdn.net/u014399368/article/details/87856322
+
+
+
+https://github.com/jianfeng418/vue-tree
+
+
+
+【vue】使用vue+element搭建项目，Tree树形控件使用
+https://www.cnblogs.com/websmile/p/8268853.html
+ElementUi tree 指定节点是否显示复选框
+https://blog.csdn.net/weixin_42704663/article/details/86489034
+Element-UI 的树列表实现单选
+https://www.cnblogs.com/usebtf/p/10694146.html

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.ul_box {
+	margin:0 auto;
+	padding:0;
+	list-style:none;
+	width:600px;
+}
+.ul_box>li {
+	padding:10px 10px 0 10px;
+	overflow:hidden;
+	border-bottom:#e5e5e5 solid 1px;
+}
+.ul_box>li:last-child {
+	border-bottom:none;
+}
+.ul_box>li>div {
+	float:left;
+}
+.ul_box>li>div:nth-child(1) {
+	width:100px;
+}
+.label_box>label {
+	display:block;
+	float:left;
+	margin:0 10px 10px 0;
+	position:relative;
+	overflow:hidden;
+}
+.label_box>label>input {
+	position:absolute;
+	top:0;
+	left:-20px;
+}
+.label_box>label>div {
+	width:100px;
+	text-align:center;
+	border:#dddddd solid 1px;
+	height:30px;
+	line-height:30px;
+	color:#666666;
+	user-select:none;
+	overflow:hidden;
+	position:relative;
+}
+.label_box>label>input:checked + div {
+	border:#087FED solid 1px;
+	color:#087FED;
+}
+.label_box>label>input:checked + div:after {
+    content: '';
+    display: block;
+    width: 47px;
+    height: 31px;
+    background-color: #087FED;
+    transform: skewY(-47deg);
+    position: absolute;
+    bottom: -29px;
+    right: -3px;
+    z-index: 1;
+    border-radius: 36%;
+}
+.label_box>label>input:checked + div:before {
+	content:'';
+	display:block;
+	width:3px;
+	height:8px;
+	border-right:#ffffff solid 2px;
+	border-bottom:#ffffff solid 2px;
+	transform:rotate(35deg);
+	position:absolute;
+	bottom:2px;
+	right:4px;
+	z-index:2;
+}
+</style>
+<body>
+    <div>
+    <ul class="ul_box">
+        <li>
+            <div></div>
+            <div class="label_box">
+                <label>
+                        <input name="sex" type="radio">
+                        <div>男单选框</div>
+                    </label>
+                <label>
+                        <input name="sex" type="radio">
+                        <div>女</div>
+                    </label>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+
+	var str="2019-11-01"
+	document.write(str.substring(5,7)+"/"+str.substring(8,10))
+	
+	</script>
+</body>
+</html>
+

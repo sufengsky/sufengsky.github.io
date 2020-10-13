@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .tooltip {
+      width: 200px;
+      background: #ccc;
+      color: #000;
+      text-align: center;
+      padding: 10px 20px 10px 20px;
+      border-radius: 10px;
+      bottom: calc(100% + 11px);
+      left: 50%;
+      transform: translate-x(-50%)
+    }
+
+    .tooltip-box {
+      position: relative
+    }
+
+    .triangle {
+      border-width: 0 6px 6px;
+      border-color: transparent;
+      border-bottom-color: #ccc;
+      position: absolute;
+      bottom: -6px;
+      transform: rotate(180deg) translate-x(-50%);
+      left: calc(50% - 12px)
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 参考 ：https://viashchuk.github.io/tooltip-generator/# -->
+  <div class="tooltip-box">
+    <a href="#">Hover</a>
+    <div class="tooltip">
+      <span class="triangle"></span>
+      abcd
+    </div>
+  </div>
+</body>
+
+</html>

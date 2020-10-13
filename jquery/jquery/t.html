@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.ul_box {
+	margin:0 auto;
+	padding:0;
+	list-style:none;
+	width:600px;
+}
+.ul_box>li {
+	padding:10px 10px 0 10px;
+	overflow:hidden;
+	border-bottom:#e5e5e5 solid 1px;
+}
+.ul_box>li:last-child {
+	border-bottom:none;
+}
+.ul_box>li>div {
+	float:left;
+}
+.ul_box>li>div:nth-child(1) {
+	width:100px;
+}
+.ul_box>li>div:nth-child(2) {
+	width:480px;
+	overflow:hidden;
+}
+.label_box>label {
+	display:block;
+	float:left;
+	margin:0 10px 10px 0;
+	position:relative;
+	overflow:hidden;
+}
+.label_box>label>input {
+	position:absolute;
+	top:0;
+	left:-20px;
+}
+.label_box>label>div {
+	width:100px;
+	text-align:center;
+	border:#dddddd solid 1px;
+	height:30px;
+	line-height:30px;
+	color:#666666;
+	user-select:none;
+	overflow:hidden;
+	position:relative;
+}
+.label_box>label>input:checked + div {
+	border:#087FED solid 1px;
+	color:#087FED;
+}
+.label_box>label>input:checked + div:after {
+    content: '';
+    display: block;
+    width: 47px;
+    height: 31px;
+    background-color: #087FED;
+    transform: skewY(-47deg);
+    position: absolute;
+    bottom: -29px;
+    right: -3px;
+    z-index: 1;
+    border-radius: 36%;
+}
+.label_box>label>input:checked + div:before {
+	content:'';
+	display:block;
+	width:3px;
+	height:8px;
+	border-right:#ffffff solid 2px;
+	border-bottom:#ffffff solid 2px;
+	transform:rotate(35deg);
+	position:absolute;
+	bottom:2px;
+	right:4px;
+	z-index:2;
+}
+</style>
+<body>
+
+
+    
+    <!-- <span style='color:#999'>我被加<s>删除线</s></span>
+    <br/>
+    <span style='color:#999;text-decoration: line-through;'>我被加</span>
+   <br/>
+
+
+
+
+
+　　<a href="https://download.gwhome.com.cn/tools/ukeydriver_pay_1_0.exe">abbb</a>
+    https://icss.me/3080.html
+    <h1 style="text-align: center;">纯CSS美化单选/复选框</h1>
+    <ul class="ul_box">
+        <li>
+            <div>单选框：</div>
+            <div class="label_box">
+                <label>
+                        <input name="sex" type="radio">
+                        <div>男单选框</div>
+                    </label>
+                <label>
+                        <input name="sex" type="radio">
+                        <div>女</div>
+                    </label>
+            </div>
+        </li>
+        <li>
+            <div>复选框：</div>
+            <div class="label_box">
+                <label>
+                        <input name="hobby" type="checkbox">
+                        <div>旅游</div>
+                    </label>
+                <label>
+                        <input name="hobby" type="checkbox">
+                        <div>爬山</div>
+                    </label>
+                <label>
+                        <input name="hobby" type="checkbox">
+                        <div>游泳</div>
+                    </label>
+            </div>
+        </li>
+    </ul> -->
+
+    <!-- <input type="text" value="abc" readonly="readonly"/> -->
+
+    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');if(this.value.length>16) this.value=this.value.slice(0,16);" />
+
+    <script>
+        // function multiply(a, b) {
+        //     document.writeln(typeof b);
+        //     b = (typeof b !== 'undefined') ?  b : 1;
+        //     return a * b;
+        // }
+        //     document.write("result<br/>");
+        //     document.write(multiply(5, 2)); // 10
+        //     document.write("<br/>");
+        //     document.write(multiply(5,null));    // 5
+            // document.write(Math.random());
+            // document.write("<br/>")
+            // document.write(Math.floor( Math.random() * 9000 ) + 1000)
+        </script>
+
+</body>
+</html>
+
