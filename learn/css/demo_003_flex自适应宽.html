@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex自适应宽</title>
+    <style>
+        #parent {
+            display: flex;
+            width: 300px;
+            height: 300px;
+            outline: solid 1px red;
+            justify-content: center;            /* flex-start flex-end center */
+            align-content: center;            /* 主轴居中对齐 */
+            align-items: center;            /* 交叉轴的中点对齐 */
+        }
+
+        .child1 {
+            width: 100px;
+            background-color: lightblue;
+        }
+
+        .child2 {
+            width: 200px;
+            flex: 1;
+            outline: solid 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 参考：https://www.cnblogs.com/sunny-shine/p/10749726.html -->
+    <div class="parent">
+        <div class="child1">主轴居中对齐主轴居中对齐</div>
+        <div class="child2">主轴居中对齐主轴居中对齐主轴居中对齐主轴居中对齐主轴居中对齐</div>
+    </div>
+</body>
+
+</html>

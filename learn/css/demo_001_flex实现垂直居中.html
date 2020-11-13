@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 两列等高</title>
+    <style>
+        .parent {
+            width: 300px;
+            padding:10px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: stretch; /* 感觉设置这个没有起什么作用  stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度 */
+            outline: 1px solid green;
+        }
+
+        .child {
+            width: 100px;
+            outline: solid 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 参考：https://www.cnblogs.com/sunny-shine/p/10749726.html -->
+    <!-- 参考：https://blog.csdn.net/sinat_34104446/article/details/83051052 这个是使用live server的配置及使用 -->
+    <div class="parent">
+        <div class="child">hahjdjjaj dES6提供的Paroxy可以听说Vue v的高度的增加自动的增加</div>
+        <div class="child"></div><!-- 这个div的高度会随着上面一个div的高度的增加自动的增加 -->
+    </div>
+
+</body>
+
+</html>

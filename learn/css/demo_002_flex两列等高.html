@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex实现垂直居中</title>
+    <style>
+        #parent {
+            display: flex;
+            width: 300px;
+            height: 300px;
+            outline: solid 1px red;
+            justify-content: center; /* flex-start flex-end center */
+            align-content: center;  /* 主轴居中对齐 */
+            align-items: center; /* 交叉轴的中点对齐 */
+        }
+
+        #child {
+            width: 100px;
+            height: 100px;
+            outline: solid 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 参考：https://www.cnblogs.com/sunny-shine/p/10749726.html -->
+    <!-- 参考：https://blog.csdn.net/sinat_34104446/article/details/83051052 这个是使用live server的配置及使用 -->
+    <div id="parent">
+        <div id="child">
+        </div>
+    </div>
+</body>
+
+</html>
