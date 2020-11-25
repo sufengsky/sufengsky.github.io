@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>scrollTop demo</title>
+
+  <script type="text/javascript" src="https://download.gwhome.com.cn/jslibs/jquery/jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body>
+  <script>
+    let a = [{
+      type: 1,
+      name: 'zs',
+      age: 1
+    }, {
+      type: 1,
+      name: 'zs',
+      age: 1
+    }, {
+      type: 2,
+      name: 'ls',
+      age: 1
+    }]
+
+
+    let arr = []
+    a.forEach(item => {
+      let findex = arr.findIndex(x => { return x.type == item.type })
+      if (findex == -1) {
+        arr.push({
+          type: item.type,
+          name: item.name,
+          records: [item]
+        })
+      } else {
+        arr[findex].records.push(item)
+      }
+    })
+
+    console.dir(arr)
+  </script>
+
+</body>
+
+</html>
