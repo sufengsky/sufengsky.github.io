@@ -3,13 +3,35 @@
 
 <head>
   <meta charset="utf-8">
-  <title>scrollTop demo</title>
+  <title>demo</title>
 
   <script type="text/javascript" src="https://download.gwhome.com.cn/jslibs/jquery/jquery-3.5.1.min.js"></script>
+  <style type="text/css">
+    span {
+      color: red;
+    }
 
+    div .con-span {
+      color: blue;
+    }
+    html h1 {
+      color: purple;
+    }
+    body h1 {
+      color: green;
+    }
+
+
+  </style>
 </head>
 
 <body>
+
+  <div id="con-id">
+    <span class="con-span">asdfafsfd</span>
+  </div>
+  <h1>Here is a title!</h1>
+
   <script>
     let a = [{
       type: 1,
@@ -26,21 +48,39 @@
     }]
 
 
-    let arr = []
-    a.forEach(item => {
-      let findex = arr.findIndex(x => { return x.type == item.type })
-      if (findex == -1) {
-        arr.push({
-          type: item.type,
-          name: item.name,
-          records: [item]
-        })
-      } else {
-        arr[findex].records.push(item)
-      }
-    })
+    // let arr = []
+    // a.forEach(item => {
+    //   let findex = arr.findIndex(x => { return x.type == item.type })
+    //   if (findex == -1) {
+    //     arr.push({
+    //       type: item.type,
+    //       name: item.name,
+    //       records: [item]
+    //     })
+    //   } else {
+    //     arr[findex].records.push(item)
+    //   }
+    // })
 
-    console.dir(arr)
+    // console.dir(arr)
+
+    // let findex = a.map(x => x.type).lastIndexOf(1)
+    // console.log(findex)
+    // if (findex != -1) {
+    //   a.splice(findex + 1, 0, {
+    //     type: 1,
+    //     name: 'zs',
+    //     aget: 30
+    //   })
+    // }
+
+    // console.dir(a)
+
+    let scores = [10, '20.4', '30.36']
+    let t = scores.reduce((acc, cur) => acc + parseFloat(cur) * 100, 0)
+    console.log(t / 100)
+
+
   </script>
 
 </body>
