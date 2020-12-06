@@ -14,14 +14,14 @@
     div .con-span {
       color: blue;
     }
+
     html h1 {
       color: purple;
     }
+
     body h1 {
       color: green;
     }
-
-
   </style>
 </head>
 
@@ -76,10 +76,54 @@
 
     // console.dir(a)
 
-    let scores = [10, '20.4', '30.36']
-    let t = scores.reduce((acc, cur) => acc + parseFloat(cur) * 100, 0)
-    console.log(t / 100)
+    // let scores = [10, '20.4', '30.36']
+    // let t = scores.reduce((acc, cur) => acc + parseFloat(cur) * 100, 0)
+    // console.log(t / 100)
 
+    // function person(name) {
+    //   this.name = name
+    //   this.say = function () {
+    //     console.log("method")
+    //   }
+    // }
+    // person.prototype.type = 'animal'
+    // person.prototype.sayHello = function () {
+    //   console.log("hello")
+    // }
+
+    // let zs = new person('张三')
+    // console.dir(person)
+    // // zs.sayHello()
+    // //zs.say()
+
+
+
+    // 定义Person构造器
+    function Person(firstName) {
+      this.firstName = firstName;
+    }
+
+    // 在Person.prototype中加入方法
+    Person.prototype.walk = function () {
+      alert("I am walking!");
+    };
+    Person.prototype.sayHello = function () {
+      alert("Hello, I'm " + this.firstName);
+    };
+
+    // 定义Student构造器
+    function Student(firstName, subject) {
+      // 调用父类构造器, 确保(使用Function#call)"this" 在调用过程中设置正确
+      Person.call(this, firstName);
+
+      // 初始化Student类特有属性
+      this.subject = subject;
+    };
+    console.log(Object.create(Person.prototype))
+    Student.prototype = Object.create(Person.prototype); // See note below
+    // 设置"constructor" 属性指向Student
+    Student.prototype.constructor = Student;
+    console.dir(Student)
 
   </script>
 
