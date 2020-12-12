@@ -1,6 +1,12 @@
 
  # 2020.12.12 20:00-22:00 promise规范及应用
+ https://live.vhall.com/room/watch/442640570
+ ## 为什么需要promise
+ javascript单线程语言  
+ 异常处理的需要
  ## 1、promises/A+规范详解
+ promise基础   
+ 如何把异步函数封装为promise
 
  ## 2、实现一个简易版本的promise函数
 
