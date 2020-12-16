@@ -17,7 +17,7 @@
     // }
 
     //删除数组中符合条件的多个元素 方法1：逆序遍历数组
-    // let a = [{ name: 'sf', age: 30 }, { name: 'ls', age: 20 }, { name: 'zs', age: 5 }, { age: 'sj', age: 3 }]
+    // let a = [{ name: 'sf', age: 30 }, { name: 'ls', age: 20 }, { name: 'zs', age: 5 }, { name: 'sj', age: 3 }]
     // for (let i = a.length - 1; i >= 0; i--) {
     //   if (a[i].age < 10) {
     //     a.splice(i, 1)
@@ -25,14 +25,14 @@
     // }
     // console.log(a)
 
-    //删除数组中符合条件的多个元素 方法2：filter方法
-    // let a = [{ name: 'sf', age: 30 }, { name: 'ls', age: 20 }, { name: 'zs', age: 5 }, { age: 'sj', age: 3 }]
-    // console.log(a.filter(x => x.age >= 10))
+    // 删除数组中符合条件的多个元素 方法2：filter方法
+    let a = [{ name: 'sf', age: 30 }, { name: 'ls', age: 20 }, { name: 'zs', age: 5 }, { name: 'sj', age: 3 }]
+    console.log(a.filter(x => x.age < 10))
 
 
 
 
-    
+
   </script>
 
 </body>
