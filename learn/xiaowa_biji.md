@@ -89,10 +89,34 @@
     重点跑下 babel的这个例子
 
  # 2020-12-27 20:00-22:00 ES6 & ESNext 常见 API 及 babel 编译-止水
- ## 1、ECMAScript规范发展简介
+https://live.vhall.com/room/watch/358850593
+ ## 1、ECMAScript规范发展简介    
  ## 2、ES6新增API解析
+    2.1 推荐看阮一峰的书(ECMAScript6 入门)    
+    2.2 let/const/async/await/yeild    
+        let与const的区别(面试题)     
+    2.3 解构
+        console.log(...[1,2,3])
+        const list=[1,2,3]; const [a,...rest]=list;
+        避免与ESModule模块化的混淆
+    2.4 Promise.allSettled  解决 Promise.all要加catch才能一定进入then函数
+    2.5 for in 与 for of 的区别
+        for of与async(await) 实现对promise数组的顺序执行
+    2.6 async await   
+    2.7 iterator 迭代器
+    2.8 proxy与reflector(用的比较少)
+    2.9 decorator(不太稳定的语法)
  ## 3、ESNext规范中的API解析
  ## 4、babel编译工具链的使用
+    4.1 三个步骤 解析=>转换=>生成 (编译的本质是字符串到字符串的转换)
+        estree规范
+    4.2 涉及的工具
+        @babel/parser
+        @babel/traverse
+        @babel/types
+        @babel/generator
+    4.3 课后作业
+    https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md
 
  # 2020.12.27 20:00-22:00 ES6项目实战
  ## 1、使用node.js express框架书写简单API
