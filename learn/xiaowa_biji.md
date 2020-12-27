@@ -1,0 +1,99 @@
+
+ # 2020.12.12 20:00-22:00 promise规范及应用
+ https://live.vhall.com/room/watch/442640570
+ ## 为什么需要promise
+    javascript单线程语言  
+    异常处理的需要
+ ## 1、promises/A+规范详解
+    promise基础   
+    如何把异步函数封装为promise
+
+ ## 2、实现一个简易版本的promise函数
+
+ ## 3、ES6/ESNext中的generator/async await简介
+
+ # 2020.12.13 20:00-22:00 JS模块化详解
+ ## 1、CommonJS模块化规范及发展
+
+ ## 2、AMD、CMD、SystemJS模块化规范介绍及使用
+    运行环境层面实现的
+ ## 3、ESModule规范及与其他规范的区别  
+    语法层面
+ ## 4、模块化打包工具工程化使用简介   
+    browserify/rollup/webpack 打包工具主要解决模块化规范之间的差异 
+    babel主要是解决语法降价以达到语法兼容的问题
+    CommonJS与ESModule这两个规范是重点
+
+ # 2020.12.19 20:0-22:00 浏览器内置JS对象详解、浏览器事件模型详解、浏览器请求相关内容详解
+ ## 1、浏览器内置JS对象详解
+ ### 常见浏览器JS对象常见API及用法
+ ## 2、浏览器事件模型详解
+ ### 2.1详解浏览器事件捕获，冒泡以及浏览器不同规范间区别
+ ### 2.2绑定事件的应用，以及封装一个多浏览器的绑定事件函数
+ ## 3、浏览器请求相关内容详解
+ ### 3.1ajax及fetch API详解
+ ### 3.2常见的浏览器请求、响应头、错误码解析
+ ### 3.3发送请求的示例，以及封装一个多浏览器兼容的请求函数
+
+ # 2020.12.20 20:00-22:00 面向对象编程/原型及原型链
+ ## 1、JS面向对象编程
+ ## 2、原型及原型链
+ ## 3、继承（原型继承、构造函数继承、组合继承）
+ ## ------自学内容 this指针/闭包/作用域
+ ## 1、this指针详解
+ ## 2、闭包的概念及应用场景
+ ## 3、作用域(全局作用域、函数作用域)
+
+# 2020-12-26 20:00-22:00 前端工程化的发展及工具详解-止水
+## 上节课的作业      
+    可以使用 async-poll 或 Plimt 这样库来实现    建议看下这两个库的源码
+## 前端工程化
+## npm包管理                                  
+    npm install   
+    npm publish  
+## bower管理工具   
+    例如：bower install jquery   
+    配置文件 .bowerrc   rc(runtime config)
+## npm管理工具
+    配置文件 package.json   
+## yarn管理工具
+
+## 前端代码格式化与风格检查    
+    eslint   
+    prettier  
+
+## js编译   
+    babel    
+    需要安装两个模块   
+    can i use 网站配置babel的编译设置 
+    @babel/core @babel/cli         
+    @babel/preset-env   通过target控制编译结果           
+    @babel/pollyfill  处理方法不存在的问题  给对象增加了方法以避免运行时错误      
+
+# js打包工具    
+    browserfy commonjs模块化开发的代码转换成可以在浏览器端使用的代码    
+    roolup  要使用es-module方式进行模块化规范编码      
+
+## js压缩工具    
+    uglify    
+
+## 流式处理工具     
+    grunt    
+    gulp     
+
+## 通用处理工具     
+    fis3    百度出品      
+    webpack    
+## 作业：     
+    如果只想兼容chrome 87   如何配置  "@babel/preset-env"
+    重点跑下 babel的这个例子
+
+ # 2020-12-27 20:00-22:00 ES6 & ESNext 常见 API 及 babel 编译-止水
+ ## 1、ECMAScript规范发展简介
+ ## 2、ES6新增API解析
+ ## 3、ESNext规范中的API解析
+ ## 4、babel编译工具链的使用
+
+ # 2020.12.27 20:00-22:00 ES6项目实战
+ ## 1、使用node.js express框架书写简单API
+ ## 2、项目实战：使用ES6完成今日头条
