@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>demo</title>
+</head>
+
+<body>
+  <input type="button" value="增加方法" id='test' />
+  <input type="button" value="减少" id='test2' />
+  <script>
+
+    // function fun() {
+    //   console.log((new Date()))
+    // }
+    // let btn = document.querySelector("#test")
+    // btn.addEventListener('click', () => {
+    //   console.log(window.history);
+    //   history.pushState(null, null, document.URL)
+    //   window.addEventListener('popstate', fun, false)
+    //   console.log(window.history);
+    // })
+    // let btn2 = document.querySelector("#test2")
+    // btn2.addEventListener('click', () => {
+    //   console.log(window.history);
+    //   window.removeEventListener('popstate', fun, false)
+    //   console.log(window.history);
+    // })
+
+    // let flag = 0
+    // if (flag) {
+    //   console.log('abc')
+    // } else {
+    //   console.log("false")
+    // }
+
+    //删除数组中符合条件的多个元素 方法1：逆序遍历数组
+    // let a = [{ name: 'sf', age: 30 }, { name: 'ls', age: 20 }, { name: 'zs', age: 5 }, { name: 'sj', age: 3 }]
+    // for (let i = a.length - 1; i >= 0; i--) {
+    //   if (a[i].age < 10) {
+    //     a.splice(i, 1)
+    //   }
+    // }
+    // console.log(a)
+
+    // // 删除数组中符合条件的多个元素 方法2：filter方法
+    // let a = [{ name: 'sf', age: 30 }, { name: 'ls', age: 20 }, { name: 'zs', age: 5 }, { name: 'sj', age: 3 }]
+    // console.log(a.filter(x => x.age < 10))
+
+    // let a = 'asdfsdf、abc、'
+    // console.log(a.slice(0, -1))
+
+    // let ab = '另  '
+    // console.log(ab.trim() + "abc")
+
+    //字符串能否转换成一个数字的判断
+    // let s = '1.1'
+    // if (parseFloat(s)) {
+    //   console.log("ok")
+    // }
+    // console.log(parseFloat(s))
+    // console.log(parseFloat(s) === NaN)
+
+
+    //把一个数字转换成千分位分隔的形式
+    // console.log((110).toLocaleString('en-US'))
+    // console.log((110.01).toLocaleString('en-US'))
+    // console.log(1000.01.toLocaleString('en-US'))
+    // console.log(10000.023.toLocaleString('en-US'))
+    // console.log(10000.0234.toLocaleString('en-US'))
+    // console.log(10000.0234.toLocaleString('en-US', { minimumFractionDigits: 4 })) //指定小数位数最少为4位
+    // let num = -1000.01
+    // console.log(num.toLocaleString('en-US')) //-1,000.01
+    // num = 2322.10232
+    // num = parseFloat(num.toFixed(2))
+    // console.log(num.toLocaleString('en-US', { maximumFractionDigits: 2,currencySign: 'accounting'}))
+
+    // let abc='ZN_asdfs'
+    // console.log(abc.startsWith('ZN'))
+
+    // async function hello() {
+    //   return 'hello world'
+    // }
+
+    // hello().then(msg=>{
+    //   console.log(msg)
+    // })
+
+    // let a = 20.345
+    // console.log(Number(a).toFixed(2))
+    // console.log('----------')
+    // console.log(Math.round(a * 100) / 100)
+    // console.log(Math.round(2034.5))
+
+    // function round(number, precision) {
+    //   return Math.round(+number + 'e' + precision) / Math.pow(10, precision)
+    // }
+    // console.log(round(20.345, 2))
+
+
+    // function Person() { }
+    // // 虽然写在注释里，但是你要注意：
+    // // prototype是函数才会有的属性
+    // // Person.prototype.name = 'Kevin';
+    // var person1 = new Person();
+    // // var person2 = new Person();
+    // // console.log(person1.name) // Kevin
+    // // console.log(person2.name) // Kevin
+    // // console.log(person1.__proto__ === Person.prototype)
+    // // console.log(Object.getPrototypeOf(person1) === Person.prototype) //Object.getPrototypeOf() 是es6中用于获取对象原型的方法
+    // // console.log(Person === Person.prototype.constructor)
+    // // console.log(Person.prototype.__proto__ == Object.prototype)
+    // console.log(Object.prototype.constructor === Object);
+    // console.log(Object.prototype.__proto__)
+
+
+
+    // let r = {
+    //   forexAmount: 4000.76,
+    //   rmbForexAmount: 5000,
+    //   totalAmount: 9000.76
+    // }
+    // console.log(parseFloat(r.forexAmount) + parseFloat(r.rmbForexAmount) != parseFloat(r.totalAmount))
+
+
+    // var foo = function () {
+    //   console.log('foo1');
+    // }
+    // foo();  // foo1
+    // console.log(foo)
+    // var foo = function () {
+    //   console.log('foo2');
+    // }
+    // foo(); // foo2
+    // console.log(foo)
+
+
+    // function foo() {
+    //   console.log('foo1');
+    // }
+    // console.log(foo)
+    // foo();  // foo2    
+    // function foo() {
+    //   console.log('foo2');
+    // }
+    // console.log(foo)
+    // foo(); // foo2
+
+    // var value = 1;
+    // function foo() {
+    //   console.log(value);
+    // }
+    // function bar() {
+    //   var value = 2;
+    //   foo();
+    // }
+    // bar(); // 结果是 1
+
+
+    // console.log(Math.pow(4, 3))
+    // console.log(4 ** 3);
+
+
+    // const obj = { 10: 'xxx', 1: 'yyy', 3: 'zzz' };
+    // console.log(Object.keys(obj));
+    // console.log(Array.isArray(Object.keys(obj)));
+    // console.log(Object.values(obj)); // ['yyy', 'zzz', 'xxx']
+    // console.log(Array.isArray(Object.values(obj)))
+    // let arr = Object.keys(obj)
+    // arr.forEach(i => console.log(i))
+    // console.log(Object.values('es8')); // ['e', 's', '8']
+    // console.log(Object.keys('es8')); // ['e', 's', '8']
+
+    // const obj = ['e', 's', '8'];
+    // console.log(Object.entries(obj)); // [['0', 'e'], ['1', 's'], ['2', '8']]
+    // const obj = { 10: 'xxx', 1: 'yyy', 3: 'zzz' };
+    // console.log(Object.entries(obj)); // [['1', 'yyy'], ['3', 'zzz'], ['10': 'xxx']]
+    // console.log(Object.entries('es8')); // [['0', 'e'], ['1', 's'], ['2', '8']]
+
+    // const obj = {
+    //   a: 1,
+    //   b: 2,
+    //   c: 3
+    // }
+    // // const { a, ...param } = obj;
+    // // console.log(a)     //1
+    // // console.log(param) //{b: 2, c: 3}
+    // function foo({ a, ...param }) {
+    //   console.log(a);    //1
+    //   console.log(param) //{b: 2, c: 3}
+    // }
+    // foo(obj)
+
+
+  </script>
+
+</body>
+
+</html>
