@@ -123,3 +123,26 @@ https://live.vhall.com/room/watch/358850593
  # 2020.12.27 20:00-22:00 ES6项目实战
  ## 1、使用node.js express框架书写简单API
  ## 2、项目实战：使用ES6完成今日头条
+
+ # 2021.1.2 20:00-22:00 vue.js基础(录播)
+ ## 1.vue.js简介
+ ## 2.vue.js模板及指令
+ ## 3.vue.js事件/数据绑定
+ ## 4.vue.js组件化
+
+ # 2021.1.3 20:00-22:00 vue.js高级用法
+ ## 1.mixin复用
+ ## 2.vue.js动画特效 & 常用组件库介绍
+ ## 3.插槽 插件 过滤器
+ ## 4.深入vue原理
+
+ # 2021.1.8 20:00-22:00 vue-cli详解(录播)
+ ## 1.vue-cli原理及用法完全掌握
+ ## 2.vue-cli源码解析
+ 
+ # 2021.1.9 20:00-22:00 vue.js前端路由及异步组件
+ ## 1.前端路由router原理及表现
+ ## 2.vue.js router使用详解 
+ ## 3.异步组件
+ ## 4、作业  将vue-router选项扁平化处理(将vue-router嵌套的树扁平化处理，BFS, DFS)
+ 可以参考vue-router源码 https://github.com/vuejs/vue-router/blob/dev/src/create-route-map.js
