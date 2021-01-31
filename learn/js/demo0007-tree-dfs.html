@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>路由树的深度优先遍历</title>
+</head>
+
+<body>
+    <script>
+        let routes = [
+            {
+                path: '/',
+                name: 'index',
+                component: {
+                    cname: 'index'
+                }
+            },
+            {
+                path: '/news',
+                name: 'news',
+                component: {
+                    cname: 'news'
+                },
+                children: [
+                    {
+                        path: 'add',
+                        name: 'newsadd',
+                        component: {
+                            cname: 'newsadd'
+                        }
+                    },
+                    {
+                        path: 'edit',
+                        name: 'newsedit',
+                        component: {
+                            cname: 'newsedit'
+                        },
+                        children: [
+                            {
+                                path: 'simple',
+                                name: 'simpleedit',
+                                component: {
+                                    cname: 'simpleedit'
+                                }
+                            },
+                            {
+                                path: 'complex',
+                                name: 'complexeidt',
+                                component: {
+                                    cname: 'complexedit'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        path: 'list',
+                        name: 'newslist',
+                        component: {
+                            cname: 'newslist'
+                        }
+                    }
+                ]
+            },
+            {
+                path: '*',
+                name: 'error',
+                component: {
+                    cname: 'error'
+                }
+            }
+        ]
+
+        let nodeArray = []
+        let result = []
+
+        function treeTravelDFS(treeRoot) {
+            treeRoot.forEach(child => {
+                if (child.children) {
+                    nodeArray.push(child.path)
+                    treeTravelDFS(child.children)
+                    nodeArray.pop()
+                } else {
+                    result.push({
+                        path: nodeArray.join('/') + '/' + child.path,
+                        name: child.path,
+                        component: child.component
+                    })
+                }
+            })
+        }
+
+        function routesTransfer() {
+            routes.forEach(tree => {
+                if (tree.children) {
+                    nodeArray.push(tree.path)
+                    treeTravelDFS(tree.children)
+                    nodeArray.pop()
+                } else {
+                    result.push({
+                        path: tree.path,
+                        name: tree.name,
+                        component: tree.component
+                    })
+                }
+            })
+        }
+        routesTransfer()
+        console.log(result)
+    </script>
+</body>
+
+</html>
