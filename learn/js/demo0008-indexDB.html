@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //添加数据
+    /*
+      参考：https://www.php.cn/html5-tutorial-359628.html
+    */
+
+    function insertAnObj(indexDbName) {
+
+      var userinfos = [{
+        id: 1001,
+        name: "小李",
+        age: 24
+      }, {
+        id: 1002,
+        name: "老王",
+        age: 30
+      }, {
+        id: 1003,
+        name: "王麻子",
+        age: 26
+      }];
+
+      var openRequest = indexedDB.open(indexDbName, 1);
+
+      openRequest.onerror = function (e) {//当创建数据库失败时候的回调
+        console.log("Database error: " + e.target.errorCode);
+      };
+
+      openRequest.onsuccess = function (event) {
+        console.log("Database created");
+
+        db = openRequest.result; //创建数据库成功时候，将结果给db，此时db就是当前数据库
+        var transaction = db.transaction("userinfo", 'readwrite');
+        var store = transaction.objectStore("userinfo");
+        for (var i = 0; i < userinfos.length; i++) {
+          store.add(userinfos[i]);//将对象添加至userinfo相关的objectstore中
+        }
+
+      };
+
+      openRequest.onupgradeneeded = function (event) {
+        var db = event.target.result;
+        //在第一次创建数据库的时候，就创建userinfo相关的objectstore，以供后面添加数据时候使用
+        if (!db.objectStoreNames.contains('userinfo')) {
+          //keyPath:Javascript对象，对象必须有一属性作为键值
+          db.createObjectStore('userinfo', { keyPath: "id" });
+        }
+      }
+
+    }
+
+    insertAnObj('test')
+  </script>
+</body>
+
+</html>
