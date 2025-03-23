@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商务服务</title>
+    <style>
+        body {
+            padding: 0 1px;
+            margin: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .nav-outer-box {
+            margin: 0 auto;
+            width: 100%;
+            height: 100px;
+            z-index: 10000;
+            text-align: left;
+        }
+
+        .nav-out-box {
+            margin: 0 auto;
+            width: 100%;
+            height: 100px;
+            z-index: 10000;
+            text-align: left;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(256, 256, 256, 1);
+        }
+
+        .nav-box {
+
+            margin: 0 auto;
+            width: 1024px;
+            height: 100px;
+            z-index: 10000;
+            text-align: left;
+            background: rgba(256, 256, 256, 1);
+        }
+
+        .nav-box img {
+            margin-top: 20px;
+            height: 58px;
+            width: 199px;
+        }
+
+        .nav-box .menu-box {
+            text-align: left;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 39px;
+            margin-left: 50px;
+        }
+
+        .nav-box .menu-box a {
+            text-decoration: none;
+            margin-left: 10px;
+            color: #000;
+        }
+
+        .nav-box .menu-box a.active {
+            color: #00568A;
+        }
+
+        .top-box {
+            width: 100%;
+            background: url(./images/about/top.jpg) no-repeat;
+            height: 300px;
+            font-size: 24px;
+            color: #fff;
+            line-height: 300px;
+        }
+
+        .main {
+            width: 1024px;
+            margin: 0 auto;
+            min-height: 500px;
+        }
+
+        .main .title {
+            font-weight: bold;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .main .title {
+            font-weight: bold;
+            font-size: 16px;
+            text-align: left;
+            margin-top: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .main .item-box {
+            margin-top:10px;
+            min-height: 80px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .main .item-box .item {
+            width: 320px;
+        }
+
+        .main .item-box .item img {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            width: 320px;
+            height: 290px;
+        }
+
+
+        /*#region 页脚 */
+        .footer-box .foot-nav {
+            margin-top: 15px;
+            width: 100%;
+            background-color: rgba(0, 92, 144, 0.8);
+            font-size: 13px;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .footer-box .foot-nav a {
+            color: #fff;
+            text-decoration: none;
+            width: 110px;
+            border-left: 1px solid #fff;
+            padding-left: 10px;
+            margin-left: 10px;
+        }
+
+        .footer-box .foot-nav a:first-child {
+            border: none;
+        }
+
+        .footer-box .copyright {
+
+            width: 100%;
+            background-color: rgba(0, 92, 144, 0.8);
+            font-size: 13px;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .footer-box .copyright a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /*#endregion*/
+    </style>
+    <script src='./js/jquery-1.10.2.js'></script>
+</head>
+
+<body>
+    <div class="nav-outer-box">
+        <div class="nav-out-box">
+            <div class="nav-box">
+                <img src="./images/index/logo.png" alt="">
+                <div class="menu-box">
+                    <a href="index.html">首页</a>
+                    <a href="study.html">游学&插班</a>
+                    <a href="" class="active">商务服务</a>
+                    <a href="tours.html">旅游&定制</a>
+                    <a href="resource.html">资源中心</a>
+                    <a href="about.html">关于我们</a>
+                    <a href="contact.html">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-box">
+        商务服务
+    </div>
+
+    <div class="main">
+        <div class="title">企业考察</div>
+        <div class="item-box">
+            <div class="item">
+                <img src="./images/tours/line1.jpg" alt="">
+                <div>踏上传奇66号公路，畅游内陆帝国</div>
+            </div>
+            <div class="item">
+                <img src="./images/tours/line2.jpg" alt="">
+                <div>置身金乡，重温加州淘金热探险之旅</div>
+            </div>
+            <div class="item">
+                <img src="./images/tours/line3.jpg" alt="">
+                <div>深入橙县，体验丰富多彩的南加州城市</div>
+            </div>
+        </div>
+        <div class="title">会议接待</div>
+        <div class="item-box">
+            <div class="item">
+                <img src="./images/tours/line1.jpg" alt="">
+                <div>踏上传奇66号公路，畅游内陆帝国</div>
+            </div>
+            <div class="item">
+                <img src="./images/tours/line2.jpg" alt="">
+                <div>置身金乡，重温加州淘金热探险之旅</div>
+            </div>
+            <div class="item">
+                <img src="./images/tours/line3.jpg" alt="">
+                <div>深入橙县，体验丰富多彩的南加州城市</div>
+            </div>
+        </div>
+        <div class="title">投资移民</div>
+        <div class="item-box">
+            <div class="item">
+                <img src="./images/tours/line1.jpg" alt="">
+                <div>踏上传奇66号公路，畅游内陆帝国</div>
+            </div>
+            <div class="item">
+                <img src="./images/tours/line2.jpg" alt="">
+                <div>置身金乡，重温加州淘金热探险之旅</div>
+            </div>
+            <div class="item">
+                <img src="./images/tours/line3.jpg" alt="">
+                <div>深入橙县，体验丰富多彩的南加州城市</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-box">
+        <div class="foot-nav">
+            <a href="resource.html">资源中心</a>
+            <a href="about.html">关于我们</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+        <div class="copyright">
+            <a>©xxx有限公司北京代表处 版权所有</a>
+            <a rel="noreferrer" target="_blank"
+                data-href="https://beian.mps.gov.cn/#/query/webSearch?code=11010502054809">京公网安备11010502054809</a>
+            <a target="_blank" data-href="https://beian.miit.gov.cn/">京ICP备2024045622号-1</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

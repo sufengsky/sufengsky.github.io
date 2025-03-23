@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资源中心</title>
+    <style>
+        body {
+            padding: 0 1px;
+            margin: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .nav-outer-box {
+            margin: 0 auto;
+            width: 100%;
+            height: 100px;
+            z-index: 10000;
+            text-align: left;
+        }
+
+        .nav-out-box {
+            margin: 0 auto;
+            width: 100%;
+            height: 100px;
+            z-index: 10000;
+            text-align: left;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(256, 256, 256, 1);
+        }
+
+        .nav-box {
+
+            margin: 0 auto;
+            width: 1024px;
+            height: 100px;
+            z-index: 10000;
+            text-align: left;
+            background: rgba(256, 256, 256, 1);
+        }
+
+        .nav-box img {
+            margin-top: 20px;
+            height: 58px;
+            width: 199px;
+        }
+
+        .nav-box .menu-box {
+            text-align: left;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 39px;
+            margin-left: 50px;
+        }
+
+        .nav-box .menu-box a {
+            text-decoration: none;
+            margin-left: 10px;
+            color: #000;
+        }
+
+        .nav-box .menu-box a.active {
+            color: #00568A;
+        }
+
+        .top-box {
+            width: 100%;
+            background: url(./images/resource/top.jpg) no-repeat;
+            height: 300px;
+            font-size: 24px;
+            color: #fff;
+            line-height: 300px;
+        }
+
+        .tab-index-box {
+            margin-top: 20px;
+        }
+
+        .tab-index-box .tab-index-item {
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: top;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            color: rgb(153 153 153);
+            border-radius: 40px;
+            border: 1px solid rgb(153 153 153);
+        }
+
+        .tab-index-box .active {
+            background-color: rgb(0 161 198);
+            color: #fff;
+        }
+
+        #tab_about {
+            margin: 0 auto;
+            width: 1024px;
+            text-align: left;
+        }
+
+        #tab_about .title {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .tab-content {
+            text-align: left;
+            margin: 20px auto;
+            width: 1024px;
+        }
+
+        .tab-content .question {
+            font-weight: bold;
+        }
+
+        #tab_sign {
+            display: none;
+        }
+
+        #tab_faq {
+            display: none;
+        }
+
+        .footer-box .foot-nav {
+            margin-top: 15px;
+            width: 100%;
+            background-color: rgba(0, 92, 144, 0.8);
+            font-size: 13px;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .footer-box .foot-nav a {
+            color: #fff;
+            text-decoration: none;
+            width: 110px;
+            border-left: 1px solid #fff;
+            padding-left: 10px;
+            margin-left: 10px;
+        }
+
+        .footer-box .foot-nav a:first-child {
+            border: none;
+        }
+
+        .footer-box .copyright {
+
+            width: 100%;
+            background-color: rgba(0, 92, 144, 0.8);
+            font-size: 13px;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .footer-box .copyright a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+    <script src='./js/jquery-1.10.2.js'></script>
+</head>
+
+<body>
+    <div class="nav-outer-box">
+        <div class="nav-out-box">
+            <div class="nav-box">
+                <img src="./images/index/logo.png" alt="">
+                <div class="menu-box">
+                    <a href="index.html">首页</a>
+                    <a href="study.html">游学&插班</a>
+                    <a href="business.html">商务服务</a>
+                    <a href="tours.html">旅游&定制</a>
+                    <a href="resource.html" class="active">资源中心</a>
+                    <a href="about.html">关于我们</a>
+                    <a href="contact.html">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-box">
+        资源中心
+    </div>
+
+    <div class="tab-index-box">
+        <div data-t="tab_usa_tour" class="tab-index-item active">美国旅行</div>
+        <div data-t="tab_sign" class="tab-index-item">签证</div>
+        <div data-t="tab_faq" class="tab-index-item">FAQ</div>
+    </div>
+
+    <div class="tab-content" id="tab_usa_tour">
+       <img src="./images/resource/usa_tour.png" alt="">
+    </div>
+    <div class="tab-content" id="tab_sign">
+        <div class="question">
+            什么是签证？
+        </div>
+        <div class="answer">
+            希望入境美国的外国公民通常须先获得美国签证，附在旅行者所在国签发的护照内。<br />
+            特定国际旅客若符合免签证旅行的规定，可能具备免签入境美国的资格。本网站的签证网页涉及赴美外国公民申请美国签证的所有事项。如有更多的问题请访问Travel.State.gov。 <br />
+            美国公民不需要美国签证，但准备出国旅行时可能需要他们希望访问的国家的大使馆签发的签证。
+        </div>
+        <br>
+        <div class="question">
+            你知道你需要什么类型的签证吗？
+        </div>
+        <div class="answer">
+            申请非移民签证，可直接上网填写DS-160 申请表；申请移民签证，可直接访问USCIS 网站填写有关表格。如果无法确定，请使用以下的签证向导功能，帮助你决定你的签证类别。<br>
+            旅游 商务 就业 留学&交换 移民 其他类型签证 <br>
+            参考：https://china.usembassy-china.org.cn/zh/visas-zh/#v410v-pills-2
+        </div>
+    </div>
+    <div class="tab-content" id="tab_faq">
+        <div style="font-style: italic;">以下是您在前往加州和洛杉矶旅行时需要了解的信息。</div>
+        <div>
+            如果您即将前往洛杉矶，计划未来去洛杉矶度假、旅行，或者当前正在洛杉矶县地区，您可能会有一些疑问。为了帮助您在旅行过程中更好地了解当前的空气质量、道路封闭情况，了解哪些景点开放以及如何支持当地恢复工作，我们整理了相关信息，以帮助您负责任且安全地规划您的洛杉矶之行。如需更多资源，敬请访问我们的旅游安全提示页面。
+        </div>
+        <br>
+        <div class="question">
+            加州的山火现在在哪里？
+        </div>
+        <div class="answer">
+            加州目前没有活跃的山火，洛杉矶的98％地区未受山火影响。
+        </div>
+        <br>
+        <div class="question">
+            目前前往加州旅行安全吗？
+        </div>
+        <div class="answer">
+            是的。加利福尼亚州幅员辽阔，是美国第三大州。大部分地区未受山火影响，旅行依然安全。若您想获取加州各地最新的空气质量和天气信息，请访问AirNow.gov和国家气象局网站。
+        </div>
+        <br>
+        <div class="question">
+            目前前往洛杉矶旅行安全吗？
+        </div>
+        <div class="answer">
+            幸运的是，洛杉矶县98％以上地区未受山火
+            影响。洛杉矶的标志性景点和体验，如好莱坞标志、好莱坞环球影城、圣塔莫尼卡码头、格里菲斯天文台等，均未受损，仍然对全球游客开放。有关受影响地区的最新信息，请参阅洛杉矶县、圣塔莫尼卡市和马里布市的应急更新。此外，您还可以通过CAL
+            FIRE获取山火状态报告。
+        </div>
+    </div>
+
+
+    <div class="footer-box">
+        <div class="foot-nav">
+            <a href="">资源中心</a>
+            <a href="about.html">关于我们</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+        <div class="copyright">
+            <a>©xxx有限公司北京代表处 版权所有</a>
+            <a rel="noreferrer" target="_blank"
+                data-href="https://beian.mps.gov.cn/#/query/webSearch?code=11010502054809">京公网安备11010502054809</a>
+            <a target="_blank" data-href="https://beian.miit.gov.cn/">京ICP备2024045622号-1</a>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('.tab-index-item').click(function () {
+                $('.tab-index-item').removeClass('active')
+                $(this).addClass('active')
+                $('.tab-content').hide()
+                var t = $(this).attr('data-t')
+                $('#' + t).show()
+            })
+        })    
+    </script>
+</body>
+
+</html>

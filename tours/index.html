@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <style>
+        body {
+            padding: 0 1px;
+            margin: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .nav-outer-box {
+            margin: 0 auto;
+            width: 100%;
+            height: 100px;
+            z-index: 10000;
+            text-align: left;
+        }
+
+        .nav-out-box {
+            margin: 0 auto;
+            width: 100%;
+            height: 100px;
+            z-index: 10000;
+            text-align: left;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(256, 256, 256, 1);
+        }
+
+        .nav-box {
+
+            margin: 0 auto;
+            width: 1024px;
+            height: 100px;
+            z-index: 10000;
+            text-align: left;
+            background: rgba(256, 256, 256, 1);
+        }
+
+        .nav-box img {
+            margin-top: 20px;
+            height: 58px;
+            width: 199px;
+        }
+
+        .nav-box .menu-box {
+            text-align: left;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 39px;
+            margin-left: 50px;
+        }
+
+        .nav-box .menu-box a {
+            text-decoration: none;
+            margin-left: 10px;
+            color: #000;
+        }
+
+        .nav-box .menu-box a.active {
+            color: #00568A;
+        }
+
+        /*#region slider */
+        .slider-box {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+        }
+
+        .slider {
+            width: 100%;
+            height: 350px;
+            position: relative;
+        }
+
+
+        .slider img {
+            display: none;
+            height: 350px;
+            object-fit: fill;
+            width: 100%;
+            border-radius: 4px;
+            touch-action: pan-y pinch-zoom;
+            border: 1px solid #DDDDDD;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider-bottom {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 0 0 4px 4px;
+            height: 44px;
+            color: #FFFFFF;
+            line-height: 44px;
+            font-size: 0;
+            position: absolute;
+            top: 307px;
+            right: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+
+        .nav {
+            width: 90px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .dot {
+            list-style-type: none;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.6);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-left: 6px;
+        }
+
+        .dot:last-child {
+            margin-right: 14px;
+        }
+
+        .selected {
+            background: #004EA8;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #FFFFFF;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 0.8s;
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 0.8s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /*#endregion */
+
+        .experience-box {
+            background-color: rgb(229 243 240);
+            min-height: 120px;
+            text-align: left;
+            padding-top: 15px;
+        }
+
+        .experience-box .title-box {
+            margin: 0 auto;
+            width: 1024px;
+            margin-bottom: 15px;
+        }
+
+        .experience-box .title-box p {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+        .experience-box .ex-content-box {
+            margin: 0 auto;
+            display: flex;
+            width: 1024px;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .experience-box .ex-content-box img {
+            height: 255px;
+            width: 190px;
+            object-fit: fill;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .footer-box .foot-nav {
+            margin-top: 15px;
+            width: 100%;
+            background-color: rgba(0, 92, 144, 0.8);
+            font-size: 13px;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .footer-box .foot-nav a {
+            color: #fff;
+            text-decoration: none;
+            width: 110px;
+            border-left: 1px solid #fff;
+            padding-left: 10px;
+            margin-left: 10px;
+        }
+
+        .footer-box .foot-nav a:first-child {
+            border: none;
+        }
+
+        .footer-box .copyright {
+
+            width: 100%;
+            background-color: rgba(0, 92, 144, 0.8);
+            font-size: 13px;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .footer-box .copyright a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+        .share-box {
+            position: fixed;
+            bottom: 10px;
+            right: 15px;
+            border-radius: 25px;
+            background-color: #fff;
+            padding: 5px 10px 0;
+        }
+
+        .share-box a img {
+            width: 25px;
+            height: 25px;
+            border-radius: 15px;
+            margin-left: 10px;
+        }
+
+        .wechat-box {
+            display: none;
+            position: fixed;
+            bottom: 48px;
+            right: 150px;
+            background-color: #fff;
+        }
+
+        .wechat-box p {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            padding-bottom: 5px;
+        }
+
+        .wechat-box img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script src='./js/jquery-1.10.2.js'></script>
+</head>
+
+<body>
+    <div class="nav-outer-box">
+        <div class="nav-out-box">
+            <div class="nav-box">
+                <img src="./images/index/logo.png" alt="">
+                <div class="menu-box">
+                    <a href="" class="active">首页</a>
+                    <a href="study.html">游学&插班</a>
+                    <a href="business.html">商务服务</a>
+                    <a href="tours.html">旅游&定制</a>
+                    <a href="resource.html">资源中心</a>
+                    <a href="about.html">关于我们</a>
+                    <a href="contact.html">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="slider-box">
+        <div class="slider">
+            <a href="news_detail.html"><img class="fade" src="images/index/slider1.jpg" alt="" /></a>
+            <a href="news_detail.html"><img class="fade" src="images/index/slider2.jpg" alt="" /></a>
+            <a href="news_detail.html"><img class="fade" src="images/index/slider3.jpg" alt="" /></a>
+
+            <div class="slider-bottom">
+                <div>
+                    <ul class="nav">
+                        <li class="dot selected" onclick="slider.turnToSlide(0)"></li>
+                        <li class="dot" onclick="slider.turnToSlide(1)"></li>
+                        <li class="dot" onclick="slider.turnToSlide(2)"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="experience-box">
+        <div class="title-box">
+            <p>
+                <img style="width:86px;height:23px;" src="./images/index/title-tiyan.png">
+            </p>
+            <p>
+                <img style="width:164;height:9px;" src="./images/index/title-tiyan2.png">
+            </p>
+        </div>
+        <div class="ex-content-box">
+            <img src="./images/index/e1.jpg">
+            <img src="./images/index/e2.jpg">
+            <img src="./images/index/e3.jpg">
+            <img src="./images/index/e4.jpg">
+        </div>
+    </div>
+
+    <div class="experience-box">
+        <div class="title-box">
+            <p>
+                <img style="width:86px;height:23px;" src="./images/index/title-tiyan.png">
+            </p>
+            <p>
+                <img style="width:164;height:9px;" src="./images/index/title-tiyan2.png">
+            </p>
+        </div>
+        <div class="ex-content-box">
+            <img src="./images/index/e1.jpg">
+            <img src="./images/index/e2.jpg">
+            <img src="./images/index/e3.jpg">
+            <img src="./images/index/e4.jpg">
+        </div>
+    </div>
+
+    <div class="experience-box">
+        <div class="title-box">
+            <p>
+                <img style="width:86px;height:23px;" src="./images/index/title-tiyan.png">
+            </p>
+            <p>
+                <img style="width:164;height:9px;" src="./images/index/title-tiyan2.png">
+            </p>
+        </div>
+        <div class="ex-content-box">
+            <img src="./images/index/e1.jpg">
+            <img src="./images/index/e2.jpg">
+            <img src="./images/index/e3.jpg">
+            <img src="./images/index/e4.jpg">
+        </div>
+    </div>
+
+    <div class="footer-box">
+        <div class="foot-nav">
+            <a href="resource.html">资源中心</a>
+            <a href="about.html">关于我们</a>
+            <a href="about.html">联系我们</a>
+        </div>
+        <div class="copyright">
+            <a>©xxx有限公司北京代表处 版权所有</a>
+            <a rel="noreferrer" target="_blank"
+                data-href="https://beian.mps.gov.cn/#/query/webSearch?code=11010502054809">京公网安备11010502054809</a>
+            <a target="_blank" data-href="https://beian.miit.gov.cn/">京ICP备2024045622号-1</a>
+        </div>
+    </div>
+
+    <div class="share-box">
+        <a id="wechat" href=""><img src="./images/index/icon-wechat.png" alt=""></a>
+        <a href=""><img src="./images/index/icon-weibo.png" alt=""></a>
+        <a href=""><img src="./images/index/icon-xiecheng.png" alt=""></a>
+        <a href=""><img src="./images/index/icon-xiaohongshu.png" alt=""></a>
+        <a href=""><img src="./images/index/icon-mafengwo.png" alt=""></a>
+    </div>
+    <div id="wechat_div" class="wechat-box">
+        <img src="./images//index/wechat.png" alt="">
+        <p>扫码关注我们</p>
+    </div>
+
+    <script>
+        //#region slider
+        function Slider() {
+            let slideIndex = 0
+            let timer,
+                flag = 0
+
+            function deleteTimer() {
+                clearTimeout(timer)
+                timer = null
+            }
+
+            function next() {
+                slideIndex++
+                showSlide()
+            }
+
+            function turnToSlide(index) {
+                if (index === slideIndex) return
+                slideIndex = index
+                showSlide()
+            }
+
+
+            function showSlide() {
+                deleteTimer()
+                const slides = document.querySelectorAll('.fade')
+                const dots = document.querySelectorAll('.dot')
+                if (slideIndex >= slides.length) {
+                    slideIndex = 0
+                }
+                if (slideIndex < 0) {
+                    slideIndex = slides.length - 1
+                }
+
+                slides[flag].style.display = 'none'
+                dots[flag].classList.remove('selected')
+
+                slides[slideIndex].style.display = 'block'
+                dots[slideIndex].classList.add('selected')
+
+                flag = slideIndex
+
+                timer = setTimeout(next, 5000)
+
+                $('.slider-bottom-text').hide().eq(slideIndex).show()
+            }
+
+            return {
+                next,
+                showSlide,
+                turnToSlide
+            }
+        }
+
+        const slider = Slider()
+        slider.showSlide()
+        //#endregion 
+        $(function () {
+            $('#wechat').hover(function () {
+                $('#wechat_div').show()
+            }, function () {
+                $('#wechat_div').hide()
+            })
+        })    
+    </script>
+</body>
+
+</html>
